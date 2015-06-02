@@ -5,7 +5,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
     foreach = require('gulp-foreach'),
-    path = require('path');
+    path = require('path'),
+    scsslint = require('gulp-scss-lint');
 
 // Settings ---------------
 
@@ -72,7 +73,15 @@ gulp.task('clean:img', function() {
 
 // Sass ---------------
 
-gulp.task('scss', ['scss:scss', 'scss:css']);
+gulp.task('scss', ['scss:lint', 'scss:scss', 'scss:css']);
+
+gulp.task('scss:lint', function() {
+  
+  return gulp
+    .src(SETTINGS.scss.src.path)
+    .pipe(scsslint());
+    
+});
 
 gulp.task('scss:scss', ['clean:scss'], function() {
   
