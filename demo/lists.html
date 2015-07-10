@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="../lib/ionic/js/ionic.bundle.js"></script>
+  <script type="text/javascript">angular.module('starter', ['ionic']);</script>
+
+  <link rel="stylesheet" href="../dist/css/mrs-lists.css">
+</head>
+
+<body ng-app="starter" >
+    <ion-pane>
+        <ion-content>
+
+            <!-- *** basic list ***-->
+            <div class="list mrs-basic-list" ng-class="{'editMode': showDelete}" >
+                <div class="item" >                    
+                    <span class="item-name">List Item</span>                            
+                </div>
+
+                <div class="item icon-right" ng-click="">                   
+                    <span class="item-name">List Item</span>
+                    <i class="icon icon-arrow-right" ></i>                    
+                </div>
+            </div>
+
+            <!-- *** editable list ***-->
+            <div class="list mrs-basic-list editable-list" ng-class="{'editMode': showDelete}" >
+                <div class="item item-checkbox icon-right" >
+                    <label class="checkbox checkbox-input-hidden checkbox-circle">
+                        <input type="checkbox" ng-model="item.checked" ng-checked="selectAllBol" class="ng-pristine ng-untouched ng-valid" ng-change="countCheckbox(item.checked, $index)">
+                        <i class="checkbox-icon"></i>                    
+                    </label>
+                    <span class="item-name">List Item</span>
+                    <i class="icon icon-search" ng-click=""></i>                    
+                </div>
+
+                <div class="item item-checkbox icon-right" >
+                    <label class="checkbox checkbox-input-hidden checkbox-circle">
+                        <input type="checkbox" ng-model="item.checked" ng-checked="selectAllBol" class="ng-pristine ng-untouched ng-valid" ng-change="countCheckbox(item.checked, $index)">
+                        <i class="checkbox-icon"></i>                    
+                    </label>
+                    <span class="item-name">List Item</span>
+                    <i class="icon icon-search" ng-click=""></i>                    
+                </div>
+            </div>
+
+
+            <!-- *** editable list : EDIT MODE ***-->
+            <div class="list mrs-basic-list editable-list editMode" ng-class="{'editMode': showDelete}" >
+                <div class="item item-checkbox icon-right" >
+                    <label class="checkbox checkbox-input-hidden checkbox-circle">
+                        <input type="checkbox" ng-model="item.checked" ng-checked="selectAllBol" class="ng-pristine ng-untouched ng-valid" ng-change="countCheckbox(item.checked, $index)">
+                        <i class="checkbox-icon"></i>                    
+                    </label>
+                    <span class="item-name">List Item</span>
+                    <i class="icon icon-search" ng-click=""></i>                    
+                </div>
+
+                <div class="item item-checkbox icon-right" >
+                    <label class="checkbox checkbox-input-hidden checkbox-circle">
+                        <input type="checkbox" ng-model="item.checked" ng-checked="selectAllBol" class="ng-pristine ng-untouched ng-valid" ng-change="countCheckbox(item.checked, $index)">
+                        <i class="checkbox-icon"></i>                    
+                    </label>
+                    <span class="item-name">List Item</span>
+                    <i class="icon icon-search" ng-click=""></i>                    
+                </div>
+            </div>
+
+            <!-- PRODUCTS LIST -->
+            <div class="list product-list editable-list" ng-class="{'editMode': showDelete}">
+                <div class="item-divider">Categoria X</div>
+                <div class="item item-avatar item-checkbox" >
+                    <img src="http://placehold.it/180x180">
+                    <div class="product-name">
+                        <div>Item Name</div>
+                        <span>Item Brand</span>
+                    </div>
+                    <div class="product-price">
+                        €0,00
+                    </div>
+                    <div class="item-actions">
+                        <button class="button button-clear mrs-button-transparent icon-plus icon button-addmore" on-hold="onHold($index, true)" ng-click="addQuantity($index); $event.stopPropagation();"></button>
+                        <div class="quantity">1</div>
+                        <button class="button button-clear mrs-button-transparent icon-minus icon button-remove" ng-if---="item.quantity > 0" ng-click="removeQuantity($index); $event.stopPropagation();"></button>
+                    </div>
+                    <label class="checkbox checkbox-input-hidden checkbox-circle">
+                        <input type="checkbox" ng-model="item.checked" ng-checked="selectAllBol" class="ng-pristine ng-untouched ng-valid" ng-change="countCheckbox(item.checked, $index)">
+                        <i class="checkbox-icon"></i>                    
+                    </label>
+                </div>
+                <div class="item item-avatar item-checkbox" >
+                    <img src="http://placehold.it/180x180">
+                    <div class="product-name">
+                        <div>Item Name</div>
+                        <span>Item Brand</span>
+                    </div>
+                    <div class="product-price">
+                        €0,00
+                    </div>
+                    <div class="item-actions">
+                        <button class="button button-clear mrs-button-transparent icon-plus icon button-addmore" on-hold="onHold($index, true)" ng-click="addQuantity($index); $event.stopPropagation();"></button>
+                        <div class="quantity">1</div>
+                        <button class="button button-clear mrs-button-transparent icon-minus icon button-remove" ng-if---="item.quantity > 0" ng-click="removeQuantity($index); $event.stopPropagation();"></button>
+                    </div>
+                    <label class="checkbox checkbox-input-hidden checkbox-circle">
+                        <input type="checkbox" ng-model="item.checked" ng-checked="selectAllBol" class="ng-pristine ng-untouched ng-valid" ng-change="countCheckbox(item.checked, $index)">
+                        <i class="checkbox-icon"></i>                    
+                    </label>
+                </div>                
+            </div>
+
+
+            <!-- PRODUCTS LIST : EDIT MODE-->
+            <div class="list product-list editable-list editMode" ng-class="{'editMode': showDelete}">
+                <div class="item-divider">Categoria X</div>
+                <div class="item item-avatar item-checkbox" >
+                    <img src="http://placehold.it/180x180">
+                    <div class="product-name">
+                        <div>Item Name</div>
+                        <span>Item Brand</span>
+                    </div>
+                    <div class="product-price">
+                        €0,00
+                    </div>
+                    <div class="item-actions">
+                        <button class="button button-clear mrs-button-transparent icon-plus icon button-addmore" on-hold="onHold($index, true)" ng-click="addQuantity($index); $event.stopPropagation();"></button>
+                        <div class="quantity">1</div>
+                        <button class="button button-clear mrs-button-transparent icon-minus icon button-remove" ng-if---="item.quantity > 0" ng-click="removeQuantity($index); $event.stopPropagation();"></button>
+                    </div>
+                    <label class="checkbox checkbox-input-hidden checkbox-circle">
+                        <input type="checkbox" ng-model="item.checked" ng-checked="selectAllBol" class="ng-pristine ng-untouched ng-valid" ng-change="countCheckbox(item.checked, $index)">
+                        <i class="checkbox-icon"></i>                    
+                    </label>
+                </div>
+                <div class="item item-avatar item-checkbox" >
+                    <img src="http://placehold.it/180x180">
+                    <div class="product-name">
+                        <div>Item Name</div>
+                        <span>Item Brand</span>
+                    </div>
+                    <div class="product-price">
+                        €0,00
+                    </div>
+                    <div class="item-actions">
+                        <button class="button button-clear mrs-button-transparent icon-plus icon button-addmore" on-hold="onHold($index, true)" ng-click="addQuantity($index); $event.stopPropagation();"></button>
+                        <div class="quantity">1</div>
+                        <button class="button button-clear mrs-button-transparent icon-minus icon button-remove" ng-if---="item.quantity > 0" ng-click="removeQuantity($index); $event.stopPropagation();"></button>
+                    </div>
+                    <label class="checkbox checkbox-input-hidden checkbox-circle">
+                        <input type="checkbox" ng-model="item.checked" ng-checked="selectAllBol" class="ng-pristine ng-untouched ng-valid" ng-change="countCheckbox(item.checked, $index)">
+                        <i class="checkbox-icon"></i>                    
+                    </label>
+                </div>                
+            </div>            
+        </div>
+
+
+
+        </ion-content>
+    </ion-pane>
+</body>
+</html> 
