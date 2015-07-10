@@ -58,6 +58,57 @@
 	img{
 		width: 100%;
 	}
+
+	&.mrs-grid-complex{
+		.col-title{		
+			width:120px;
+			height: 100%;
+			left:20px;
+			top:0;
+			padding:90px 0 0 0;		
+			text-align: center;
+			color: $light;
+			text-shadow: 1px 1px rgba(0,0,0,0.2);
+			font-size: $font-size-large;
+			line-height:$font-size-large - 1;	
+			.icon{
+				border: 1px solid $light;
+				display: block;
+				font-size: $icon-font-size-big;
+				padding: 4px;
+				position:absolute;
+				left:0;
+				right:0;
+				top:10px;
+				margin:auto;
+				max-width:70px;
+				max-height:70px;
+				min-height:70px;
+				color:$dark;
+			}		
+		}
+
+		.col-50 > .col-title{
+			height: 60px;	
+			width:100%;
+			left:0;
+			bottom:10px;
+			top:auto;
+			margin: 0;
+			padding:12px 0 0 60px;
+			text-align:left;
+			.icon{
+				font-size: $icon-font-size;
+				padding: 0px;
+				display: inline-block;
+				left:10px;
+				top:10px;
+				right:auto;
+				min-height:40px;
+				min-width:40px;
+			}		
+		}
+	}
 }
 
 
