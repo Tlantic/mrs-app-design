@@ -1,0 +1,63 @@
+.mrs-grid{
+	margin-top:20px;
+	.row{			
+		margin:0;
+		padding:0;
+		.col{			
+			@include box-sizing(border-box);
+			position:relative;			
+			padding:0;			
+			margin-bottom:5px;
+			min-height:40px;
+			max-height:165px;
+			overflow:hidden;
+			.row + .row{				
+				.col{
+					margin-bottom:0;					
+				}
+			}			
+		}	
+		.col-50{
+			margin-right:2px;		
+		}
+		.col-50 + .col-50{
+			margin-right:0;
+			margin-left:2px;
+		}
+	}
+	.row-tall{
+		.col{
+			max-height:160px;
+		}
+		.col-50{
+			max-height:325px;	
+		}
+	}
+	.col-title{
+		@include box-sizing(border-box);		
+		position:absolute;		
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 5px 10px;
+		text-transform: uppercase;
+		font-size: $font-size-base + 1;
+		line-height: $font-size-base + 1;
+		color:$light;
+		background-color:$brand-color;
+		&.image-background{
+			background-image:$appBackground-transparent;
+			background-repeat:no-repeat;
+			background-size: cover;
+			background-position: 0;
+			background-color:transparent;
+		}
+
+	}
+	img{
+		width: 100%;
+	}
+}
+
+
