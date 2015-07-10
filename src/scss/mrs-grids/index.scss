@@ -1,17 +1,18 @@
 //IONIC
 @import 
-"../../lib/ionic/scss/variables",
-"../../lib/ionic/scss/mixins",
-"../../lib/ionic/scss/grid",
-"../../lib/ionic/scss/scaffolding",
-"../../lib/ionic/scss/reset";
+'../../lib/ionic/scss/variables',
+'../../lib/ionic/scss/mixins',
+'../../lib/ionic/scss/grid',
+'../../lib/ionic/scss/scaffolding',
+'../../lib/ionic/scss/reset';
 
 //MRS VARIABLES AND MIXINS
 @import 
-"global-variables",
-"mrs-mixins/index",
-"global";
+'global-variables',
+'mrs-mixins/index',
+'global';
 
 //MRS MODULE
-@import "mrs-fonts/index";
-@import "mrs-grids/mrs-grids";
+@import 
+'mrs-fonts/index',
+'mrs-grids/mrs-grids';
