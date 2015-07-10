@@ -1,0 +1,51 @@
+/********* MODULE VARIABLES ************/
+$banner-height: 180px;
+/***************************************/
+
+.mrs-banner{		
+	@include box-shadow(rgba(0, 0, 0, 0.1) 0px 2px 4px 0px);
+	@include transition(all 0.3s cubic-bezier(0, 0.54, 0.73, 0.98));	
+	ion-slide{
+		height: 100%;	
+		max-height:$banner-height;
+		overflow:hidden;
+		line-height:0;
+	}
+	.slider-pager{
+		bottom:10px;
+		.slider-pager-page{
+			width: $slider-pager-size;
+			height: $slider-pager-size;
+			border-radius:20px;
+			background-color: $dark;
+			.icon{
+				display:none;
+			}
+		}
+	}
+
+	/*
+	*** INCLUIR ESTA CLASS EM LIST-INTORE  ***
+	&.list-instore-active{
+		padding-top: $list-instore-height;
+	}
+	******************************************
+	*/
+
+	
+}
+
+@media (min-width: 375px) {
+	.mrs-banner ion-slide{			
+		max-height:$banner-height * 2;
+	}
+ }
+ /*
+ *** INCLUIR ESTA CLASS EM LIST-INTORE  ***
+ .platform-ios.platform-cordova{
+	.banner-pub.list-instore-active{
+		padding-top: $list-instore-height + $ios-statusbar-height;
+	}
+}
+******************************************
+	*/	

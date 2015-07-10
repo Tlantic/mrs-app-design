@@ -1,0 +1,16 @@
+//IONIC
+@import 
+"../../lib/ionic/scss/variables",
+"../../lib/ionic/scss/mixins",
+"../../lib/ionic/scss/scaffolding",
+"../../lib/ionic/scss/reset",
+"../../lib/ionic/scss/slide-box";
+
+//MRS VARIABLES AND MIXINS
+@import 
+"global-variables",
+"mrs-mixins/index",
+"global";
+
+//MRS MODULE
+@import "mrs-banner/mrs-banner";
