@@ -150,6 +150,22 @@ hr{
 }
 
 
+.client-logo{
+	background-image: $brandLogo;
+	width: 100%;
+	min-height: 200px;
+	background-size: 180px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	.icon{
+		position: absolute;
+		right: 5px;
+		top: 5px;
+		font-size: $icon-font-size;
+		color: #FFF;
+	}
+}
+
 
 
 /************** PAGE CATEGORIES *************/
