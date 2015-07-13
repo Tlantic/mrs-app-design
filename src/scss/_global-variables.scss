@@ -1,5 +1,5 @@
 ///VARIAVEIS DE FONTS
-$font-path: "../../lib/fonts" !default;
+$font-path: "../lib/fonts" !default;
 $font-version: "1.0.2" !default;
 $font-family-sans-serif: "sans-serif-font";
 $font-family-serif: "serif-font";
@@ -15,11 +15,12 @@ $category-top-height: 185px;
 $subcategory-top-height: 150px;
 
 ///VARIAVEIS DE IMAGENS
-$brandLogo: url('../img/logoMonteserrat.png');
-$appBackground: url('../img/gradientBackground.svg');
-$appBackground-transparent:url('../img/backgroundTransparency.svg');
-$backgroundMenuItem: url('../img/bg-itemmenu.svg');
-$button-background-image:url('../img/buttonBackground.svg');
+$image-path: "img/" !default;
+$brandLogo: url('logoMonteserrat.png');
+$appBackground: url('gradientBackground.svg');
+$appBackground-transparent:url('backgroundTransparency.svg');
+$backgroundMenuItem: url('bg-itemmenu.svg');
+$button-background-image:url('buttonBackground.svg');
 
 ///VARIAVEIS DE CORES
 $base-color: #000;

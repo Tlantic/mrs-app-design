@@ -134,6 +134,13 @@
 	}
 }
 
+.mrs-button-small{
+	height: $button-height;
+	font-size: $font-size-base - 1;
+	text-transform:none;
+	background:transparent;
+	border:0;
+}
 .button-imageBackground{
 	background-image:$button-background-image;
 	background-repeat:no-repeat;

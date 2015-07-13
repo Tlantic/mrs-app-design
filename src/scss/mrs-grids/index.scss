@@ -8,10 +8,10 @@
 
 //MRS VARIABLES AND MIXINS
 @import 
-"../global-variables",
-"../mrs-mixins/index",
-"../global";
+'../global-variables',
+'../mrs-mixins/index',
+'../global';
 
 //MRS MODULE
-@import "../mrs-fonts/index";
-@import "mrs-grids";
+@import '../mrs-fonts/index';
+@import 'mrs-grids';
