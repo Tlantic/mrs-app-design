@@ -1,8 +1,10 @@
 .mrs-grid{
 	margin-top:20px;
+	font-family:$font-family-sans-serif;
 	.row{			
 		margin:0;
 		padding:0;
+
 		.col{			
 			@include box-sizing(border-box);
 			position:relative;			
@@ -11,6 +13,7 @@
 			min-height:40px;
 			max-height:165px;
 			overflow:hidden;
+			line-height:0;
 			.row + .row{				
 				.col{
 					margin-bottom:0;					
