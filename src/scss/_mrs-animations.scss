@@ -1,0 +1,12 @@
+.fade-in-animation{
+	opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in;
+       -moz-transition: opacity 0.3s ease-in;
+        -ms-transition: opacity 0.3s ease-in;
+         -o-transition: opacity 0.3s ease-in;
+            transition: opacity 0.3s ease-in;
+
+    &.visible{
+    	opacity: 1;
+    }
+}
