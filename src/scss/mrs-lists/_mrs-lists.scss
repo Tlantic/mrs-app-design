@@ -1,0 +1,354 @@
+.mrs-basic-list{
+	padding:10px;
+	.item{
+		position:relative;
+		padding-top:18px;
+		padding-bottom:18px;
+		padding-left:10px;
+		border:0;
+		border-bottom:solid 1px;
+		border-color: $border-color;
+		color:$dark;
+		background-color:transparent;
+		font-family: $font-family-sans-serif;
+		font-size:$font-size-large;
+		&.icon-right{
+			
+			label{
+				right:60px;
+			}
+			.icon{
+				@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+				@include calc(top, "50% - 22px");	
+				position: absolute;
+				right: 0px;
+				padding:5px;					
+				&:before{
+					font-size: $icon-font-size - 5;
+				}
+				&.activated{		
+					@include transform(scale(0.8));
+					opacity: 0.8!important;				
+				}
+			}
+		}
+	}
+	.item-name{
+		display:block;
+		line-height:normal;
+		white-space:normal;
+		padding-right:30px;
+	}
+}
+
+.checkbox{
+	.checkbox-icon{
+		&:before{
+			background: transparent;
+		}
+		&:after{
+			border-color:$brand-color;
+		}
+	}						
+	input:checked + .checkbox-icon:before{
+		background:transparent;
+		border:0;							
+	}		
+}
+
+.editable-list{	
+	.item{	
+		padding-left:60px;		
+		padding-top: 15px;
+		padding-bottom: 15px;		
+		label{		
+			display:none;
+		}	
+		.item-name{						
+			margin-left:-50px;
+			@include transform(translate3D(0px,0,0));						
+			@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		}
+	}
+	.item-avatar{
+		label{			
+			z-index:99;
+			padding: 45px 7px;
+  			margin-top: -60px;			
+		}
+	}
+	&.editMode{
+		.item{
+			label{
+				display:block;	
+			}
+			.item-name{
+				@include transform(translate3D(50px,0,0));								
+			}
+			.icon{
+				@include transform(translate3D(50px,0,0));				
+			}
+			img:first-child{
+				@include transform(translate3D(50px,0,0));				
+			}
+			.product-name{
+				@include transform(translate3D(50px,0,0));				
+			}
+			.product-price{
+				@include transform(translate3D(50px,0,0));				
+			}
+			.item-actions{
+				@include transform(translate3D(60px,0,0));				
+			}		
+		}
+	}	
+}
+
+.mrs-checkbox-list{
+	overflow:auto;
+	.item-checkbox{	
+	  	padding-bottom:30px;
+	  	padding-top:30px;		
+		&.right-icon{
+			padding-right:40px;
+			label{
+				right:40px;
+			}
+			.icon-right{
+				@include calc(top, "50% - 20px");
+				right: 0;
+				height:40px;
+				width:40px;
+				line-height:40px;
+				position: absolute;
+				font-size: $icon-font-size;
+				text-align:center;				
+				z-index:99;
+			}	
+		}
+
+		label{
+			.item-content{
+				display:block;					
+				position:absolute;
+				left:50px;
+				right:0;
+				top:0;
+				font-size:$font-size-base + 2;
+				.item-brand{
+					display:block;
+					min-height:10px;
+					font-size:$font-size-base - 1;
+				}
+				.lineThrough{
+					position: absolute;
+					top: 12px;
+					left:0;
+					right:100%;							
+					height: 1px;
+					border-top: 1px solid;
+				}
+			}	
+			input:checked  ~ .item-content{
+				opacity: 0.6;
+				.lineThrough{
+					@include transition(all 0.4s cubic-bezier(1, 0, 0, 0.82));
+					right:0px;
+				}
+			}		
+		}
+	}
+}
+
+
+.item-divider{
+	padding: 10px 15px;
+	font-size: $font-size-base + 1 ;
+}
+
+.product-list{
+	.item{
+		margin:10px 5px;
+		img:first-child{
+			@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		}
+		&.item-avatar{
+			padding-left:105px!important;
+			min-height: 115px!important;
+			max-height: 115px!important;
+			padding-right: 60px;	
+			img:first-child{
+				max-width: 90px;
+				max-height: 90px;
+				height: auto;
+				top: 50%;
+				left: 10px;
+				margin-top: -45px;
+			}
+		}
+		&.item-complex{
+			background-color:darken($light, 5%);
+		}
+	}
+	.product-name{
+		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		font-size: $font-size-base ;
+		font-weight: $font-regular;
+		line-height: $font-size-base;
+		white-space: normal;
+		>div{
+			max-height: 29px;
+  			overflow: hidden;
+		}			
+		span{
+			display:block;
+			font-size: $font-size-base - 2;
+			font-weight: $font-light;				
+			line-height: $font-size-base + 5px;
+		}
+	}
+	.product-price{
+		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		position: absolute;				
+		bottom:20px;			
+		color: $brand-color-primary;
+	}
+
+	.item-actions{
+		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		position:absolute;
+		right: 0px;
+		top: 10px !important;
+		bottom: 10px;
+		max-width:60px;
+		border-left: 1px solid $border-color;
+		z-index: 99;
+		text-align: center;	
+		.quantity{
+			color:$brand-color-primary;
+		}		
+	}	
+
+	&.dual-column{
+		.row{
+			height: 255px;
+			margin-bottom: 20px;
+			.col{
+				position: relative;
+				padding:0;
+				margin-right: 5px;
+				background-color:$light;
+				border:solid 1px lighten($dark, 60%);
+				&:first-child{
+					margin-right: 5px;
+				}											
+			}
+		}
+		.product-name{
+			padding: 0 10px;
+		}
+		.product-thumb{
+			width: 110px;
+			height: 95px;
+			margin: 20px auto;
+			img{
+				height: 95px;
+			}
+		}
+		.product-price{
+			position: absolute;
+			left: 10px;
+			bottom: 45px;
+			font-size: $font-size-base + 2;
+		}	
+	}
+}
+
+
+.item-actions-vertical{
+	.button{	
+		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+	}
+	.button-add{
+		top:-5px;
+	}
+	.button-remove{
+		top: -6px;
+		z-index: -1;
+		visibility: hidden;
+	}
+	.addButtonAnim{
+		top:30px;			
+	}
+	.removeButtonAnim{
+		top:0;
+		visibility: visible;
+	}
+}
+
+.item-actions-horizontal{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 35px;
+	border-top: 1px solid rgba(234, 234, 234, 0.5);
+	text-align: center;
+	.button{
+		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		position: absolute;
+		top: -2px;
+		width: 40px;
+		min-width: 40px;
+		&.button-add{
+			right: 0;	
+			color: $dark;				
+		}
+	}
+	span{
+		color: $brand-color-primary;
+		font-size: $font-size-base +2;
+		line-height:35px;
+	}
+
+	.button-remove{
+		@include transform(translate3D(0, 0, 0));
+		visibility: visible;
+		left: 0;
+		padding-bottom: 0;
+	}
+	.addButtonAnim{
+		@include transform(translate3d(-22px, 0, 0) !important);
+		color:$brand-color-primary;
+		padding:0;
+		&:before{
+			font-size:$icon-font-size;
+		}	
+	}
+	.removeButtonAnim{
+		@include transform(translate3D(45px, 0, 0));
+		visibility: hidden;
+	}	
+}
+
+.empty-state{
+	font-size: $font-size-base +2;
+	font-weight:$font-light;
+	color:lighten($dark, 20%);
+	text-align:center;
+	padding-top:20px;
+	.icon{
+		font-size: $icon-font-size-big * 2;
+		display:block;
+		text-align: center;
+	}
+}
+
+.product-thumb{
+	overflow: hidden;
+	img{
+		width: auto;
+	}
+}
+
+
