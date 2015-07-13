@@ -36,10 +36,21 @@ var SETTINGS = {
       path: ['./src/img/**']
     },
     dist: {
-      path: './dist/img'
+      path: ['./dist/css/img', './dist/scss/img']
     },
     watch: {
       path: ['./src/img/**']
+    }
+  },
+  lib: {
+    src: {
+      path: ['./src/lib/**']
+    },
+    dist: {
+      path: ['./dist/css/lib', './dist/scss/lib']
+    },
+    watch: {
+      path: ['./src/lib/**']
     }
   }
 };
@@ -48,11 +59,12 @@ var SETTINGS = {
 // Tasks ---------------
 
 gulp.task('default', ['build', 'watch']);
-gulp.task('build', ['scss', 'img']);
+gulp.task('build', ['scss', 'img', 'lib']);
 
 gulp.task('watch', function() {
   gulp.watch(SETTINGS.scss.watch.path, ['scss']);
   gulp.watch(SETTINGS.img.watch.path, ['img']);
+  gulp.watch(SETTINGS.lib.watch.path, ['lib']);
 });
 
 
@@ -70,16 +82,21 @@ gulp.task('clean:img', function() {
   return gulp.src(SETTINGS.img.dist.path, {read: false}).pipe(clean({force: true}));
 });
 
+gulp.task('clean:lib', function() {
+  return gulp.src(SETTINGS.lib.dist.path, {read: false}).pipe(clean({force: true}));
+});
+
 
 // Sass ---------------
 
 gulp.task('scss', ['scss:lint', 'scss:scss', 'scss:css']);
 
-gulp.task('scss:lint', function() {
+gulp.task('scss:lint', function(done) {
   
-  return gulp
+  gulp
     .src(SETTINGS.scss.src.path)
-    .pipe(scsslint());
+    .pipe(scsslint())
+    .on('end', done);
     
 });
 
@@ -102,30 +119,44 @@ gulp.task('scss:css', ['clean:css'], function() {
       var fileName = path.basename(file.relative.split(path.sep).slice(-2).shift(), '.scss');
       
       return stream
+        .pipe(sass({
+          outputStyle: 'nested'  
+        }))
         .pipe(rename({
           dirname: '',
           basename: fileName,
           extname: '.css'
-        }));
-    }))
-    // Sass files
-    .pipe(sass.sync().on('error', sass.logError))
-    // Output to dist folder
-    .pipe(gulp.dest(SETTINGS.scss.dist.css.path));
+        }))
+        .pipe(gulp.dest(SETTINGS.scss.dist.css.path));
+    }));
     
 });
 
 
 // Images ---------------
 
-gulp.task('img', ['clean:img'], function() {
+gulp.task('img', ['clean:img'], function(done) {
   
-  return gulp
-    .src(SETTINGS.img.src.path)
-    .pipe(imagemin({
-      // No options
-      // See https://www.npmjs.com/package/gulp-imagemin
-    }))
-    .pipe(gulp.dest(SETTINGS.img.dist.path));
+  for(var k in SETTINGS.img.dist.path)
+    gulp
+      .src(SETTINGS.img.src.path)
+      .pipe(imagemin({
+        // No options
+        // See https://www.npmjs.com/package/gulp-imagemin
+      }))
+      .pipe(gulp.dest(SETTINGS.img.dist.path[k]));
+      
+  done();
+});
+
+// Lib ---------------
+
+gulp.task('lib', ['clean:lib'], function(done) {
   
+  for(var k in SETTINGS.lib.dist.path)
+    gulp
+      .src(SETTINGS.lib.src.path)
+      .pipe(gulp.dest(SETTINGS.lib.dist.path[k]));
+  
+  done();
 });
