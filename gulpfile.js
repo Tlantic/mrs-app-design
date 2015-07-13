@@ -36,7 +36,7 @@ var SETTINGS = {
       path: ['./src/img/**']
     },
     dist: {
-      path: ['./dist/css/img', './dist/scss/img']
+      path: ['./dist/img']
     },
     watch: {
       path: ['./src/img/**']
@@ -47,7 +47,7 @@ var SETTINGS = {
       path: ['./src/lib/**']
     },
     dist: {
-      path: ['./dist/css/lib', './dist/scss/lib']
+      path: ['./dist/lib']
     },
     watch: {
       path: ['./src/lib/**']
