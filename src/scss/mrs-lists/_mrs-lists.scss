@@ -351,4 +351,18 @@
 	}
 }
 
+.item-accordion {
+  	transition: 0.09s all linear;
+	padding: 10px;
+	background-color:lighten($brand-color, 55%);
+	color: lighten($base-color, 20%);
+}
+.item-accordion.ng-hide {
+  	line-height: 0px;
+}
+.item-accordion.ng-hide-add,
+.item-accordion.ng-hide-remove {
+  	display: block !important;
+}	
+
 

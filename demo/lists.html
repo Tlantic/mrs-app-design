@@ -288,7 +288,21 @@
                         <button class="button button-clear icon icon-plus button-add"  on-hold="onHold($index*2 +1)" ng-click="addQuantity($index*2 +1); $event.stopPropagation()"></button>       
                     </div>
                 </div>
-            </div>            
+            </div>           
+
+
+            <!-- ITEM ACCORDION -->
+            <!-- VERIFICAR FUNCIONALIDADE -->
+            <div class="list-subcategories">
+                <div>
+                    <ion-item ng-click="toggleSubCategory(subCategory)" ng-class="{active : subCategory.selected }">
+                        <div>Categoria</div>
+                    </ion-item>
+                    <ion-item class="item-accordion selected" _ng-show="subCategory.selected" ng-click="goToProducts(item)">
+                        <div>SUB CATEGORIA 1</div>
+                    </ion-item>
+                </div>
+            </div> 
 
 
 
