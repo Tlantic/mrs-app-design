@@ -4,7 +4,6 @@
 	.row{			
 		margin:0;
 		padding:0;
-
 		.col{			
 			@include box-sizing(border-box);
 			position:relative;			
@@ -27,6 +26,9 @@
 			margin-right:0;
 			margin-left:2px;
 		}
+	}
+	.row + .row{
+		margin:0;
 	}
 	.row-tall{
 		.col{
