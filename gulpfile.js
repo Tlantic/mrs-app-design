@@ -6,7 +6,8 @@ var gulp = require('gulp'),
     imagemin = require('gulp-imagemin'),
     foreach = require('gulp-foreach'),
     path = require('path'),
-    scsslint = require('gulp-scss-lint');
+    scsslint = require('gulp-scss-lint'),
+    csso = require('gulp-csso');
 
 // Settings ---------------
 
@@ -122,6 +123,7 @@ gulp.task('scss:css', ['clean:css'], function() {
         .pipe(sass({
           outputStyle: 'nested'  
         }))
+        .pipe(csso())
         .pipe(rename({
           dirname: '',
           basename: fileName,
