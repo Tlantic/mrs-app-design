@@ -177,3 +177,9 @@
 	}
 }
 
+
+.toggle input:checked + .track{
+	background-color:$brand-color;
+	border-color:$brand-color;
+}
+
