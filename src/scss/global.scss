@@ -85,12 +85,14 @@
 		background-color:transparent;
 	}
 }
+/*
 .has-tabs{
 	top:45px;
 }
 .has-footer{
 	bottom: 49px;	
 }
+*/
 .has-subheader{
 	top:$bar-height * 2!important;
 }
@@ -129,10 +131,6 @@ hr{
 	color: $light;
 	position: absolute !important;
 	background-color:$badge-color!important;
-}
-.toggle input:checked + .track{
-	background-color:$brand-color;
-	border-color:$brand-color;
 }
 
 .activated{
