@@ -115,3 +115,31 @@
 }
 
 
+
+.mrs-grid-menu{
+	font-family:$font-family-sans-serif;
+	.row{
+		padding:0;
+		margin-bottom:20px;	
+		.col{
+			padding: 15px;
+			text-align: center;
+			min-height:110px;
+			margin:0;
+			.icon{
+				display:block;
+				margin:0 auto;
+				font-size: $icon-font-size-big;
+			}
+			/*background: rgba(255,255,255,0.3);*/			
+			&:first-child{
+				background: rgba(255,255,255,0.1);
+			}
+			&:first-child + div{
+				background: rgba(255,255,255,0.2);
+			}
+		}
+	}
+
+}
+
