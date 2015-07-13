@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="lib/ionic/js/ionic.bundle.js"></script>
-  <script type="text/javascript">angular.module('starter', ['ionic']);</script>
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script type="text/javascript">angular.module('starter', ['ionic']);</script>
 
     <link rel="stylesheet" href="../dist/css/mrs-forms.css">
 </head>
@@ -53,6 +53,31 @@
                 <p class="lightText">A nova senha será enviada para o email cadastrado<br/></p>
             </div>
                
+            <br/>
+            <br/>
+            <!-- START MODULE: SEARCH BAR  -->             
+            <div class="mrs-form-wrapper search-bar darkBackground">
+                <div class="row">
+                    <div class="search-item light-input col col-80">
+                        <input class="round-square" ng-model="searchText.value" type="search" ng-keyup="$event.keyCode == 13 ? goToSearch() : null" placeholder='Pesquisa'>
+                        <button class="button button-icon button-clear icon-search" ng-click="goToSearch()"></button>
+                    </div>
+                    <div class="icon icon-barcode" ng-click="goToBarcodeScaner()"></div>
+                </div>
+            </div>          
+
+
+            <!-- START MODULE: SEARCH BAR  -->             
+            <div class="mrs-form-wrapper search-bar darkBackground">
+                <div class="row">
+                    <div class="search-item col">
+                        <input class="" ng-model="searchText.value" type="search" ng-keyup="$event.keyCode == 13 ? goToSearch() : null" placeholder='Pesquisa'>
+                        <button class="button button-icon button-clear icon-search" ng-click="goToSearch()"></button>
+                    </div>
+                </div>
+            </div>
+                <!-- END MODULE -->
+
            
         </ion-content>
     </ion-pane>
