@@ -14,9 +14,8 @@
 	@include transition(transform 0.2s ease);
 	font-family:$font-family-sans-serif!important;
 	text-transform:uppercase;
-	line-height: $button-bar-button-height;
+	line-height: $button-height;
 	background-color:$brand-color;
-	
 	&:after{
 		font-family: $font-icons;
 	}
@@ -99,6 +98,13 @@
 		padding: 1px 6px;
 		right: 0;
 	}
+	.icon{	
+		display:inline-block;
+		vertical-align:middle;
+		&:before{
+			font-size: $icon-font-size-big - 10;
+		}
+	}
 }
 
 .mrs-button-transparent{
@@ -127,11 +133,9 @@
 }
 
 .mrs-button-big{
-	height: $button-height + 15;
+	height: $button-height + 15;	
 	font-size: $font-size-base + 2;
-	.icon:before{
-		font-size: $icon-font-size-big - 10;
-	}
+	line-height: $button-height + 15;	
 }
 
 .mrs-button-small{
