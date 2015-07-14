@@ -15,7 +15,7 @@ $category-top-height: 185px;
 $subcategory-top-height: 150px;
 
 ///VARIAVEIS DE IMAGENS
-$image-path: "img/" !default;
+$image-path: "../img/" !default;
 $brandLogo: url($image-path + 'logoMonteserrat.png');
 $appBackground: url($image-path +  'gradientBackground.svg');
 $appBackground-transparent:url($image-path + 'backgroundTransparency.svg');
