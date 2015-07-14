@@ -98,7 +98,10 @@ hr{
 }
 .round-square{
   border-radius:100px!important; 
+ 
+  /*
   border:1px solid rgba(255, 255, 255, 0.3)!important;
+  */
 }
 /*
 .pane{
@@ -172,6 +175,105 @@ hr{
 		color: #FFF;
 	}
 }
+
+.item-actions{	
+	.button-addfirst{
+	}
+	.button-add{
+	}
+	.button-remove{
+	}
+	span{
+		@include fontfamily();
+		color: $brand-color-primary;
+	}
+}
+
+.item-actions-vertical{
+	.button{	
+		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+	}
+	.button-addfirst{
+	}
+	.button-add{
+		top:-5px;
+	}
+	.button-remove{		
+		visibility: hidden;
+	}
+	.addButtonAnim{
+		top:30px;			
+	}
+	.removeButtonAnim{
+		visibility: visible;
+	}
+}
+
+.item-actions-horizontal{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 40px;
+	border-top: 1px solid rgba(234, 234, 234, 0.5);
+	text-align: center;
+	
+	span{		
+		font-size: $font-size-base +2;
+		line-height:40px;
+	}
+	.button{
+		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		position: absolute;
+		min-height:40px;
+		height:40px;
+		line-height:40px;		
+	}
+	.button-addfirst{
+		@include calc(left, "50% - 30px");
+	}
+	.button-add{
+		right: 0;		
+	}	
+	.button-remove{
+		@include transform(translate3D(0, 0, 0));
+		visibility: visible;
+		left: 0;
+		padding-bottom: 0;
+	}
+	.addButtonAnim{
+		@include transform(translate3d(0, 0, 0) !important);
+	}
+	.removeButtonAnim{
+		@include transform(translate3D(45px, 0, 0));
+		visibility: hidden;
+	}	
+	&.item-actions-horizontal-big{
+		position:relative;
+		height: 60px;
+  		padding: 10px 0;
+		.button{
+			&:before{
+				font-size: $icon-font-size-big;
+			}
+			&.button-add{							
+				right: 40px;	
+			}
+			&.button-remove{
+				left:40px;
+			}
+		}
+
+		span{
+			font-size: $font-size-large + 10;
+			line-height: 40px;
+		}		
+	}
+}
+
+
+
+
 /*
 .slidedown-help{
 	position: absolute;
@@ -816,6 +918,146 @@ hr{
 	font-size:$font-size-base - 4;
 	line-height:$font-size-base - 1;
 }
+
+
+// PRICE STYLES
+.item-price{
+	color: $brand-color-primary;
+	font-size:$font-size-large + 6;
+	font-weight: $font-regular;
+	span{
+		font-size: $font-size-base;
+		color: lighten($base-color, 70%);
+		display: block;
+		text-decoration: line-through;
+	}
+}
+
+
+#details-top{
+	@include fontfamily(sans);
+	.row{
+		position:relative;
+		padding:10px;		
+	}
+	.item-photo{
+		margin-bottom:40px;
+		img{
+			width: auto;
+			max-height:200px;
+			margin:0 auto;
+		}
+	}
+	.item-name{
+		font-size: $font-size-base + 2;
+		font-weight: $font-regular;
+		width:100%;
+		span{
+			display:block;
+			color:lighten($textColor, 20%);	
+			font-size: $font-size-base + 1;
+		}
+	}
+	.item-price{
+		min-width:80px;
+		text-align:right;
+	}
+	.item-description{
+		margin-bottom:20px;
+		color:$textColor;
+	}
+}
+
+.item-secondary-actions{
+	position: absolute;
+	bottom:0;
+	margin: 0;
+}	
+
+
+
+.details-modal{
+	@include transform(translate3d(0px, 100%, 0px));
+	@include transition(all 0.5s ease);
+	position: absolute;
+	z-index: $z-index-popup + 2;
+	top: 100%;
+	bottom:0;
+	left: 0;
+	right: 0;
+	color:$dark;
+	font-size:$font-size-base - 2;
+	height:100%;
+
+	.close-modal{
+		background-color: transparent;
+		top: $bar-height;
+		width: 100%;
+		height:100%;
+		.icon{
+			@include box-shadow(rgba(0,0,0,0.4) 0px 0px 10px);
+			display: block;
+			position: absolute;
+			top: 130px;
+			left: 50%;
+			width: 60px;
+			height: 60px;
+			background-color: $light;
+			margin-left: -30px;
+			color: $dark;
+			font-size: $icon-font-size-big;
+			border-radius:40px;
+			text-align:center;
+			line-height:60px;
+		}
+	}
+
+	.wrapper{
+		position:absolute;
+		left: 0;
+		top: $bar-height * 5;
+		right: 0;
+		bottom: 0!important;
+		background-color:$light;
+		z-index: $z-index-popup;
+		display:block;
+	}
+	&.open{
+		top: 0px;
+		@include transform(translate3d(0px, 0px, 0px));
+		@include transition(transform 0.2s ease);
+	}
+	&.share-modal{
+		&.open{
+			top: 65%;
+		}
+		.wrapper{
+			top:0;
+			color: $light;
+			background-color:darken($dark, 15%);
+			.item{
+				color: $light;
+				font-size: $font-size-base + 2;
+				text-transform: uppercase;
+				font-weight: $font-light;
+				border:0;
+				background-color:transparent;			
+
+			}
+		}
+	}
+}
+
+.infodetails-backdrop{
+	@extend .modal-dropdown-backdrop;
+	display:none!important;
+	&.open{
+		display: block!important;
+		z-index: $z-index-backdrop + 2;
+	}
+}
+
+
 
 
 //PLATFORM

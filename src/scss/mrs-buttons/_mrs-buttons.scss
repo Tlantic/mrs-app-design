@@ -55,22 +55,16 @@
 		}
 	}
 
-	&.button-add{
-		background-color:transparent;
+	&.button-addfirst{
 		color:$brand-color-primary;
-		padding:0;				
-		&.button-add-small{
-			min-width: 34px;
-			min-height: 34px;
-			width: 34px;
-			height: 34px;			
-		}
-		&:before{			
+		padding:0;
+		max-width:60px;
+		&:before{
 			font-size:$icon-font-size;
-		}
+		}			
 	}
 
-	&.button-addmore{
+	&.button-add{
 		color:$dark;
 		&:before{
 			font-size:$icon-font-size;
