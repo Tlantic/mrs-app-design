@@ -809,6 +809,13 @@ hr{
 	}	
 }
 
+.appversion{
+	display:block;
+	text-align:center;
+	color:lighten($base-color, 40%);
+	font-size:$font-size-base - 4;
+	line-height:$font-size-base - 1;
+}
 
 
 //PLATFORM

@@ -372,3 +372,31 @@
 }	
 
 
+.mrs-settings-list{
+	padding:0;
+	
+	.item{
+		font-size: $font-size-base;
+		background: rgba(255,255,255,0.6);
+		border:none;
+		&:first-child{
+			margin-top: 15px;
+		}
+		&.border-bottom{
+			border-bottom:1px solid rgba(195,195,195,0.5);
+			margin-bottom: 1px;
+		}	
+	}
+	
+	.item-divider{
+		font-weight:$font-light;
+		font-size:$font-size-base;
+		text-transform:uppercase;
+		background: transparent !important;
+		margin-top:10px;
+		&:first-child{
+			border-top:none;
+		}
+	}
+}
+
