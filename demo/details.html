@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script type="text/javascript">angular.module('starter', ['ionic']);</script>
+
+  <link rel="stylesheet" href="../dist/css/mrs-grids.css">
+  <link rel="stylesheet" href="../dist/css/mrs-buttons.css">
+
+</head>
+<body ng-app="starter">
+    <ion-pane>
+      <ion-content>
+      <!-- DETAILS TOP -->
+        <div id="details-top">
+            <div class="row item-photo">
+                    <img src="http://placehold.it/600x400" width="100%" height="100%">
+            </div>
+
+            <div class="row">
+                <div class="item-name">
+                        Product Name
+                        <span>Product Brand</span>
+                </div>
+                <div class="item-price">
+                        €9,99
+                </div>
+            </div>
+            <div class="row">
+                <div class="item-description">
+                    Homer no function beer well without. I was saying "Boo-urns." Kids, we need to talk for a moment about Krusty Brand Chew Goo Gum Like Substance.
+
+                </div>
+            </div>
+
+            <div class="row">
+
+              <div class="item-actions item-actions-horizontal item-actions-horizontal-big">                
+              
+                  <button class="button button-clear mrs-button-transparent round-squareicon icon-minus button-remove"></button>
+                  <span>99</span>
+                  <button class="button button-clear mrs-button-transparent round-square icon icon-plus button-add" ></button>       
+                  
+                  <!--
+                  <button class="button button-clear mrs-button-transparent round-square icon icon-plus button-addfirst addButtonAnim"></button>   
+                  -->
+              </div>
+<!--
+              <div class="item-actions-horizontal">                
+                  <button class="button button-clear icon icon-minus"  ng-class="{'removeButtonAnim':!products[$index].quantity, 'button-remove':products[$index].quantity}" ng-click="removeQuantity($index); $event.stopPropagation()"></button>
+                  <span ng-if="products[$index].quantity > 0">99</span>
+                  <button class="button button-clear icon icon-plus"  on-hold="onHold($index)" ng-class="{'addButtonAnim' : !products[$index].quantity, 'button-add' : products[$index].quantity > 0}" ng-click="addQuantity($index); $event.stopPropagation()"></button>       
+              </div>
+              -->
+
+<!--
+                <div class="item-actions-horizontal">                
+                    <button class="button button-clear icon icon-minus button-remove"  ng-class--="{'removeButtonAnim':!product.quantity}" ng-click="removeQuantity(detailsActiveSlide); $event.stopPropagation()"></button>
+                    <span ng-if="product.quantity > 0">99</span>
+                    <button class="button button-clear icon icon-plus"  on-hold="onHold(detailsActiveSlide)" ng-class--="{'addButtonAnim' : !product.quantity, 'button-add' : product.quantity > 0}" ng-click="addQuantity(detailsActiveSlide); $event.stopPropagation()"></button>       
+                </div>
+
+                -->
+            </div>
+        </div>
+
+        <div class="mrs-grid mrs-grid-menu darkerBackground">
+            <div class="row">
+                <div class="col" ng-click="goToFlyers()">
+                    <i class="icon icon-share"></i>
+                    E-mail
+                </div>
+                <div class="col" ng-click="openSettings()">
+                    <i class="icon icon-share"></i>
+                    SMS
+                </div>
+                <div class="col" ng-click="openSettings()">
+                    <i class="icon icon-share"></i>
+                    Facebook
+                </div>                    
+            </div>
+        </div>
+
+
+        <!-- -->
+        <!-- DETAILS INFO -->
+        <!--
+        <div class="item-secondary-actions row">           
+            <div class="col" ng-click="showShare({{ product.id }})">
+                <i class="icon icon-share"></i><br/>
+                PARTILHAR
+            </div>
+        </div>
+        -->
+    <!-- -->
+      </ion-content>
+    </ion-pane>
+</body>
+</html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
   <script src="lib/ionic/js/ionic.bundle.js"></script>
   <script type="text/javascript">angular.module('starter', ['ionic']);</script>
 
@@ -9,13 +10,11 @@
 <body ng-app="starter">
     <ion-pane class="imageBackground">
      
-    <ion-content class="lighterBackground">
+      <ion-content class="lighterBackground">
         <div class="list mrs-basic-list mrs-settings-list">
             <div class="item item-divider">
                 ITEM DIVIDER
-            </div>
-
-               
+            </div>               
             <div class="item item-toggle border-bottom">
                Setting
                 <label class="toggle">
@@ -41,23 +40,18 @@
                 Option Parent 1
                 <i class="icon icon-arrow-right"></i>
             </div>
-              <div class="item icon-right"  ng-click="editPersonal()">
+            <div class="item icon-right"  ng-click="editPersonal()">
                 Option Parent 2
                 <i class="icon icon-arrow-right"></i>
-            </div>
-                                                       
-   
-            <div class="item item-divider">
-            </div>
-            <!--    <div class="item" ng-click="loginSettings()">
-     {{ "authentication.login.header" | i18n }}</div> -->
-            <div class="item" ng-click="logoutSettings()">
-                Logout</div>
+            </div>                                                      
+            <div class="item item-divider"></div>
+
+            <div class="item" ng-click="logoutSettings()">Logout</div>
         </div>
+
         <div class="appversion">APP NAME<br/>BETA VERSION v0.2.8</div>
 
-
-    </ion-content>
+      </ion-content>
     </ion-pane>
 </body>
 </html>
