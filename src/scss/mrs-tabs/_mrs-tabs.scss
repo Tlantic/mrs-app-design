@@ -4,21 +4,17 @@
 		@include transform(translate3d(0px, 0, 0px));
 		background-color:rgba(0,0,0,0.3);	
 		color:$light;
-		/*
-		height:48px;
-		*/
 		border: 0;
 		border-color: transparent;
 		border-top: transparent;
 		border-bottom: transparent;
 		background-image: none !important;	
-
+		/*height:48px;*/
 		
 		.tab-item{
-			/*
-			position: relative;
-			opacity:1;
+			position: relative;			
 			border:0;
+			/* opacity:1; */
 			&:before{
 				@include transition(all 0.3s cubic-bezier(0.575, 0.885, 0.520, 1.275));
 				position: absolute;
@@ -31,16 +27,16 @@
 				border-radius: 50px 50px 0 0;
 				transform: translateY(65px);
 				-webkit-transform: translateY(65px);
-		*/
-				/*
+		
 				background-image: $backgroundMenuItem;
 				background-repeat: no-repeat;
 				background-size: cover;
 				background-position: 0 0;			
-				*/
-			/*
+				
 			}
-			span{
+			span{		
+				position:relative;
+				/*
 				display:block;
 				position:absolute;
 				left:0;
@@ -49,8 +45,9 @@
 				text-align:center;
 				font-size:$font-size-base - 2;
 				color: transparentize($light, 0.2);
+				*/
 			}
-			*/
+			
 			i{
 				line-height:32px!important;
 				position: relative;
@@ -61,12 +58,11 @@
 			.badge{			
 				line-height:16px!important;			
 			}
-			&.active{			
+			&.tab-item-active{			
 				overflow: visible;
 				i{
 					text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 				}
-					                
 				&:before{
 					transform: translateY(0px);
 					-webkit-transform: translateY(0px);				
