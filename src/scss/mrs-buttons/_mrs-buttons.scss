@@ -150,5 +150,8 @@
 	background-repeat:no-repeat;
 	background-position: center;
 	background-size:110%;
+	&.background-cover{
+		background-size:cover;
+	}
 }
 
