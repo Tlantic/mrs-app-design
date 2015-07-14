@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script type="text/javascript">angular.module('starter', ['ionic']);</script>
+
+  <link rel="stylesheet" href="../dist/css/mrs-lists.css">
+</head>
+
+<body ng-app="starter" >
+    <ion-pane>
+    <!-- START MODULE: quick-list + MRS-CHECKBOX-LISTS -->
+            <div class="mrs-quick-list imageBackground listOpen" ng-if---="basket.itemsLength > 0" -- ng-class---="{'listOpen': listOpen}">
+                <div class="quick-list-header">               
+                    <i class="icon icon-list" ></i>                
+                    Tem <strong>99</strong> artigos na lista de compras
+                    <button class="button round-square mrs-button-light" id="toggleButton" ng-click="openCloseList()">INICIAR COMPRA</button>
+                </div>
+
+                <div class="list mrs-checkbox-list quick-list-content darkerBackground ">
+                
+                    <div class="item item-checkbox ng-valid right-icon lightText" ng-repeat--="item in basket.items">
+                        <label class="checkbox checkbox-input-hidden checkbox-circle">
+                            <input type="checkbox" ng-model="item.checked" ng-checked="item.checked" class="ng-pristine ng-untouched ng-valid">
+                            <i class="checkbox-icon"></i>                    
+                            <div class="item-content">
+                                <strong >2x</strong> Item Name
+                                <span class="item-brand">Item Brand</span>
+                                <span class="lineThrough"></span>
+                            </div>
+                        </label>
+                        <i class="icon-right icon-info" ng-click="openDetailPop($index)"></i>
+                    </div>
+
+                    <div class="item item-checkbox ng-valid right-icon lightText" ng-repeat--="item in basket.items">
+                        <label class="checkbox checkbox-input-hidden checkbox-circle">
+                            <input type="checkbox" ng-model="item.checked" ng-checked="item.checked" class="ng-pristine ng-untouched ng-valid">
+                            <i class="checkbox-icon"></i>                    
+                            <div class="item-content">
+                                <strong >2x</strong> Item Name
+                                <span class="item-brand">Item Brand</span>
+                                <span class="lineThrough"></span>
+                            </div>
+                        </label>
+                        <i class="icon-right icon-info" ng-click="openDetailPop($index)"></i>
+                    </div>
+
+                    <div class="item item-checkbox ng-valid right-icon lightText" ng-repeat--="item in basket.items">
+                        <label class="checkbox checkbox-input-hidden checkbox-circle">
+                            <input type="checkbox" ng-model="item.checked" ng-checked="item.checked" class="ng-pristine ng-untouched ng-valid">
+                            <i class="checkbox-icon"></i>                    
+                            <div class="item-content">
+                                <strong >2x</strong> Item Name
+                                <span class="item-brand">Item Brand</span>
+                                <span class="lineThrough"></span>
+                            </div>
+                        </label>
+                        <i class="icon-right icon-info" ng-click="openDetailPop($index)"></i>
+                    </div>
+
+                    <div class="item item-checkbox ng-valid right-icon lightText" ng-repeat--="item in basket.items">
+                        <label class="checkbox checkbox-input-hidden checkbox-circle">
+                            <input type="checkbox" ng-model="item.checked" ng-checked="item.checked" class="ng-pristine ng-untouched ng-valid">
+                            <i class="checkbox-icon"></i>                    
+                            <div class="item-content">
+                                <strong >2x</strong> Item Name
+                                <span class="item-brand">Item Brand</span>
+                                <span class="lineThrough"></span>
+                            </div>
+                        </label>
+                        <i class="icon-right icon-info" ng-click="openDetailPop($index)"></i>
+                    </div>
+
+                    <div class="item item-checkbox ng-valid right-icon lightText" ng-repeat--="item in basket.items">
+                        <label class="checkbox checkbox-input-hidden checkbox-circle">
+                            <input type="checkbox" ng-model="item.checked" ng-checked="item.checked" class="ng-pristine ng-untouched ng-valid">
+                            <i class="checkbox-icon"></i>                    
+                            <div class="item-content">
+                                <strong >2x</strong> Item Name
+                                <span class="item-brand">Item Brand</span>
+                                <span class="lineThrough"></span>
+                            </div>
+                        </label>
+                        <i class="icon-right icon-info" ng-click="openDetailPop($index)"></i>
+                    </div>
+
+                    <div class="item item-checkbox ng-valid right-icon lightText" ng-repeat--="item in basket.items">
+                        <label class="checkbox checkbox-input-hidden checkbox-circle ">
+                            <input type="checkbox" ng-model="item.checked" ng-checked="item.checked" class="ng-pristine ng-untouched ng-valid">
+                            <i class="checkbox-icon"></i>                    
+                            <div class="item-content">
+                                <strong >2x</strong> Item Name
+                                <span class="item-brand">Item Brand</span>
+                                <span class="lineThrough"></span>
+                            </div>
+                        </label>
+                        <i class="icon-right icon-info" ng-click="openDetailPop($index)"></i>
+                    </div>                                        
+                </div>
+
+                <button class="button bottom-button" ng-click="goToListPage()"> 
+                    <i class="icon icon-edit"></i>
+                    EDITAR LISTA
+                </button>
+            </div>
+            <!-- END MODULE -->
+        <ion-content>
+        
+            
+        </ion-content>
+    </ion-pane>
+</body>
+</html> 
