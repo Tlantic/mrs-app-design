@@ -1,4 +1,18 @@
 ///MIXINS
+
+@mixin fontfamily($font-type:'sans') {
+   @if $font-type == 'sans' {
+	font-family: $font-family-sans-serif;
+   } @else if $font-type == 'serif'{
+	font-family: $font-family-serif;
+   }
+   @else if $font-type == 'icons'{
+ 	font-family: $font-icons;   
+   }
+}
+
+
+
 @mixin calc($property, $expression) { 
   #{$property}: -webkit-calc(#{$expression}); 
   #{$property}: calc(#{$expression}); 
@@ -22,6 +36,7 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
 
 
 @mixin gradient ($color1, $color2){
