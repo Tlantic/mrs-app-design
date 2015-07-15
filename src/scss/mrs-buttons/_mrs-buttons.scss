@@ -38,7 +38,6 @@
 	&.activated{		
 		@include transform(scale(0.97));
 		opacity: 0.8!important;
-		background-color:$brand-color;
 	}
 
 	&.button-close{
