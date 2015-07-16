@@ -221,17 +221,6 @@
 
 	.item-actions-vertical{
 		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
-		position:absolute;
-		right: 0px;
-		top: 10px !important;
-		bottom: 10px;
-		max-width:60px;
-		border-left: 1px solid $border-color;
-		z-index: 99;
-		text-align: center;	
-		.quantity{
-			color:$brand-color-primary;
-		}		
 	}	
 
 	&.dual-column{
