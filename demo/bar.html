@@ -11,11 +11,31 @@
 </head>
 <body ng-app="starter">
     <ion-pane class="imageBackground">
-        <ion-header-bar align-title="center" class="bar bar-header disable-user-behavior"><button class="button back-button buttons button-clear header-item ng-binding" ng-click="$ionicGoBack()">
-        <i class="icon icon-arrow-left"></i> Voltar
-    </button><div class="title title-center header-item" style="left: 105.975952148438px; right: 105.975952148438px;"><span class="nav-bar-title ng-binding">
-        DEFINIÇÕES
-    </span></div></ion-header-bar>
+
+        <!-- HEADER CLASS OPTIONS: darkerBackground, lightText -->
+        <ion-header-bar align-title="center" class="lighterBackground darkText bar bar-header disable-user-behavior">
+          <ion-nav-bar>    
+            <!--********* USE THIS CODE FOR BACK BUTTON ************ -->
+            <!--
+            <ion-nav-back-button class="button-clear">
+              <i class="icon icon-arrow-left"></i>Voltar
+            </ion-nav-back-button>
+            -->
+            <!-- ****** GENERATED HTML FOR BACK BUTTON - DEMO ONLY ****** -->
+            <button class="button back-button buttons button-clear header-item ng-binding" ng-click="$ionicGoBack()">
+              <i class="icon icon-arrow-left"></i> Voltar
+            </button>
+
+            <ion-nav-title>
+              <!--<i class="icon icon-products lightText"></i>-->
+              Título
+            </ion-nav-title>
+
+          </ion-nav-bar>
+        </ion-header-bar>
+
+
+
 
     </ion-pane>
 </body>
