@@ -37,18 +37,23 @@ hr{
 }
 .baseBackground{
 	background-color:$base-background-color!important;
+	margin-top:0;
 }
 .imageBackground{
 	@include appBackgroundImage;
+	margin-top:0;
 }
 .darkBackground{
 	background: rgba(0,0,0,0.8)!important;
+	margin-top:0;
 }
 .darkerBackground{
 	background: rgba(0,0,0,0.2)!important;
+	margin-top:0;
 }
 .lighterBackground{
 	background: rgba(255,255,255,0.8)!important;
+	margin-top:0;
 }
 .darkBorder{
 	border-color:rgba(0,0,0, 0.15)!important;
