@@ -104,6 +104,22 @@
 }
 
 
+.mrs-form-edit{
+	label{		
+		font-size: $font-size-base;
+	}
+	input {
+		margin-top: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+	}
+	.password{
+		.button{
+			top:15px;
+		}
+	}
+}
+
 .search-bar{
 	padding:10px 5px;
 	margin-bottom:10px;

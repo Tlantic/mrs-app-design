@@ -80,6 +80,41 @@
             </div>
                 <!-- END MODULE -->
 
+
+
+   <div class="mrs-form-wrapper">
+        <form class="mrs-form mrs-form-edit mrs-form-dark ">
+<!--         <form class="personalInfoForm cleanForm"> -->
+            <label for="userName">NOME</label>
+            <input type="text" id="userName"/>
+
+            <label for="userEmail">EMAIL</label>
+            <input type="email" id="userEmail"/>
+
+            <label for="userCPF">CPF</label>
+            <input type="number" id="userCPF" />
+
+            <label for="userPhone">CELULAR</label>
+            <input type="tel" id="userPhone" />
+
+            <div class="password">                
+                <label for="userPassword">NOVA PASSWORD</label>
+                <input type="password" id="userPassword" class="passwordInput" />
+                <button class="button button-clear icon-eye" ng-click="hideShowPassword(0); $event.stopPropagation()"></button>
+            </div>
+            
+            <div class="password">
+                <label for="passwordRepeat">CONFIRMAR PASSWORD</label>
+                <input type="password" id="passwordRepeat" class="passwordInput" />
+                <button class="button button-clear icon-eye" ng-click="hideShowPassword(1)"></button>
+            </div>
+
+        
+            <button class="button mrs-button-light round-square" type="submit">CONFIRMAR</button>
+            <button class="button mrs-button-light round-square">CANCELAR</button>
+            
+
+        </form>
            
         </ion-content>
     </ion-pane>
