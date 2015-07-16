@@ -221,24 +221,26 @@
         </div>
 
 
-
+<h1>GRID LIST / DUAL COLUMN</h1>
 
         <!-- **********   DUAL COLUMN/GRID LIST ********* -->
         <div class="product-list dual-column">
             <div class="row" >
-                <div class="col"  ng-click="openDetails($index*2)">
-                    <div class="product-thumb">
-                        <img src="http://placehold.it/180x180">
-                    </div>
-                    <div class="product-name">
-                        <div>Item Name</div>
-                        <span>Item Brand</span>
-                    </div>
-                   <div class="product-price">€0,00</div>
+                <div class="col">
+                  
+                    <a href="#">
+                        <div class="product-thumb">
+                            <img src="http://placehold.it/180x180">
+                        </div>
+                        <div class="product-name">
+                            <div>Item Name</div>
+                            <span>Item Brand</span>
+                        </div>
+                       <div class="product-price">€0,00</div>
+                   </a>
+
                     <div class="item-actions item-actions-horizontal">    
-                        
-                        <button class="button button-clear icon icon-plus button-addfirst addButtonAnim"></button>   
-                     
+                        <button class="button button-clear icon icon-plus button-addfirst addButtonAnim"></button>
                         <!--
                         <button class="button button-clear icon icon-minus"  ng-class="{'removeButtonAnim':!products[$index].quantity, 'button-remove':products[$index].quantity}" ng-click="removeQuantity($index); $event.stopPropagation()"></button>
                         <span ng-if="products[$index].quantity > 0">1</span>
@@ -247,15 +249,17 @@
                     </div>
                 </div>
 
-                <div class="col"  ng-click="openDetails($index*2+1)">
-                    <div class="product-thumb">
-                        <img src="http://placehold.it/180x180">
-                    </div>                    
-                    <div class="product-name">
-                        <div>Item Name</div>
-                        <span>Item Brand</span>
-                    </div>
-                   <div class="product-price">€0,00</div>
+                <div class="col" >
+                    <a href="#">
+                        <div class="product-thumb">
+                            <img src="http://placehold.it/180x180">
+                        </div>
+                        <div class="product-name">
+                            <div>Item Name</div>
+                            <span>Item Brand</span>
+                        </div>
+                       <div class="product-price">€0,00</div>
+                   </a>
                     
                     <div class="item-actions item-actions-horizontal">                
                       <button class="button button-clear icon icon-plus button-addfirst addButtonAnim"></button>        
@@ -265,14 +269,17 @@
 
             <div class="row" >
                 <div class="col"  ng-click="openDetails($index*2)">
-                    <div class="product-thumb">
-                        <img src="http://placehold.it/180x180">
-                    </div>
-                    <div class="product-name">
-                        <div>Item Name</div>
-                        <span>Item Brand</span>
-                    </div>
-                   <div class="product-price">€0,00</div>
+                    <a href="#">
+                        <div class="product-thumb">
+                            <img src="http://placehold.it/180x180">
+                        </div>
+                        <div class="product-name">
+                            <div>Item Name</div>
+                            <span>Item Brand</span>
+                        </div>
+                       <div class="product-price">€0,00</div>
+                   </a>
+
                     <div class="item-actions item-actions-horizontal">                
                         <button class="button button-clear icon icon-minus button-remove" ng-click="removeQuantity($index); $event.stopPropagation()"></button>
                         <span>1</span>
@@ -281,14 +288,16 @@
                 </div>
                 
                 <div class="col"  ng-click="openDetails($index*2+1)">
-                    <div class="product-thumb">
-                        <img src="http://placehold.it/180x180">
-                    </div>                    
-                    <div class="product-name">
-                        <div>Item Name</div>
-                        <span>Item Brand</span>
-                    </div>
-                   <div class="product-price">€0,00</div>
+                    <a href="#">
+                        <div class="product-thumb">
+                            <img src="http://placehold.it/180x180">
+                        </div>
+                        <div class="product-name">
+                            <div>Item Name</div>
+                            <span>Item Brand</span>
+                        </div>
+                       <div class="product-price">€0,00</div>
+                   </a>
                     
                     <div class="item-actions item-actions-horizontal">                
                         <button class="button button-clear icon icon-minus button-remove" ng-click="removeQuantity($index*2 +1); $event.stopPropagation()"></button>
