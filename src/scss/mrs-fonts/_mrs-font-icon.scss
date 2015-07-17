@@ -4,8 +4,8 @@
   font-family: $font-icons;
   src:url('#{$font-path}/icons/customer-fontv2.eot?w39upw');
   src:url('#{$font-path}/icons/customer-fontv2.eot?#iefixw39upw') format('embedded-opentype'),
-    url('#{$font-path}/icons/customer-fontv2.woff?w39upw') format('woff'),
     url('#{$font-path}/icons/customer-fontv2.ttf?w39upw') format('truetype'),
+    url('#{$font-path}/icons/customer-fontv2.woff?w39upw') format('woff'),
     url('#{$font-path}/icons/customer-fontv2.svg?w39upw#customer-font') format('svg');
   font-weight: normal;
   font-style: normal;
@@ -76,72 +76,81 @@
 .icon-gift:before {
   content: "\e610";
 }
-.icon-home:before {
+.icon-inbox:before {
   content: "\e611";
 }
-.icon-inbox:before {
+.icon-info:before {
   content: "\e612";
 }
-.icon-info:before {
+.icon-list:before {
   content: "\e613";
 }
-.icon-list:before {
+.icon-location:before {
   content: "\e614";
 }
-.icon-location:before {
+.icon-logout:before {
   content: "\e615";
 }
-.icon-logout:before {
+.icon-minus:before {
   content: "\e616";
 }
-.icon-minus:before {
+.icon-more:before {
   content: "\e617";
 }
-.icon-more:before {
+.icon-move:before {
   content: "\e618";
 }
-.icon-move:before {
+.icon-order:before {
   content: "\e619";
 }
-.icon-order:before {
+.icon-password:before {
   content: "\e61a";
 }
-.icon-password:before {
+.icon-plus:before {
   content: "\e61b";
 }
-.icon-plus:before {
+.icon-products:before {
   content: "\e61c";
 }
-.icon-products:before {
+.icon-search:before {
   content: "\e61d";
 }
-.icon-search:before {
+.icon-settings-2:before {
   content: "\e61e";
 }
-.icon-settings-2:before {
+.icon-settings:before {
   content: "\e61f";
 }
-.icon-settings:before {
+.icon-share:before {
   content: "\e620";
 }
-.icon-share:before {
+.icon-star-full:before {
   content: "\e621";
 }
-.icon-star-full:before {
+.icon-star:before {
   content: "\e622";
 }
-.icon-star:before {
+.icon-trash:before {
   content: "\e623";
 }
-.icon-trash:before {
+.icon-user:before {
   content: "\e624";
 }
-.icon-user:before {
+.icon-view-column:before {
   content: "\e625";
 }
-.icon-view-column:before {
+.icon-view-list:before {
   content: "\e626";
 }
-.icon-view-list:before {
+.icon-email:before {
   content: "\e627";
+}
+.icon-facebook:before {
+  content: "\e628";
+}
+.icon-home:before {
+  content: "\e629";
+}
+.icon-sms:before {
+  content: "\e62a";
 }
