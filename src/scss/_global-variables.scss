@@ -20,10 +20,10 @@ $subcategory-top-height: 150px;
 ///VARIAVEIS DE IMAGENS
 $image-path: "../img/" !default;
 $brandLogo: url($image-path + 'logoMonteserrat.png');
-$appBackground: url($image-path +  'gradientBackground.svg');
-$appBackground-transparent:url($image-path + 'backgroundTransparency.svg');
-$backgroundMenuItem: url($image-path + 'bg-itemmenu.svg');
-$button-background-image:url($image-path + 'buttonBackground.svg');
+$appBackground: url($image-path +  'backgrounds/gradientBackground.svg');
+$appBackground-transparent:url($image-path + 'backgrounds/backgroundTransparency.svg');
+$backgroundMenuItem: url($image-path + 'backgrounds/bg-itemmenu.svg');
+$button-background-image:url($image-path + 'backgrounds/buttonBackground.svg');
 
 $quick-list-height:70px;
 

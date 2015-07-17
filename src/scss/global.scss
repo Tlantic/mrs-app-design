@@ -1,10 +1,10 @@
 a{
-	@extend fontfamily(sans);
+	@include fontfamily(sans);
 	text-decoration: none;
 	color: inherit;
 }
 h1{
-	@extend fontfamily(sans);
+	@include fontfamily(sans);
 	font-size: $font-size-large;
 	font-weight: $font-light;
 	&.title{
@@ -12,12 +12,15 @@ h1{
 	}
 }
 h2{
-	@extend fontfamily(sans);
+	@include fontfamily(sans);
 	font-size: $font-size-base + 1;
 	font-weight: $font-light;
 }
+p{
+	@include fontfamily(sans);
+}
 small{
-	@extend fontfamily(sans);
+	@include fontfamily(sans);
 	font-size:$font-size-small;
 	color: lighten($base-color, 50%);
 }
@@ -35,10 +38,10 @@ hr{
 	visibility: hidden;
 }
 .content-wrapper-10{
-	padding:0 10px;
+	padding:10px;
 }
 .content-wrapper-20{
-	padding:0 20px;
+	padding:20px;
 }
 
 .transparentBackground{
@@ -63,6 +66,21 @@ hr{
 .lighterBackground{
 	background: rgba(255,255,255,0.8)!important;
 	margin-top:0;
+}
+.border-all{
+	border:solid 1px;
+}
+.border-left{
+	border-left:solid 1px;
+}
+.border-right{
+	border-right:solid 1px;
+}
+.border-top{
+	border-top:solid 1px;
+}
+.border-bottom{
+	border-bottom:solid 1px;
 }
 .darkBorder{
 	border-color:rgba(0,0,0, 0.15)!important;
@@ -259,79 +277,6 @@ hr{
 	}
 }
 
-
-
-
-/*
-.slidedown-help{
-	position: absolute;
-	display: block;
-	left:50%;
-	right:0;
-	width: 50px;
-	height:100px;
-	z-index:999;
-	-webkit-transform: translateX(-50%);
-	-ms-transform: translateX(-50%);
-	transform: translateX(-50%);
-
-	.swipe-bar{
-		opacity:0;
-		position: absolute;
-		display: block;
-		height: 50px;
-		width: 50px;
-		z-index: 98;
-		text-align: center;
-		border-radius: 40px;
-		top: 10px;
-		left: 0;
-		background-color:transparentize($highlight-color, 0.8);
-		@include box-shadow(rgba(0,0,0,0.4) 0px 0px 10px);
-		padding:5px 0;
-		-webkit-animation: resizeBar 1.6s 2;
-		animation: resizeBar 1.6s 2;
-
-	}
-	.swipe-ball{
-		opacity:0;
-		display: block;
-		position: absolute;
-		z-index: 99;
-		top: 15px;
-		left: 5px;
-  		width: 40px;
-  		height: 40px;
-  		background-color:transparentize($highlight-color, 0.3);
-  		border-radius: 60px;
-  		text-align: center;
-  		margin: 0 auto;
-
-  		-webkit-animation: moveBall 1.6s 2;
-  		animation: moveBall 1.6s 2;
-	}
-
-	svg{
-		position:absolute;
-		left:20px;
-	}
-
-	#swipedown{
-		-webkit-animation: moveSVG 2s 2;
-		-moz-animation:    moveSVG 2s 2;
-		-o-animation:      moveSVG 2s 2;
-		animation:         moveSVG 2s 2;
-
-	}
-	#touch{
-		-webkit-animation: showTouch 2s 2;
-		-moz-animation:    showTouch 2s 2;
-		-o-animation:      showTouch 2s 2;
-		animation: 		   showTouch 2s 2;
-
-	}
-}
-*/
 
 #modal-filter{
 	top:$bar-height * 2;
@@ -740,71 +685,6 @@ hr{
 	}
 }
 
-
-
-.mrs-quick-list{
-	@include box-sizing(border-box);
-	@include box-shadow(rgba(0,0,0,0.10) 0px -2px 8px 0px inset);
-	@include transition(all 0.4s cubic-bezier(1, 0, 0, 0.82));
-	position:relative;
-	height:$quick-list-height;
-	font-size: $font-size-base;
-	line-height: $font-size-base + 2;	
-	color:$light;
-	z-index: 99;
-	overflow: hidden;	
-	&.listOpen{
-		height:100%;
-		.edit-list{
-			visibility: visible;
-			opacity: 1;
-		}
-	}
-	
-	/* QUICK LIST HEADER */
-	.quick-list-header{	
-		@include box-sizing(border-box);
-		height:$quick-list-height;
-		padding:20px 140px 20px 50px;
-		font-weight: $font-light;	
-		font-size:$font-size-base - 1;	
-		.icon{
-			position: absolute;
-			left: 0;
-			top: 0;
-			font-size: $icon-font-size-big;
-			line-height: $quick-list-height;
-		}
-		.button{
-			min-width:125px;
-			position:absolute;
-			right:10px;
-			top:($quick-list-height - $button-height) / 2 - 2.5;
-			font-size:$font-size-base;
-		}		
-	}
-
-	.quick-list-content{
-		height:0;
-  		@include calc(height, "100% - 117px");  		
-		padding-right: 10px;
-		padding-left: 10px;			
-	}
-
-	.bottom-button{
-		@include transition(opacity 0.7s ease-in);
-		color: #000;
-		background: rgba(255,255,255,0.3);
-		width: 100%;
-		border-radius: 0;
-		border-top: 1px solid rgba(255,255,255,0.14);
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		visibility: hidden;
-		opacity:0;		
-	}	
-}
 
 .appversion{
 	display:block;
