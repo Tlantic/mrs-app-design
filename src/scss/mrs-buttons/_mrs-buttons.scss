@@ -1,28 +1,19 @@
-.button-wrapper-10{
-	padding:0 10px;
-	text-align:center;
-
-}
-.button-wrapper-20{
-	padding:0 20px;
-	text-align:center;
-	
-}
-
 .button{
 	@include box-sizing(border-box);
 	@include transition(transform 0.2s ease);
 	font-family:$font-family-sans-serif!important;
 	text-transform:uppercase;
-	line-height: $button-bar-button-height;
+	line-height: $button-height;
 	background-color:$brand-color;
-	
 	&:after{
 		font-family: $font-icons;
 	}
 	&:before{
 		font-family: $font-icons;
 		font-size:$icon-font-size;
+	}
+	&:hover{
+		color:inherit;
 	}
 	&.no-animation{
 	  @include transition(none);
@@ -36,7 +27,6 @@
 	&.activated{		
 		@include transform(scale(0.97));
 		opacity: 0.8!important;
-		background-color:$brand-color;
 	}
 
 	&.button-close{
@@ -53,22 +43,16 @@
 		}
 	}
 
-	&.button-add{
-		background-color:transparent;
+	&.button-addfirst{
 		color:$brand-color-primary;
-		padding:0;				
-		&.button-add-small{
-			min-width: 34px;
-			min-height: 34px;
-			width: 34px;
-			height: 34px;			
-		}
-		&:before{			
+		padding:0;
+		max-width:60px;
+		&:before{
 			font-size:$icon-font-size;
-		}
+		}			
 	}
 
-	&.button-addmore{
+	&.button-add{
 		color:$dark;
 		&:before{
 			font-size:$icon-font-size;
@@ -99,6 +83,13 @@
 		padding: 1px 6px;
 		right: 0;
 	}
+	.icon{	
+		display:inline-block;
+		vertical-align:middle;
+		&:before{
+			font-size: $icon-font-size-big - 10;
+		}
+	}
 }
 
 .mrs-button-transparent{
@@ -127,17 +118,25 @@
 }
 
 .mrs-button-big{
-	height: $button-height + 15;
+	height: $button-height + 15;	
 	font-size: $font-size-base + 2;
-	.icon:before{
-		font-size: $icon-font-size-big - 10;
-	}
+	line-height: $button-height + 15;	
 }
 
+.mrs-button-small{
+	height: $button-height;
+	font-size: $font-size-base - 1;
+	text-transform:none;
+	background:transparent;
+	border:0;
+}
 .button-imageBackground{
 	background-image:$button-background-image;
 	background-repeat:no-repeat;
 	background-position: center;
 	background-size:110%;
+	&.background-cover{
+		background-size:cover;
+	}
 }
 

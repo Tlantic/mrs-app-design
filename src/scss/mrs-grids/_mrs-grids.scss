@@ -1,5 +1,6 @@
 .mrs-grid{
 	margin-top:20px;
+	font-family:$font-family-sans-serif;
 	.row{			
 		margin:0;
 		padding:0;
@@ -11,6 +12,7 @@
 			min-height:40px;
 			max-height:165px;
 			overflow:hidden;
+			line-height:0;
 			.row + .row{				
 				.col{
 					margin-bottom:0;					
@@ -24,6 +26,9 @@
 			margin-right:0;
 			margin-left:2px;
 		}
+	}
+	.row + .row{
+		margin:0;
 	}
 	.row-tall{
 		.col{
@@ -111,4 +116,36 @@
 	}
 }
 
+
+
+.mrs-grid-menu{
+	font-family:$font-family-sans-serif;
+	.row{
+		padding:0;
+		margin-bottom:20px;	
+		.col{
+			padding: 0;
+			text-align: center;			
+			margin:0;
+			a{
+				display: block;
+				padding: 15px;
+				min-height: 110px;				
+			}
+			.icon{
+				display:block;
+				margin:0 auto;
+				font-size: $icon-font-size-big;
+			}
+			/*background: rgba(255,255,255,0.3);*/			
+			&:first-child{
+				background: rgba(255,255,255,0.1);
+			}
+			&:first-child + div{
+				background: rgba(255,255,255,0.2);
+			}
+		}
+	}
+
+}
 

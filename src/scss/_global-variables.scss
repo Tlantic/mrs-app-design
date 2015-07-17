@@ -1,5 +1,5 @@
 ///VARIAVEIS DE FONTS
-$font-path: "../../lib/fonts" !default;
+$font-path: "../lib/fonts" !default;
 $font-version: "1.0.2" !default;
 $font-family-sans-serif: "sans-serif-font";
 $font-family-serif: "serif-font";
@@ -8,18 +8,25 @@ $font-light: 300;
 $font-regular: 400;
 $font-semibold: 600;
 $font-bold: 700;
+$font-size-base: 14px;
+$font-size-large: 18px;
+$font-size-small: 11px;
 $icon-font-size:40px;
 $icon-font-size-big:60px;
 
-$category-top-height: 185px;
+$category-top-height: 160px;
 $subcategory-top-height: 150px;
 
 ///VARIAVEIS DE IMAGENS
-$brandLogo: url('../img/logoMonteserrat.png');
-$appBackground: url('../img/gradientBackground.svg');
-$appBackground-transparent:url('../img/backgroundTransparency.svg');
-$backgroundMenuItem: url('../img/bg-itemmenu.svg');
-$button-background-image:url('../img/buttonBackground.svg');
+$image-path: "../img/" !default;
+$brandLogo: url($image-path + 'logoMonteserrat.png');
+$appBackground: url($image-path +  'gradientBackground.svg');
+$appBackground-transparent:url($image-path + 'backgroundTransparency.svg');
+$backgroundMenuItem: url($image-path + 'bg-itemmenu.svg');
+$button-background-image:url($image-path + 'buttonBackground.svg');
+
+$quick-list-height:70px;
+
 
 ///VARIAVEIS DE CORES
 $base-color: #000;

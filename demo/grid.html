@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="../lib/ionic/js/ionic.bundle.js"></script>
+    <meta charset="utf-8">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
   <script type="text/javascript">angular.module('starter', ['ionic']);</script>
 
+<link rel="stylesheet" href="../dist/lib/ionic/css/ionic.css">
   <link rel="stylesheet" href="../dist/css/mrs-grids.css">
 </head>
 
@@ -12,8 +14,7 @@
         <ion-content>
 
             <div class="mrs-grid">
-                <mrs-grid-template>                            
-                    
+                <mrs-grid-template>                           
 
                     <div class="row" >
                         <div class="col">
@@ -25,13 +26,9 @@
                     <div class="row" >        
                         <div class="col">
                             <img src="http://placehold.it/640x280">                        
-                            <div class="col-title image-background">
-                                <div class="icon-circle icon icon-products round-square lighterBackground"></div>
-                                Os nossos Produtos
-                            </div>                                            
+                            <div class="col-title lighterBackground image-background darkText">Os nossos Produtos</div>
                         </div>
                     </div>
-
 
                     <div class="row">
                         <div class="col col-50">
@@ -93,6 +90,23 @@
                     
                 </mrs-grid-template>
 
+            </div>
+            
+            <div class="mrs-grid mrs-grid-menu darkerBackground">
+                <div class="row">
+                    <div class="col">
+                        <a href="#">
+                            <i class="icon icon-flyers"></i>
+                            FOLHETOS
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#">
+                            <i class="icon icon-settings"></i>
+                            DEFINIÇÕES
+                        </a>
+                    </div>
+                </div>
             </div>
 
         </ion-content>
