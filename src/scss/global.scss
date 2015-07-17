@@ -1,4 +1,3 @@
-
 a{
 	font-family:$font-family-sans-serif!important;
 	text-decoration: none;
@@ -107,38 +106,11 @@ hr{
 	text-align: center;
 }
 .uppercase{
-	text-transform:uppercase;
+	text-transform:uppercase!important;
 }
 .round-square{
   border-radius:100px!important; 
- 
-  /*
-  border:1px solid rgba(255, 255, 255, 0.3)!important;
-  */
 }
-/*
-.pane{
-	background-color:$base-background-color;
-}
-.modal{
-	@extend .pane;
-	&.modal-transparent{
-		background-color:transparent;
-	}
-}
-*/
-/*
-.has-tabs{
-	top:45px;
-}
-.has-footer{
-	bottom: 49px;	
-}
-*/
-.has-subheader{
-	top:$bar-height * 2!important;
-}
-
 .title{
 	.icon{
 		font-size: $icon-font-size + 10;		
@@ -150,28 +122,15 @@ hr{
 	position: absolute !important;
 	background-color:$badge-color!important;
 }
-
 .activated{
 	opacity: 0.8!important;
 }
-/*
-.item.activated{
-	background-color:$light;
-}
-*/
-
-/*
-.placeholder-icon{
-	font-size:$font-size-base + 10;
-}
-*/
 .item-icon-left{
 	position:relative;
 }
 .icon-big{
 	font-size: $icon-font-size-big;
 }
-
 
 .client-logo{
 	background-image: $brandLogo;
@@ -239,7 +198,6 @@ hr{
 	width: 100%;
 	height: 40px;
 	border-top: 1px solid $border-color;
-	
 	span{		
 		font-size: $font-size-base +2;
 		line-height:40px;
@@ -461,7 +419,6 @@ hr{
 
 
 // PAGE FLYERS
-
 .modal-flyer{
 	.bar{
 		button{
@@ -482,9 +439,7 @@ hr{
 		z-index: 4;
 
 	}
-	.mrs-slider-pager{
-	
-	
+	.mrs-slider-pager{	
 		&.landscape{
 			left: 50px;
 			right: 50px;
@@ -643,39 +598,6 @@ hr{
 	}
 }
 
-/*
-.page-flyers{
-	.flyers-list{
-		.item{
-			border:1px solid rgba(220,220,220,0.5);
-			padding: 0;
-			margin:15px;
-			display: block;
-			overflow:hidden;
-			background: $light;
-			&:first-child{
-				margin-top:10px;
-			}
-			
-			.item-content{
-				padding:10px 16px 10px 16px;
-			}
-			img{
-				display: block;
-				width: 100%;
-				height: 100%;
-			}
-			p{
-				padding:10px;
-				color: $dark;
-				font-size: $font-size-base - 1;
-			}	
-		}
-	}
-}
-*/
-
-
 .flyer-details{
 	@include transform(translate3d(0px, 90px, 0px));
 	@include transition(all 0.2s ease);
@@ -717,40 +639,6 @@ hr{
 	}
 }
 
-/*
-.bgflyer01{
-	background-image:url("../img/bgflyer01.png");
-	background-position: center;
-	background-size:cover;
-	background-color:$light;
-}
-
-.bgflyer02{
-	background-image:url("../img/bgflyer02.png");
-	background-position: center;
-	background-size:cover;
-	background-color:$light;
-}
-.bgflyer03{
-	background-image:url("../img/bgflyer03.png");
-	background-position: center;
-	background-size:cover;
-	background-color:$light;
-}
-.bgflyer04{
-	background-image:url("../img/bgflyer04.png");
-	background-position: center;
-	background-size:cover;
-	background-color:$light;
-}
-.bgflyer05{
-	background-image:url("../img/bgflyer05.png");
-	background-position: center;
-	background-size:cover;
-	background-color:$light;
-}
-*/
-
 .header-search{
 	border:0;
 	position: absolute;
@@ -764,28 +652,6 @@ hr{
 		color: $light!important;
 	}
 }
-/*
-.setQuick{
-	.checkbox{
-		display: block;
-		input{
-			display: inline-block !important;
-			margin-right: 10px;	
-			vertical-align: top;
-			width: 20px;
-			height: 20px;
-			&:checked:before{
-				background-color: $header-background-color;
-				border-color: $header-background-color;
-			}
-			&:checked:after{
-				width: 11px;
-				height: 4px;
-			}
-		}
-	} 
-}
-*/
 
 .modal-dropdown-backdrop{
 	display:block;
@@ -863,7 +729,6 @@ hr{
 		color: $dark;
 	}
 }
-
 
 
 
@@ -987,13 +852,11 @@ hr{
 		color:$textColor;
 	}
 }
-
 .item-secondary-actions{
 	position: absolute;
 	bottom:0;
 	margin: 0;
 }	
-
 
 
 .details-modal{
@@ -1078,81 +941,31 @@ hr{
 }
 
 
+.horizontal-scroller{
+	overflow: scroll;
+	white-space: nowrap;
+	height:47px;	  
+  	padding: 4px 0;
+	.button{
+		  line-height: 42px;
+		  height: 40px!important;
+		  min-height: 40px;
+		  padding-right: 10px;
+		  padding-left: 10px;
 
+		&.active{
+			@extend .imageBackground;
+			background-size:200%;
+			border:rgba(255,255,255,0.2);
+			@include box-shadow (inset 0 1px 2px 0 rgba(0,0,0,0.2));
+			color: $light;	
+		}
+	}
+}
 
 //PLATFORM
 .platform-ios.platform-cordova{
-	/*
-	ion-tabs{
-		.tabs {
-			top: $bar-height + $ios-statusbar-height - 2;
-		}
-		.pane{
-			top: $bar-height + 4;
-		}
-	}
-	.header-search{
-		height: $bar-height + $ios-statusbar-height + 2;
-  		padding-top:$ios-statusbar-height;
-	}
-
-	.modal-dropdown{
-		height: $dropdown-modal-height + $bar-height + $ios-statusbar-height;
-		padding-top:$bar-height + $ios-statusbar-height;
-		top:$bar-height * 2 + $ios-statusbar-height!important;
-		&.modal-alerts{
-			height:$dropdown-modal-height * 2 + $ios-statusbar-height;
-		}
-	}
-
-	#modal-search{
-		top:0!important;
-	}
-	#modal-alerts{
-		top:0!important;
-	}
-	#page-groups{
-		top: 0!important;
-		padding-top:$ios-statusbar-height;
-	}
-
-
-	.filter-search{
-		top:$bar-height + $ios-statusbar-height!important;
-	}
-
-	#header-categories{
-		top: $ios-statusbar-height;
-	}
-	#slider-categories{
-		top: $bar-height + $ios-statusbar-height;
-	}
-
-	.hidebar-spacing{
-		height: 64px;
-	}
-
 	
-	#subHeader{
-		height: 54px;
-		top: 67px + $ios-statusbar-height;
-		&.headerTop{
-			top: 0;			
-		}
-	}
-	*/
-/*
-	.has-footer.has-tabs{
-		bottom:114px;
-	}
-	.has-subheader {
-	  top: 108px!important;
-	}
-	.has-header{
-  		top: 65px!important;
-	}
-	*/
 }
-
 
 
