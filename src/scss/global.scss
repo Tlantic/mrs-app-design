@@ -1,9 +1,10 @@
 a{
-	font-family:$font-family-sans-serif!important;
+	@extend fontfamily(sans);
 	text-decoration: none;
 	color: inherit;
 }
 h1{
+	@extend fontfamily(sans);
 	font-size: $font-size-large;
 	font-weight: $font-light;
 	&.title{
@@ -11,10 +12,12 @@ h1{
 	}
 }
 h2{
+	@extend fontfamily(sans);
 	font-size: $font-size-base + 1;
 	font-weight: $font-light;
 }
 small{
+	@extend fontfamily(sans);
 	font-size:$font-size-small;
 	color: lighten($base-color, 50%);
 }
