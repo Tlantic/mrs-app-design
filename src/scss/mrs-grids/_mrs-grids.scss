@@ -47,18 +47,11 @@
 		right: 0;
 		padding: 5px 10px;
 		text-transform: uppercase;
+		@include fontfamily(sans);
 		font-size: $font-size-base + 1;
 		line-height: $font-size-base + 1;
-		color:$light;
+		color:$light;		
 		background-color:$brand-color;
-		&.image-background{
-			background-image:$appBackground-transparent;
-			background-repeat:no-repeat;
-			background-size: cover;
-			background-position: 0;
-			background-color:transparent;
-		}
-
 	}
 	img{
 		width: 100%;
