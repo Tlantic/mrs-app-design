@@ -13,7 +13,7 @@
 	font-family:$font-family-sans-serif!important;
 	text-transform:uppercase;
 	line-height: $button-height;
-	background-color:$brand-color;
+	// background-color:$brand-color;
 	border-width:0;
 	&:after{
 		font-family: $font-icons;
@@ -36,7 +36,7 @@
 
 	&.activated{		
 		@include transform(scale(0.97));
-		background-color:$brand-color;
+		// background-color:$brand-color;
 		opacity: 0.8!important;
 	}
 
@@ -46,14 +46,12 @@
 		left: -40px;
 		z-index: 10;
 	}
-
 	&.button-quantity{
 		display: block;
 		&:before{
 			font-size: $icon-font-size-big + 10;
 		}
 	}
-
 	&.button-addfirst{
 		color:$brand-color-primary;
 		padding:0;
@@ -155,5 +153,21 @@
 	background-color:#385185;
 	&.activated{		
 		background-color:#385185;	
+	}
+}
+
+
+.back-button{
+	@include fontfamily(sans);
+	padding: 2px;
+	font-size: $font-size-base - 2 !important;
+	left: -10px;
+	position: relative;
+	text-transform:uppercase;
+	font-weight:$font-light;
+	.icon:before{
+		@include fontfamily(icons);
+		padding:0;
+		margin-right:-10px;
 	}
 }
