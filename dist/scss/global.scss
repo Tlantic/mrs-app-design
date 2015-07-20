@@ -288,6 +288,10 @@ hr{
 	}
 }
 
+.mrs-quicklist-active{
+	margin-top:$quick-list-height;
+}
+
 .mrs-quick-list{
 	@include box-sizing(border-box);
 	@include box-shadow(rgba(0,0,0,0.10) 0px -2px 8px 0px inset);
@@ -301,7 +305,7 @@ hr{
 	overflow: hidden;	
 	&.listOpen{
 		height:100%;
-		.edit-list{
+		.bottom-button{
 			visibility: visible;
 			opacity: 1;
 		}
@@ -795,6 +799,7 @@ hr{
 	}
 	.item-photo{
 		margin-bottom:40px;
+		padding:0;
 		img{
 			width: auto;
 			max-height:200px;
