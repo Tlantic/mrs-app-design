@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script type="text/javascript">angular.module('starter', ['ionic']);</script>
+
+<link rel="stylesheet" href="../dist/lib/ionic/css/ionic.css">
+    <link rel="stylesheet" href="../dist/css/mrs-forms.css">
+</head>
+
+<body ng-app="starter">
+    <ion-pane class="imageBackground">
+        <ion-content >
+
+
+            <div class="mrs-form-wrapper">
+                <form class="mrs-form mrs-form-dark">
+                    <input type="email"  placeholder="EMAIL" class="lineInput"/>
+                    <div class="password">
+                    <input type="password" placeholder="PASSWORD" class="lineInput"/>
+                    <button class="button button-clear icon-eye" ng-click="hideShowPassword(0)"></button>
+
+                    </div>
+                    <button type="submit" class="button button-block mrs-button-dark round-square ">LOGIN</button>
+                    <button class="button button-block mrs-button-transparent mrs-button-small" ng-click="openRecovery()">Recuperar Password</button>
+                </form>
+              
+                <button  class="button button-block mrs-button-dark round-square" ng-click="goToRegister()">REGISTAR</button>
+            </div>
+
+
+            <div class="mrs-form-wrapper darkerBackground">
+                <form class="mrs-form mrs-form-light">
+                    <input type="email"  placeholder="EMAIL" class="lineInput"/>
+                    <div class="password">
+                    <input type="password" placeholder="PASSWORD" class="lineInput"/>
+                    <button class="button button-clear icon-eye" ng-click="hideShowPassword(0)"></button>
+
+                    </div>
+                    <button type="submit" class="button button-block mrs-button-light round-square ">LOGIN</button>
+                    <button class="button button-block mrs-button-transparent mrs-button-small" ng-click="openRecovery()">Recuperar Password</button>
+                </form>
+              
+                <button  class="button button-block mrs-button-light round-square" ng-click="goToRegister()">REGISTAR</button>
+            </div>
+
+
+            <div class="mrs-form-wrapper darkerBackground">
+                <form class="mrs-form mrs-form-light">
+                    <label for="recoveryCPF">INDIQUE POR FAVOR O SEU <strong>CPF</strong></label>
+                    <input type="number" class="round-square" />
+                    <button class="button button-block mrs-button-light round-square">ENVIAR</button>
+                </form>
+                <p class="lightText">A nova senha será enviada para o email cadastrado<br/></p>
+            </div>
+               
+            <br/>
+            <br/>
+            <!-- START MODULE: SEARCH BAR  -->             
+            <div class="mrs-form-wrapper search-bar darkBackground">
+                <div class="row">
+                    <div class="search-item light-input col col-80">
+                        <input class="round-square" ng-model="searchText.value" type="search" ng-keyup="$event.keyCode == 13 ? goToSearch() : null" placeholder='Pesquisa'>
+                        <button class="button button-icon button-clear icon-search" ng-click="goToSearch()"></button>
+                    </div>
+                    <div class="icon icon-barcode" ng-click="goToBarcodeScaner()"></div>
+                </div>
+            </div>          
+
+
+            <!-- START MODULE: SEARCH BAR  -->             
+            <div class="mrs-form-wrapper search-bar darkBackground">
+                <div class="row">
+                    <div class="search-item col">
+                        <input class="" ng-model="searchText.value" type="search" ng-keyup="$event.keyCode == 13 ? goToSearch() : null" placeholder='Pesquisa'>
+                        <button class="button button-icon button-clear icon-search" ng-click="goToSearch()"></button>
+                    </div>
+                </div>
+            </div>
+                <!-- END MODULE -->
+
+
+
+   <div class="mrs-form-wrapper">
+        <form class="mrs-form mrs-form-edit mrs-form-dark ">
+<!--         <form class="personalInfoForm cleanForm"> -->
+            <label for="userName">NOME</label>
+            <input type="text" id="userName"/>
+
+            <label for="userEmail">EMAIL</label>
+            <input type="email" id="userEmail"/>
+
+            <label for="userCPF">CPF</label>
+            <input type="number" id="userCPF" />
+
+            <label for="userPhone">CELULAR</label>
+            <input type="tel" id="userPhone" />
+
+            <div class="password">                
+                <label for="userPassword">NOVA PASSWORD</label>
+                <input type="password" id="userPassword" class="passwordInput" />
+                <button class="button button-clear icon-eye" ng-click="hideShowPassword(0); $event.stopPropagation()"></button>
+            </div>
+            
+            <div class="password">
+                <label for="passwordRepeat">CONFIRMAR PASSWORD</label>
+                <input type="password" id="passwordRepeat" class="passwordInput" />
+                <button class="button button-clear icon-eye" ng-click="hideShowPassword(1)"></button>
+            </div>
+
+        
+            <button class="button button-block mrs-button-light round-square" type="submit">CONFIRMAR</button>
+            <button class="button button-block mrs-button-transparent lightText lightBorder round-square">CANCELAR</button>
+            
+
+        </form>
+           
+        </ion-content>
+    </ion-pane>
+</body>
+</html>

@@ -1,0 +1,104 @@
+.mrs-tabs{
+	.tabs{
+		@include transition(all 0.5s cubic-bezier(1, 0.01, 0, 1.01));
+		@include transform(translate3d(0px, 0, 0px));
+		background-color:rgba(0,0,0,0.3);	
+		color:$light;
+		border: 0;
+		border-color: transparent;
+		border-top: transparent;
+		border-bottom: transparent;
+		background-image: none !important;	
+		height:48px;
+		
+		.tab-item{
+			position: relative;			
+			border:0;
+			/* opacity:1; */
+			&:before{
+				@include transition(all 0.3s cubic-bezier(0.575, 0.885, 0.520, 1.275));
+				position: absolute;
+				bottom: -5px;				
+				left: calc(50% - 35px);
+				content: "";
+				width: 100%;
+				max-width:70px;
+				height: $bar-height +21;
+				border-radius: 50px 50px 0 0;
+				transform: translateY(65px);
+				-webkit-transform: translateY(65px);
+		
+				background-image: $backgroundMenuItem;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-position: 0 0;			
+				
+			}
+			span{		
+				position:relative;
+				/*
+				display:block;
+				position:absolute;
+				left:0;
+				right:0;
+				bottom:-14px;
+				text-align:center;
+				font-size:$font-size-base - 2;
+				color: transparentize($light, 0.2);
+				*/
+			}
+			
+			i{
+				line-height:32px!important;
+				position: relative;
+				&:before{
+					font-size:$icon-font-size;
+				}
+			}
+			.badge{			
+				line-height:16px!important;			
+			}
+			&.tab-item-active{			
+				overflow: visible;
+				i{
+					text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+				}
+				&:before{
+					transform: translateY(0px);
+					-webkit-transform: translateY(0px);				
+				}
+			}
+			&.activated{
+				opacity: 1 !important;
+			}
+		}
+		&.bottomHide{
+			@include transform(translate3d(0px, 122%, 0px));
+		}
+	}
+
+}
+
+
+.effect{
+	display: block;
+	position: absolute;
+	background: rgba(221, 25, 33, 0.7);
+	border-radius: 100%;
+	transform: scale(0);
+	-webkit-transform: scale(0);
+	left: 50%;
+	top:50%;
+	margin-top:-16px;
+	margin-left: -16px;
+	width: 35px;
+	height: 35px;
+	z-index:-1;
+	&.animationCart{
+		@include transition(all 0.35s linear);
+		transform: scale(2.5);
+		-webkit-transform: scale(2.5);
+		opacity: 0;
+	}
+}
+

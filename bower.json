@@ -1,0 +1,25 @@
+{
+  "name": "mrs-app-design",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Tlantic/mrs-app-design",
+  "authors": [
+    "Pedro Simeão Carvalho <pesimeao@gmail.com>"
+  ],
+  "description": "MRS App Design Core patterns to build Apps in lightning speed!",
+  "keywords": [
+    "tlantic",
+    "mrs",
+    "design"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo",
+    "src",
+    "gulpfile.js"
+  ]
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script type="text/javascript">angular.module('starter', ['ionic']);</script>
+
+<link rel="stylesheet" href="../dist/lib/ionic/css/ionic.css">
+  <link rel="stylesheet" href="../dist/css/mrs-lists.css">
+  <link rel="stylesheet" href="../dist/css/mrs-bar.css">
+</head>
+<body ng-app="starter">
+    <ion-pane class="imageBackground">
+      <!-- HEADER CLASS OPTIONS: darkerBackground, lightText -->
+        <ion-header-bar align-title="center" class="lighterBackground darkText bar bar-header disable-user-behavior">
+          <ion-nav-bar>    
+            <!--********* USE THIS CODE FOR BACK BUTTON ************ -->
+            <!--
+            <ion-nav-back-button class="button-clear">
+              <i class="icon icon-arrow-left"></i>Voltar
+            </ion-nav-back-button>
+            -->
+            <!-- ****** GENERATED HTML FOR BACK BUTTON - DEMO ONLY ****** -->
+            <button class="button back-button buttons button-clear header-item ng-binding" ng-click="$ionicGoBack()">
+              <i class="icon icon-arrow-left"></i> Voltar
+            </button>
+
+            <ion-nav-title>
+              <!--<i class="icon icon-products lightText"></i>-->
+              Título
+            </ion-nav-title>
+
+          </ion-nav-bar>
+        </ion-header-bar>
+
+      <ion-content class="lighterBackground">
+        <div class="list mrs-basic-list mrs-settings-list">
+            <div class="item item-divider">
+                ITEM DIVIDER
+            </div>               
+            <div class="item item-toggle border-bottom">
+               Setting
+                <label class="toggle">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="item item-toggle">
+                Setting
+                <label class="toggle">
+                    <input type="checkbox">
+                    <div class="track">
+                        <div class="handle"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="item item-divider">
+                Item divider
+            </div>
+                 <div class="item icon-right"  ng-click="editPersonal()">
+                Option Parent 1
+                <i class="icon icon-arrow-right"></i>
+            </div>
+            <div class="item icon-right"  ng-click="editPersonal()">
+                Option Parent 2
+                <i class="icon icon-arrow-right"></i>
+            </div>                                                      
+            <div class="item item-divider"></div>
+
+            <div class="item" ng-click="logoutSettings()">Logout</div>
+        </div>
+
+        <div class="appversion">APP NAME<br/>BETA VERSION v0.2.8</div>
+
+      </ion-content>
+    </ion-pane>
+</body>
+</html>

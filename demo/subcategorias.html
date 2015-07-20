@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script type="text/javascript">angular.module('starter', ['ionic']);</script>
+
+<link rel="stylesheet" href="../dist/lib/ionic/css/ionic.css">
+  <link rel="stylesheet" href="../dist/css/mrs-lists.css">
+  <link rel="stylesheet" href="../dist/css/mrs-bar.css">
+  <link rel="stylesheet" href="../dist/css/mrs-buttons.css">
+  <link rel="stylesheet" href="../dist/css/mrs-banner.css">
+</head>
+<body ng-app="starter">
+    <ion-pane class="imageBackground">
+
+      <ion-header-bar align-title="center" class="lighterBackground darkText bar bar-header disable-user-behavior">
+          <ion-nav-bar>              
+            <button class="button back-button buttons button-clear header-item ng-binding" ng-click="$ionicGoBack()">
+              <i class="icon icon-arrow-left"></i> Voltar
+            </button>
+            <ion-nav-title>
+              Título
+            </ion-nav-title>
+          </ion-nav-bar>
+      </ion-header-bar>
+
+
+      <ion-content class="baseBackground">
+    
+      <!--HEADER COM IMAGEM E SLIDER CATEGORIAS-->
+      
+        <div class="mrs-banner mrs-banner-small">
+           <img src="http://placehold.it/640x230" width="100%" height="100%">
+        </div>
+        <!-- HORIZONTAL SLIDER-->
+        <ion-scroll direction="x" class="horizontal-scroller" scrollbar-x="false">
+          <!-- ng-repeat das categorias-->
+          <div class="button mrs-button-small round-square uppercase darkText button-light">Category 1</div>
+          <div class="button mrs-button-small round-square uppercase darkText button-light active">Category 2</div>
+          <div class="button mrs-button-small round-square uppercase darkText button-light">Category 3</div>
+          <div class="button mrs-button-small round-square uppercase darkText button-light">Category 4</div>
+          <div class="button mrs-button-small round-square uppercase darkText button-light">Category 5</div>
+        </ion-scroll>
+
+
+  <!-- SLIDE BOX -->
+  <ion-slide-box on-slide-changed="slideHasChanged($index)" show-pager='false'>
+  
+    <ion-slide>
+      <!-- SUBCATEGORIES -->
+      <div class="list mrs-basic-list mrs-list-subcategories">
+        <!-- ng-repeat das subcategorias -->        
+            
+            <!-- NOTE: WHEN USING <A HREF> LINKS -> ADD ITEM-LINK CLASS -->
+            <div class="item item-link">
+              <a href="#/app/catalog/products/list">
+                <span bo-text="subCategory.DisplayName">Clicar para produtos</span>
+              </a>
+            </div>
+
+            <!-- ITEMS PARENT -->
+            <div class="item item-accordion-parent open">
+              <span bo-text="subCategory.DisplayName">SubCategoria 2</span>
+            </div>
+            <!-- ITEMS CHILDREN -->
+            <div class="item item-accordion imageBackground" >
+              <span bo-text="item.DisplayName">Opção 1</span>
+            </div>
+            <div class="item item-accordion imageBackground" >
+              <span bo-text="item.DisplayName">Opção 2</span>
+            </div>
+            <!-- END ITEMS CHILDREN --> 
+
+             <div class="item item-accordion-parent">
+                <span bo-text="subCategory.DisplayName">SubCategoria 3</span>
+            </div>
+                              
+        </div>
+    </ion-slide>
+
+
+
+
+    <!--
+    <ion-slide>
+        <ion-list class="list-subcategories" >        
+                <ion-item>
+                    <div bo-text="subCategory.DisplayName">SubCategoria 1</div>
+                </ion-item>
+                 <ion-item >
+                    <div bo-text="subCategory.DisplayName">SubCategoria 2</div>
+                </ion-item>
+                <ion-item class="item-accordion" >
+                    <div bo-text="item.DisplayName">Opção 1</div>
+                </ion-item>
+                <ion-item class="item-accordion" >
+                    <div bo-text="item.DisplayName">Opção 2</div>
+                </ion-item>
+           
+        </ion-list>
+    </ion-slide>
+    -->
+  </ion-slide-box>
+
+
+      </ion-content>
+    </ion-pane>
+</body>
+</html>
