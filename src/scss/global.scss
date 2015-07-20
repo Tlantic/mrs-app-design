@@ -273,15 +273,16 @@ hr{
 		position:relative;
 		height: auto;
 		padding: 20px 0;
+		border:0;
 		.button{
 			&:before{
 				font-size: $icon-font-size-big;
 			}
 			&.button-add{							
-				right: 40px;	
+				right: 30px;	
 			}
 			&.button-remove{
-				left:40px;
+				left: 30px;
 			}
 		}
 		span{
