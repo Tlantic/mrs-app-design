@@ -50,13 +50,18 @@ hr{
 .baseBackground{
 	background-color:$base-background-color!important;
 	margin-top:0;
+	&.scroll-content{
+		padding-top:0;
+	}
 }
 .imageBackground{
 	@include appBackgroundImage(normal);
+	background-color:transparent;
 	margin-top:0;
 }
 .imageBackground-transparent{
-	@include appBackgroundImage(transparent);
+	@include appBackgroundImage('transparent');
+	background-color:transparent!important;
 	margin-top:0;
 }
 .darkBackground{
@@ -160,10 +165,12 @@ hr{
 .item-icon-left{
 	position:relative;
 }
-.icon-big{
+.big-icon{
 	font-size: $icon-font-size-big;
 }
-
+.mega-icon{
+	font-size: $icon-font-size-big + $icon-font-size;	
+}
 .client-logo{
 	background-image: $brandLogo;
 	width: 100%;
@@ -279,6 +286,72 @@ hr{
 			line-height: 40px;
 		}		
 	}
+}
+
+.mrs-quick-list{
+	@include box-sizing(border-box);
+	@include box-shadow(rgba(0,0,0,0.10) 0px -2px 8px 0px inset);
+	@include transition(all 0.4s cubic-bezier(1, 0, 0, 0.82));
+	position:relative;
+	height:$quick-list-height;
+	font-size: $font-size-base;
+	line-height: $font-size-base + 2;	
+	color:$light;
+	z-index: 99;
+	overflow: hidden;	
+	&.listOpen{
+		height:100%;
+		.edit-list{
+			visibility: visible;
+			opacity: 1;
+		}
+	}
+	
+	/* QUICK LIST HEADER */
+	.quick-list-header{	
+		@include box-sizing(border-box);
+		height:$quick-list-height;
+		padding:20px 140px 20px 50px;
+		font-weight: $font-light;	
+		font-size:$font-size-base - 1;	
+		.icon{
+			position: absolute;
+			left: 0;
+			top: 0;
+			font-size: $icon-font-size-big;
+			line-height: $quick-list-height;
+		}
+		.button{
+			min-width:125px;
+			position:absolute;
+			right:10px;
+			top:($quick-list-height - $button-height) / 2 - 2.5;
+			font-size:$font-size-base;
+		}		
+	}
+
+	.quick-list-content{
+		height:0;
+  		@include calc(height, "100% - 117px");  		
+		padding-right: 10px;
+		padding-left: 10px;		
+		margin:0;	
+	}
+
+	.bottom-button{
+		@include transition(opacity 0.7s ease-in);
+		color: #000;
+		background: rgba(255,255,255,0.3);
+		border-top: 1px solid rgba(255,255,255,0.14);
+		width: 100%;
+		margin:0;
+		border-radius: 0;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		visibility: hidden;
+		opacity:0;		
+	}	
 }
 
 
