@@ -52,7 +52,11 @@ hr{
 	margin-top:0;
 }
 .imageBackground{
-	@include appBackgroundImage;
+	@include appBackgroundImage(normal);
+	margin-top:0;
+}
+.imageBackground-transparent{
+	@include appBackgroundImage(transparent);
 	margin-top:0;
 }
 .darkBackground{
@@ -538,7 +542,6 @@ hr{
 		text-align: center;
 		color: lighten($dark, 40%);
 		font-size: $font-size-small;
-
 	}
 
 	.slider{
@@ -594,19 +597,20 @@ hr{
 	}
 }
 
-.header-search{
-	border:0;
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: $bar-height + 2;
-	background-color:darken($dark, 15%);
-	z-index: $z-index-bar-above +1;
-	button{
-		color: $light!important;
-	}
-}
+
+// .header-search{
+// 	border:0;
+// 	position: absolute;
+// 	top: 0;
+// 	left: 0;
+// 	right: 0;
+// 	height: $bar-height + 2;
+// 	background-color:darken($dark, 15%);
+// 	z-index: $z-index-bar-above +1;
+// 	button{
+// 		color: $light!important;
+// 	}
+// }
 
 .modal-dropdown-backdrop{
 	display:block;
@@ -675,6 +679,7 @@ hr{
 		}
 	}
 }
+
 .modal-light{
 	background-color:$light;
 	.title{
