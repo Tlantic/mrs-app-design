@@ -76,6 +76,9 @@ hr{
 	background: rgba(255,255,255,0.8)!important;
 	margin-top:0;
 }
+.no-border{
+	border:0!important;
+}
 .border-all{
 	border:solid 1px!important;
 }
@@ -268,8 +271,8 @@ hr{
 	}	
 	&.item-actions-horizontal-big{
 		position:relative;
-		height: 60px;
-  		padding: 10px 0;
+		height: auto;
+		padding: 20px 0;
 		.button{
 			&:before{
 				font-size: $icon-font-size-big;
