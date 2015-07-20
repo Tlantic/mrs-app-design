@@ -119,6 +119,7 @@
 	left: -10px;
 	position: relative;
 	text-transform:uppercase;
+	font-weight:$font-light;
 	.icon:before{
 		@include fontfamily(icons);
 		padding:0;
