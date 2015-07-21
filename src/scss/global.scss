@@ -686,6 +686,10 @@ hr{
 	height:47px;
 	padding:0;
 }
+.subheader-scroller ~ .has-subheader{
+	top:91px!important;
+}
+
 
 // #modal-filter{
 // 	top:$bar-height * 2;
