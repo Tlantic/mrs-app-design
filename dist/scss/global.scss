@@ -80,6 +80,21 @@ hr{
 	background: rgba(255,255,255,0.8)!important;
 	margin-top:0;
 }
+.has-quicklist{
+	height:auto;
+	bottom:$quick-list-height;
+}
+.has-quicklist-small{
+	height:auto;
+	bottom:$quick-list-height / 2;
+}
+
+.no-margin{
+	margin:0!important;
+}
+.no-padding{
+	padding:0!important;
+}
 .no-border{
 	border:0!important;
 }
@@ -317,10 +332,6 @@ hr{
 	}
 }
 
-.mrs-quicklist-active{
-	margin-top:$quick-list-height;
-}
-
 .mrs-quick-list{
 	@include box-sizing(border-box);
 	@include box-shadow(rgba(0,0,0,0.10) 0px -2px 8px 0px inset);
@@ -331,9 +342,17 @@ hr{
 	line-height: $font-size-base + 2;	
 	color:$light;
 	z-index: 99;
-	overflow: hidden;	
+	overflow: hidden;
+
+	&.mrs-quick-list-small{
+		height:$quick-list-height / 2 ;
+	}	
+
 	&.listOpen{
-		height:100%;
+		height:100%!important;
+		.quick-list-header{
+			height:$quick-list-height;
+		}
 		.bottom-button{
 			visibility: visible;
 			opacity: 1;
@@ -344,7 +363,7 @@ hr{
 	.quick-list-header{	
 		@include box-sizing(border-box);
 		height:$quick-list-height;
-		padding:20px 140px 20px 50px;
+		padding:0;
 		font-weight: $font-light;	
 		font-size:$font-size-base - 1;	
 		.icon{
@@ -354,13 +373,23 @@ hr{
 			font-size: $icon-font-size-big;
 			line-height: $quick-list-height;
 		}
+		.num-items{
+			padding:15px 140px 20px 50px;			
+		}
 		.button{
-			min-width:125px;
-			position:absolute;
-			right:10px;
-			top:($quick-list-height - $button-height) / 2 - 2.5;
-			font-size:$font-size-base;
-		}		
+			margin:0;
+			height:$quick-list-height / 2 ;
+			min-height:$quick-list-height / 2 ;
+			line-height:$quick-list-height / 2 ;
+			&.start-button{
+				min-width:125px;
+				position:absolute;
+				right:10px;
+				top:15px;
+				font-size:$font-size-base;
+			}		
+		}	
+		
 	}
 
 	.quick-list-content{
@@ -372,6 +401,11 @@ hr{
 
 	.bottom-button{
 		@include transition(opacity 0.7s ease-in);
+		color: #000;
+		/*
+		background: rgba(255,255,255,0.3);
+		border-top: 1px solid rgba(255,255,255,0.14);
+		*/
 		width: 100%;
 		margin:0;
 		border-radius: 0;
@@ -384,6 +418,7 @@ hr{
 			margin:0;
 		}		
 	}	
+
 }
 
 

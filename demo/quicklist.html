@@ -13,10 +13,14 @@
     <ion-pane>
     <!-- START MODULE: quick-list + MRS-CHECKBOX-LISTS -->
             <div class="mrs-quick-list imageBackground listOpen" ng-if---="basket.itemsLength > 0" -- ng-class---="{'listOpen': listOpen}">
-                <div class="quick-list-header">               
+                
+                 <div class="quick-list-header">               
                     <i class="icon icon-list" ></i>                
-                    Tem <strong>99</strong> artigos na lista de compras
-                    <button class="button round-square mrs-button-light" id="toggleButton" ng-click="openCloseList()">INICIAR COMPRA</button>
+                    <div class="num-items"><strong>5</strong> {{'list.Products in list' | i18n}}</div>
+                    <button class="button round-square mrs-button-light start-button" id="toggleButton" ng-click="openCloseList()">
+                        <span ng-if="!isQuickListOpen">{{'list.Begin shopping' | i18n}}</span>
+                        <span ng-if="isQuickListOpen">Pausa</span>
+                    </button>   
                 </div>
 
                 <div class="list mrs-checkbox-list quick-list-content darkerBackground ">
