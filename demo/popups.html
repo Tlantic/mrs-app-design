@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="lib/ionic/js/ionic.bundle.js"></script>
+  <script type="text/javascript">angular.module('starter', ['ionic']);</script>
+
+  <link rel="stylesheet" href="../dist/lib/ionic/css/ionic.css">
+  <link rel="stylesheet" href="../dist/css/mrs-popups.css">
+
+</head>
+<body ng-app="starter">
+  <div class="backdrop visible active"></div>
+  
+  <div class="popup-container popup-showing active" ng-class="cssClass">
+    <div class="popup">
+      <div class="popup-head">
+        <h3 class="popup-title ng-binding" ng-bind-html="title"></h3>
+        <!-- ngIf: subTitle -->
+      </div>
+      <div class="popup-body">
+
+        <!-- USE CONTENT TEMPLATE HERE -->
+        <div class="moreInfoItem">
+          <img src="http://placehold.it/180x180">
+          <p class="title">Nome produto
+            <span>Marca produto</span>
+          </p>
+          <p class="price">€ 999,99 </p>
+          <div class="quantity">99</div>
+        </div>
+        <!-- *************************** -->
+
+        <div class="bottom-buttons row">
+          <div class="col">
+            <button class="button button-full mrs-button-transparent" >button</button>
+          </div>
+          <div class="col">
+            <button class="button button-full mrs-button-transparent" >button</button>
+          </div>          
+        </div>
+      </div>
+
+      <div class="popup-buttons">
+        <!-- ngRepeat: button in buttons -->
+        <button ng-click="$buttonTapped(button, $event)" class="button ng-binding icon-close" ng-class="button.type || 'button-default'" ng-bind-html="button.text"></button>
+          <!-- end ngRepeat: button in buttons -->          
+        </div>
+      </div>
+  </div>
+
+
+
+
+
+    <ion-pane>
+      <ion-content>      
+      </ion-content>
+    </ion-pane>
+</body>
+</html>
