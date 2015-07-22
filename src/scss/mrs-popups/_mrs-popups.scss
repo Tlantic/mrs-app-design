@@ -14,7 +14,7 @@
 		.popup-body{
 			@include fontfamily(sans);
 			font-size: $font-size-base;
-			padding: 0 0 ($button-height+5) 0;
+			padding: 0;
 		}
 		.popup-buttons{
 			padding:0;
@@ -46,10 +46,7 @@
 		}
 
 		.bottom-buttons{
-			position:absolute;
-			bottom: 0;
-			width: 100%;
-			left: 0;
+			width: 100%;			
 			border: none;
 			border-top:1px solid $border-color;
 			border-radius:0 0 8px 8px;
@@ -74,7 +71,6 @@
 
 
 .moreInfoItem{
-	background: #fff;
 	padding: 20px;
 	border-radius: 8px 8px 0 0;
 	text-align: left;
