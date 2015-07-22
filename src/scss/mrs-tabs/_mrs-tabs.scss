@@ -1,7 +1,7 @@
 .mrs-tabs{
 	.tabs{
 		@include transition(all 0.5s cubic-bezier(1, 0.01, 0, 1.01));
-		@include transform(translate3d(0px, 0, 0px));
+		@include transform(translate3d(0, 0, 0));
 		background-color:rgba(0,0,0,0.3);	
 		color:$light;
 		border: 0;
@@ -71,14 +71,15 @@
 			&.activated{
 				opacity: 1 !important;
 			}
-		}
-		&.bottomHide{
-			@include transform(translate3d(0px, 122%, 0px));
-		}
+		}		
 	}
-
 }
 
+&.bottomHide{
+	.tabs{
+		@include transform(translate3d(0px, 122%, 0));
+	}
+}
 
 .effect{
 	display: block;
