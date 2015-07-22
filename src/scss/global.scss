@@ -68,6 +68,10 @@ hr{
 	background: rgba(0,0,0,0.8)!important;
 	margin-top:0;
 }
+.lightBackground{
+	background: rgba(255,255,255,0.2)!important;
+	margin-top:0;
+}
 .darkerBackground{
 	background: rgba(0,0,0,0.2)!important;
 	margin-top:0;
@@ -119,6 +123,27 @@ hr{
 	}
 	p{
 		color:$dark;
+	}	
+}
+.darkerText{
+	color:#000!important;
+	button{
+		color:#000!important;
+	}
+	.title{
+		color:#000;
+	}
+	h1{
+		color:#000;
+	}
+	h2{
+		color:#000;
+	}
+	h3{
+		color:#000;
+	}
+	p{
+		color:#000;
 	}	
 }
 .lightText{
@@ -339,8 +364,7 @@ hr{
 	}
 
 	.quick-list-content{
-		height:0;
-  		@include calc(height, "100% - 117px");  		
+		height:100%;	
 		padding-right: 10px;
 		padding-left: 10px;		
 		margin:0;	
@@ -348,9 +372,6 @@ hr{
 
 	.bottom-button{
 		@include transition(opacity 0.7s ease-in);
-		color: #000;
-		background: rgba(255,255,255,0.3);
-		border-top: 1px solid rgba(255,255,255,0.14);
 		width: 100%;
 		margin:0;
 		border-radius: 0;
@@ -358,7 +379,10 @@ hr{
 		bottom: 0;
 		left: 0;
 		visibility: hidden;
-		opacity:0;		
+		opacity:0;
+		.button{
+			margin:0;
+		}		
 	}	
 }
 
