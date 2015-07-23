@@ -679,21 +679,21 @@ hr{
 }
 
 
+.details-item-photo{
+	margin-bottom:20px;
+	img{
+		width: auto;
+		max-height:160px;
+		margin:0 auto;
+	}
+}
 #details-top{
 	@include fontfamily(sans);
 	.row{
 		position:relative;
 		padding:10px;		
 	}
-	.item-photo{
-		margin-bottom:40px;
-		padding:0;
-		img{
-			width: auto;
-			max-height:200px;
-			margin:0 auto;
-		}
-	}
+
 	.item-name{
 		font-size: $font-size-base + 2;
 		font-weight: $font-regular;
@@ -709,8 +709,7 @@ hr{
 		text-align:right;
 	}
 	.item-description{
-		margin-bottom:20px;
-		color:$textColor;
+		padding:20px 10px;
 	}
 }
 .item-secondary-actions{
@@ -718,6 +717,7 @@ hr{
 	bottom:0;
 	margin: 0;
 }	
+
 
 
 .horizontal-scroller{
