@@ -324,14 +324,29 @@
 .mrs-list-subcategories{
 	@include box-sizing(border-box);
 	padding:0 20px 5px 20px;
+	margin-bottom:0;
 }
-
 .item-accordion-parent{
 	&.open{
 		@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));	
 		@include appBackgroundImage(normal);
 		font-weight:$font-bold;
 		color:$light;
+
+	}
+	&.has-children{
+		position:relative;
+		&:before{
+			@include fontfamily(icons);
+			@extend .icon-arrow-down;
+			content:"";
+			position:absolute;
+			right:0;
+			display:block;
+			width:40px;
+			height:40px;
+			font-size:$icon-font-size;
+		}
 	}
 }
 
