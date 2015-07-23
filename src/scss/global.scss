@@ -819,7 +819,8 @@ hr{
 				font-size: 27px;
 				position: absolute;
 				width:50px;				
-				right: 13px;				
+				right: 13px;	
+				line-height:44px;			
 				&.activated{
 					@include box-shadow(none);
 					border:none !important;					
