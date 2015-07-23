@@ -749,6 +749,111 @@ hr{
 	top:91px!important;
 }
 
+//LIST HEADER 
+.mainList{
+	.bar-header{
+		height:$bar-height+10;
+	}
+	.has-subheader{
+		top:95px !important;
+	}
+	.bar-subheader{
+		/*
+		@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+		@include transform(translate3D(0,0,0));
+		*/
+		z-index: -1;		
+		display:block;	
+		background-color: rgba(0, 0, 0, 0.5);
+		top:$bar-height+10;
+		&.subheaderEnter{
+			/*@include transform(translate3D(0,0,0));*/
+			display:block;		
+		}
+		.button{
+			font-size: $font-size-base - 2;
+		}
+	}
+	.headerList{
+		.transparent{
+			visibility: hidden;
+		}
+	
+		.editButton{
+			@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+			line-height:45px;		
+			&.removeButtons{
+				@include transform(translate3D(-100%,0,0));
+			}
+		}
+		.cancelButton{
+			@extend .editButton;
+			@include transform(translate3D(-180%,0,0));			
+			&.cancelEnter{
+				@include transform(translate3D(0%,0,0));
+			}
+		}
+		.addNewProduct{
+			@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
+			margin:0 auto;			
+			background: rgba(255,255,255, 0.2);
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			border-radius: 25px;
+			width: 80px;
+			position: relative;
+			@include transition(all 0.3s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+			&.slideForm{
+				@include transform(translate3D(0%,-200%,0));
+			}
+			input{
+				width: 100%;
+				padding:25px 10px;
+				background: transparent;
+				color: #FFF;
+			}
+			.addButton{
+				@include transform(rotate(0deg));
+				@include transition(all 0.9s cubic-bezier(0.190, 1.000, 0.220, 1.000));				
+				margin:0 auto;
+				border:none;
+				font-size: 27px;
+				position: absolute;
+				width:50px;				
+				right: 13px;				
+				&.activated{
+					@include box-shadow(none);
+					border:none !important;					
+				}
+			}
+			&.openInput{
+				padding: 0 35px 0 15px;
+				width: 100%;
+				
+				.addButton{
+					width: 50px;
+					right: 0;
+					@include transform(rotate(45deg));
+
+				}
+			}
+		}
+		.icon-barcode{
+				
+			@include transition(all 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+			&:before{
+				font-size:45px;
+			}
+			&.removeButtons{
+				@include transform(translate3D(100%,0,0));
+			}
+		}
+		
+	}
+}
+
+
+
+
 
 // #modal-filter{
 // 	top:$bar-height * 2;
@@ -1011,8 +1116,41 @@ hr{
 
 
 //PLATFORM
-.platform-ios.platform-cordova{
-	
-}
+.platform-ios.platform-cordova {
+  // iOS has a status bar which sits on top of the header.
+  // Bump down everything to make room for it. However, if
+  // if its in Cordova, and set to fullscreen, then disregard the bump.
+  &:not(.fullscreen) {
+    .bar-header:not(.bar-subheader) {   
+      &.item-input-inset .item-input-wrapper {
+        margin-top: 0 !important;
+      }
 
+      > * {
+        margin-top: 0;
+      }
+    }
+  }
+	.mainList{
+		.bar-header{
+			height:$bar-height+10!important;
+		}
+		.has-subheader{
+			top:95px !important;
+		}
+		.bar-subheader{
+			top:$bar-height+10;
+		}
+	}
+
+	.mrs-quick-list-small {
+  		padding-top:$ios-statusbar-height;
+  		height:($quick-list-height / 2) + $ios-statusbar-height;
+	}
+	.has-quicklist-small {
+  		height: auto;
+  		bottom:($quick-list-height / 2) + $ios-statusbar-height;
+	}
+
+}
 
