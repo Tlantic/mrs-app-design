@@ -94,9 +94,9 @@
 	}
 	.icon{	
 		display:inline-block;
-		vertical-align:middle;
+		vertical-align:inherit;
 		&:before{
-			font-size: $icon-font-size-big - 10;
+			font-size: $icon-font-size-big - 10;		 	
 		}
 	}
 }
