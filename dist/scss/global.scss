@@ -1143,15 +1143,30 @@ hr{
 			top:$bar-height+10;
 		}
 	}
-
+	
+	.mrs-quick-list{
+		padding-top:$ios-statusbar-height;
+  		height: $quick-list-height + $ios-statusbar-height;	
+  		.start-button{
+			top: 35px;
+  		}
+  		.icon{
+			top:20px;
+  		}
+	}
+	.has-quicklist {
+  		height: auto;
+  		bottom: $quick-list-height + $ios-statusbar-height;
+	}	
 	.mrs-quick-list-small {
   		padding-top:$ios-statusbar-height;
   		height:($quick-list-height / 2) + $ios-statusbar-height;
-	}
+	}	
 	.has-quicklist-small {
   		height: auto;
   		bottom:($quick-list-height / 2) + $ios-statusbar-height;
-	}
+	}	
+
 
 }
 
