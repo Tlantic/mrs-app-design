@@ -332,7 +332,6 @@
 		@include appBackgroundImage(normal);
 		font-weight:$font-bold;
 		color:$light;
-
 	}
 	&.has-children{
 		position:relative;
@@ -346,6 +345,11 @@
 			width:40px;
 			height:40px;
 			font-size:$icon-font-size;
+		}
+		&.open{
+			&:before{
+				@extend .icon-arrow-up;
+			}
 		}
 	}
 }
