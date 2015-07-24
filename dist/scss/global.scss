@@ -222,7 +222,10 @@ hr{
 	background-repeat: no-repeat;
 	background-position: 50%;
 }
-
+.loading-spinner{
+	display:block;
+	text-align:center;
+}
 .item-actions{	
 	position:absolute;	
 	z-index: 99;
