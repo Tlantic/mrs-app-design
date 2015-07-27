@@ -221,6 +221,7 @@ hr{
 	background-size: 180px;
 	background-repeat: no-repeat;
 	background-position: 50%;
+	margin-top:10px;
 }
 .loading-spinner{
 	display:block;
@@ -1111,35 +1112,22 @@ hr{
 // }
 
 
-
 //PLATFORM
 .platform-ios.platform-cordova {
-  // iOS has a status bar which sits on top of the header.
-  // Bump down everything to make room for it. However, if
-  // if its in Cordova, and set to fullscreen, then disregard the bump.
-  &:not(.fullscreen) {
-    .bar-header:not(.bar-subheader) {   
-      &.item-input-inset .item-input-wrapper {
-        margin-top: 0 !important;
-      }
-
-      > * {
-        margin-top: 0;
-      }
-    }
-  }
-	.mainList{
-		.bar-header{
-			height:$bar-height+10!important;
-		}
-		.has-subheader{
-			top:95px !important;
-		}
-		.bar-subheader{
-			top:$bar-height+10;
+	// iOS has a status bar which sits on top of the header.
+	// Bump down everything to make room for it. However, if
+	// if its in Cordova, and set to fullscreen, then disregard the bump.
+	&:not(.fullscreen) {
+		.bar-header:not(.bar-subheader) {   
+			&.item-input-inset .item-input-wrapper {
+				margin-top: 0;
+			}
+			> * {
+				margin-top: 20px;
+			}
 		}
 	}
-	
+
 	.mrs-quick-list{
 		padding-top:$ios-statusbar-height;
   		height: $quick-list-height + $ios-statusbar-height;	
@@ -1153,6 +1141,7 @@ hr{
 	.has-quicklist {
   		height: auto;
   		bottom: $quick-list-height + $ios-statusbar-height;
+
 	}	
 	.mrs-quick-list-small {
   		padding-top:$ios-statusbar-height;
@@ -1161,8 +1150,27 @@ hr{
 	.has-quicklist-small {
   		height: auto;
   		bottom:($quick-list-height / 2) + $ios-statusbar-height;
+
+		.bar-header:not(.bar-subheader) {   
+			height:$bar-height;
+			> * {
+				margin-top: 0px!important;
+			}
+		}
+		.has-header{
+			top:$bar-height!important;
+		}
 	}	
-
-
+	.mainList{
+		.headerList{
+			height:$bar-height+10!important;		
+		}
+		.has-subheader{
+			top:95px !important;
+		}
+		.bar-subheader{
+			top:$bar-height+10!important;
+		}
+	}
 }
 
