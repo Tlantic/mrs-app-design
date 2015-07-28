@@ -343,8 +343,10 @@ hr{
 
 	&.mrs-quick-list-small{
 		height:$quick-list-height / 2 ;
+  		.quicklist-header-wrapper{
+  			height:$quick-list-height;
+  		}
 	}	
-
 	&.listOpen{
 		height:100%!important;
 		.quick-list-header{
