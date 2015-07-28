@@ -230,44 +230,44 @@ hr{
 .item-actions{	
 	position:absolute;	
 	z-index: 99;
-	text-align: center;	
-	span{
-		@include fontfamily();
-		color: $brand-color-primary;
-	}
+	text-align: center;
 	.button{	
 		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
-	}
-	.button-addfirst{
-	}
-	.button-add{
-	}
-	.button-remove{
 	}
 	.quantity{
 		color:$brand-color-primary;
 	}		
 }
 
-.item-actions-vertical{	
+
+.item-actions-vertical{
 	right: 0px;
 	top: 10px !important;
 	bottom: 10px;
 	max-width:60px;
 	border-left: 1px solid $border-color;
-	.button-addfirst{
-	}
-	.button-add{
-		top:-5px;
-	}
-	.button-remove{		
+	.button-remove{
+		top: -17px;
+		z-index: -1;
 		visibility: hidden;
 	}
-	.addButtonAnim{
-		top:30px;			
+	.button-addQuant{
+		top:30px;
+	    color:$brand-color-primary;
+	    &:before{
+			font-size:$icon-font-size;
+	    }		
 	}
-	.removeButtonAnim{
-		visibility: visible;
+	&.addQuantity{
+		.button-remove{
+			top:0;
+			visibility: visible;
+		}
+		.button-addQuant{
+			top:-5px;	
+			color: $dark;			
+		}
+
 	}
 }
 
@@ -1173,6 +1173,128 @@ hr{
 		.bar-subheader{
 			top:$bar-height+10!important;
 		}
+	}
+}
+
+
+
+//LIST HEADER 
+.mainList{
+	.bar-header{
+		height:$bar-height+10;
+	}
+	.has-header{
+		top:$bar-height+10 !important;
+	}
+	.has-subheader{
+		top:95px !important;
+		@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+		-webkit-transition-delay: 0.4s; /* Safari */
+    	transition-delay: 0.4s;
+	}
+	.bar-subheader{
+		z-index: -1;
+		display:none;	
+		background-color: rgba(0, 0, 0, 0.5);
+		top:$bar-height+10;
+		&.subheaderEnter{
+			/*@include transform(translate3D(0,0,0));*/
+			display:block;
+			
+		}
+		.button{
+			font-size: $font-size-base - 2;
+		}
+	}
+
+	.backgroundBlock{
+		position: absolute;
+		top:0;
+		left:0;
+		right: 0;
+		bottom:$footer-height;
+		background-color: rgba(0,0,0,0.4);
+		z-index:5;
+		display: none;
+	}
+	.headerList{
+		.transparent{
+			visibility: hidden;
+		}
+	
+		.editButton{
+			@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+			line-height:45px;
+			position:absolute;		
+			&.removeButtons{
+				@include transform(translate3D(-110%,0,0));
+			}
+		}
+		.cancelButton{
+			@extend .editButton;
+			@include transform(translate3D(-180%,0,0));			
+			&.cancelEnter{
+				@include transform(translate3D(0%,0,0));
+			}
+		}
+		.addNewProduct{
+			@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
+			margin:0 auto;			
+			background: rgba(255,255,255, 0.2);
+			border: 1px solid rgba(255, 255, 255, 0.15);
+			border-radius: 25px;
+			width: 80px;
+			position: relative;
+			z-index:99;
+			@include transition(all 0.3s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+			&.slideForm{
+				@include transform(translate3D(0%,-200%,0));
+			}
+			input{
+				width: 100%;
+				padding:25px 10px;
+				background: transparent;
+				color: #FFF;
+			}
+			.addButton{
+				@include transform(rotate(0deg));
+				@include transition(all 0.9s cubic-bezier(0.190, 1.000, 0.220, 1.000));				
+				margin:0 auto;
+				border:none;
+				font-size: 27px;
+				position: absolute;
+				width:50px;				
+				right: 13px;	
+				line-height:44px;			
+				&.activated{
+					@include box-shadow(none);
+					border:none !important;					
+				}
+			}
+			&.openInput{
+				padding: 0 35px 0 15px;
+				width: 100%;
+				
+				.addButton{
+					width: 50px;
+					right: 0;
+					top:0;
+					@include transform(rotate(45deg));
+
+				}
+			}
+		}
+		.icon-barcode{
+				
+			@include transition(all 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+			&:before{
+				font-size:45px;
+			}
+			&.removeButtons{
+				@include transform(translate3D(100%,0,0));
+			}
+		}
+		
 	}
 }
 
