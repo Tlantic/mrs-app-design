@@ -13,7 +13,6 @@
   color: #000;
   background-color: #fff;
   text-align: center;
-  font-weight: 300;
 }
 
 .tabbed-slidebox .tsb-icons {
@@ -30,29 +29,10 @@
   -webkit-transform:translate3d(0,0,0);
 }
 
-.tabbed-slidebox .tsb-icons a {
-  display: inline-block;
-  width: 54px;
-  font-size: 2.5em;
-  color: rgba(0, 0, 0, 0.3);
-  -webkit-transform:translate3d(0,8px,0);
-}
-
-.tabbed-slidebox .tsb-icons a.active {
-  color: rgba(0, 0, 0, 1);
-  font-size: 3.5em;
-  -webkit-transform:translate3d(0,0,0);
-}
-
-.tabbed-slidebox .tabbed-slidebox {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
-}
-
 .tsb-hscroll.scroll-view{
   white-space: nowrap;
   margin:0 auto;
+  width:100%;
 }
 .tsb-hscroll.scroll-view .scroll-bar{
   visibility:hidden;
@@ -62,14 +42,21 @@
 }
 
 .tabbed-slidebox .tsb-icons .scroll a{
+  display: inline-block;
+  @include fontfamily(sans);
   width:auto;
-  font-size: 1.5em;
-  line-height: 1.5em;
+  font-size:$font-size-base - 1;    
+  text-transform:uppercase;
   text-decoration: none;
-  margin: 0 15px;
-  border-bottom: 3px solid transparent;
+  padding: 5px 10px;
+  margin: 0 5px; 
 }
+
 .tabbed-slidebox .tsb-icons .scroll a.active {
-  font-size: 1.8em;
-  border-bottom: 3px solid #ccc;
+    @extend .imageBackground;
+    @extend .round-square;
+    @include box-shadow (inset 0 1px 2px 0 rgba(0,0,0,0.2));
+    background-size:200%;
+    border:rgba(255,255,255,0.2);   
+    color: $light;  
 }
