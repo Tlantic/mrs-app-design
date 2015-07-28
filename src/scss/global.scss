@@ -230,44 +230,44 @@ hr{
 .item-actions{	
 	position:absolute;	
 	z-index: 99;
-	text-align: center;	
-	span{
-		@include fontfamily();
-		color: $brand-color-primary;
-	}
+	text-align: center;
 	.button{	
 		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
-	}
-	.button-addfirst{
-	}
-	.button-add{
-	}
-	.button-remove{
 	}
 	.quantity{
 		color:$brand-color-primary;
 	}		
 }
 
-.item-actions-vertical{	
+
+.item-actions-vertical{
 	right: 0px;
 	top: 10px !important;
 	bottom: 10px;
 	max-width:60px;
 	border-left: 1px solid $border-color;
-	.button-addfirst{
-	}
-	.button-add{
-		top:-5px;
-	}
-	.button-remove{		
+	.button-remove{
+		top: -17px;
+		z-index: -1;
 		visibility: hidden;
 	}
-	.addButtonAnim{
-		top:30px;			
+	.button-addQuant{
+		top:30px;
+	    color:$brand-color-primary;
+	    &:before{
+			font-size:$icon-font-size;
+	    }		
 	}
-	.removeButtonAnim{
-		visibility: visible;
+	&.addQuantity{
+		.button-remove{
+			top:0;
+			visibility: visible;
+		}
+		.button-addQuant{
+			top:-5px;	
+			color: $dark;			
+		}
+
 	}
 }
 
@@ -420,241 +420,6 @@ hr{
 
 }
 
-
-
-// PAGE FLYERS
-
-// .modal-flyer{
-// 	.bar{
-// 		button{
-// 			&:before{
-// 				color: $light;
-// 				margin-right: -10px;
-// 			}
-// 		}
-// 		.button.basket {
-// 			position: absolute;
-// 			top: 5px;
-// 		    right: 5px;
-// 		    bottom: 5px;
-// 		}
-// 	}
-// 	.bar-subheader{
-// 		height: $bar-height + 5;
-// 		z-index: 4;
-
-// 	}
-// 	.mrs-slider-pager{	
-// 		&.landscape{
-// 			left: 50px;
-// 			right: 50px;
-// 		}
-		
-// 	}
-// 	.search-flyer{
-// 		padding:5px;
-// 		input[type="text"]{
-// 			padding:5px;
-// 			height: $bar-height - 10px;
-// 		}
-// 		.button{
-// 			right: 5px;
-// 			top: 5px;
-// 		}
-// 	}
-// 	.title{
-// 		@include box-sizing(border-box);
-// 		color: $dark;
-// 		margin: 0;
-// 		padding: 2px;
-// 		padding-right: 50px!important;
-// 		padding-left:50px!important;
-// 		left: 0!important;
-// 		top: 0px;
-// 		height: $bar-height;
-// 	}
-
-// }
-
-#content-flyer{
-	z-index:99;
-	&.portrait{		
-	}
-	&.landscape{
-		overflow:visible;
-		.mrs-slider-pager{
-			top: -$bar-height;
-			left: 55px;
-			right: 55px;
-			background: transparent;
-		}
-	}
-
-	.mrs-slider-pager{
-		background-color:$light;
-	}
-
-	.row{
-		padding: 0px 5px 0 5px;
-		margin-bottom: 11px;
-		&:first-child{
-			margin-top:10px;
-		}
-		.col{
-			position: relative;
-			padding:0;
-			background-color:$light;
-			border:solid 1px lighten($dark, 60%);
-			height: 180px;
-			&:nth-child(odd){
-				margin-right:5px;
-			}
-		}
-	}
-
-	.product-name{
-		font-size: $font-size-base - 2;
-		padding: 0 10px;
-		line-height: 14px;
-		color: #5A5A5A;
-		white-space: normal;
-	}
-
-	.favoriteIcon{
-		position: absolute;
-		top: 0;
-		font-size: 40px;
-		left: 0;
-		color: #828282;
-	}
-
-	.product-thumb{
-		width: 80px;
-		height: 75px;
-		margin: 10px auto 5px;
-		img{
-			height: 75px;
-		}
-	}
-	.product-price{
-		position: absolute;
-		left: 10px;
-		bottom: 45px;
-		font-size: $font-size-base;
-		color: $brand-color-primary;
-	}
-	.product-discount{
-		display: block;
-		position: absolute;
-		left: 5px;
-		top: 5px;
-		width: 35px;
-		height: 27px;
-		&.discount-superpreco{
-			height: 25px;
-			bottom:10px;
-		}
-	}
-
-	.item-actions{
-		right: 10px;
-		top: 10px;
-		.button-remove{
-			position: absolute;
-			top: 0;
-			right: 40px;
-			margin: 0px;
-			padding: 0;
-		}
-		.button-add{
-			font-size:$icon-font-size-big;
-		}
-		.button-addmore{
-			min-width:34px;
-			min-height:34px;
-			width:34px;
-			height:34px;
-		}
-
-
-	}
-
-	.pager{
-		position: absolute;
-		display: block;
-		left: 0;
-		width: 100%;
-		bottom:0;
-		text-align: center;
-		color: lighten($dark, 40%);
-		font-size: $font-size-small;
-	}
-
-	.slider{
-		margin: 0;
-		&.slider-landscape{
-			bottom:0;
-			height:100%;
-		}
-	}
-	.slider-pager{
-		bottom:10px;
-	}
-}
-
-.flyer-details{
-	@include transform(translate3d(0px, 90px, 0px));
-	@include transition(all 0.2s ease);
-	position: absolute;
-	z-index: $z-index-popup;
-	bottom:0;
-	top:auto;
-	left: 0;
-	right: 0;
-	background-color:$light;
-	height:90px;
-	.wrapper{
-		@include vertical-align;
-		color: $dark;
-		font-size:$font-size-base - 2;
-		padding:10px 60px 10px 10px;
-		h1{
-			font-size: $font-size-large;
-			font-weight: $font-semibold;
-			margin:0;
-			padding:0;
-		}
-		.price{
-			font-size: $font-size-large;
-			font-weight: $font-semibold;
-			color: $dark;
-		}
-	}
-
-	&.open{
-		@include transform(translate3d(0px, 0px, 0px));
-		@include transition(transform 0.2s ease);
-		.button-close{
-			@include vertical-align;
-			position: absolute;
-			right: 0px;
-			left: auto;
-		}
-	}
-}
-
-
-.modal-light{
-	background-color:$light;
-	.title{
-		color: $dark;
-	}
-	.button{
-		color: $dark;
-	}
-}
-
-
 .appversion{
 	display:block;
 	text-align:center;
@@ -718,7 +483,6 @@ hr{
 }	
 
 
-
 .horizontal-scroller{
 	overflow: scroll;
 	white-space: nowrap;
@@ -740,6 +504,7 @@ hr{
 		}
 	}
 }
+
 .subheader-scroller{
 	height:47px;
 	padding:0;
@@ -753,25 +518,36 @@ hr{
 	.bar-header{
 		height:$bar-height+10;
 	}
+	.has-header{
+		top:$bar-height+10 !important;
+	}
 	.has-subheader{
 		top:95px !important;
+		@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+		-webkit-transition-delay: 0.4s; /* Safari */
+    	transition-delay: 0.4s;
 	}
 	.bar-subheader{
-		/*
-		@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
-		@include transform(translate3D(0,0,0));
-		*/
 		z-index: -1;		
-		display:block;	
+		display:none;	
 		background-color: rgba(0, 0, 0, 0.5);
 		top:$bar-height+10;
 		&.subheaderEnter{
-			/*@include transform(translate3D(0,0,0));*/
 			display:block;		
 		}
 		.button{
 			font-size: $font-size-base - 2;
 		}
+	}
+	.backgroundBlock{
+		position: absolute;
+		top:0;
+		left:0;
+		right: 0;
+		bottom:$footer-height;
+		background-color: rgba(0,0,0,0.6);
+		z-index:5;
+		display: none;
 	}
 	.headerList{
 		.transparent{
@@ -780,7 +556,8 @@ hr{
 	
 		.editButton{
 			@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
-			line-height:45px;		
+			line-height:45px;	
+			position:absolute;			
 			&.removeButtons{
 				@include transform(translate3D(-100%,0,0));
 			}
@@ -800,6 +577,7 @@ hr{
 			border-radius: 25px;
 			width: 80px;
 			position: relative;
+			z-index:99;
 			@include transition(all 0.3s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 			&.slideForm{
 				@include transform(translate3D(0%,-200%,0));
@@ -832,13 +610,12 @@ hr{
 				.addButton{
 					width: 50px;
 					right: 0;
+					top: 0;
 					@include transform(rotate(45deg));
-
 				}
 			}
 		}
 		.icon-barcode{
-				
 			@include transition(all 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 			&:before{
 				font-size:45px;
@@ -850,7 +627,6 @@ hr{
 		
 	}
 }
-
 
 
 
@@ -1113,6 +889,238 @@ hr{
 // 	}
 // }
 
+// PAGE FLYERS
+
+// .modal-flyer{
+// 	.bar{
+// 		button{
+// 			&:before{
+// 				color: $light;
+// 				margin-right: -10px;
+// 			}
+// 		}
+// 		.button.basket {
+// 			position: absolute;
+// 			top: 5px;
+// 		    right: 5px;
+// 		    bottom: 5px;
+// 		}
+// 	}
+// 	.bar-subheader{
+// 		height: $bar-height + 5;
+// 		z-index: 4;
+
+// 	}
+// 	.mrs-slider-pager{	
+// 		&.landscape{
+// 			left: 50px;
+// 			right: 50px;
+// 		}
+		
+// 	}
+// 	.search-flyer{
+// 		padding:5px;
+// 		input[type="text"]{
+// 			padding:5px;
+// 			height: $bar-height - 10px;
+// 		}
+// 		.button{
+// 			right: 5px;
+// 			top: 5px;
+// 		}
+// 	}
+// 	.title{
+// 		@include box-sizing(border-box);
+// 		color: $dark;
+// 		margin: 0;
+// 		padding: 2px;
+// 		padding-right: 50px!important;
+// 		padding-left:50px!important;
+// 		left: 0!important;
+// 		top: 0px;
+// 		height: $bar-height;
+// 	}
+// }
+
+// #content-flyer{
+// 	z-index:99;
+// 	&.portrait{		
+// 	}
+// 	&.landscape{
+// 		overflow:visible;
+// 		.mrs-slider-pager{
+// 			top: -$bar-height;
+// 			left: 55px;
+// 			right: 55px;
+// 			background: transparent;
+// 		}
+// 	}
+
+// 	.mrs-slider-pager{
+// 		background-color:$light;
+// 	}
+
+// 	.row{
+// 		padding: 0px 5px 0 5px;
+// 		margin-bottom: 11px;
+// 		&:first-child{
+// 			margin-top:10px;
+// 		}
+// 		.col{
+// 			position: relative;
+// 			padding:0;
+// 			background-color:$light;
+// 			border:solid 1px lighten($dark, 60%);
+// 			height: 180px;
+// 			&:nth-child(odd){
+// 				margin-right:5px;
+// 			}
+// 		}
+// 	}
+
+// 	.product-name{
+// 		font-size: $font-size-base - 2;
+// 		padding: 0 10px;
+// 		line-height: 14px;
+// 		color: #5A5A5A;
+// 		white-space: normal;
+// 	}
+
+// 	.favoriteIcon{
+// 		position: absolute;
+// 		top: 0;
+// 		font-size: 40px;
+// 		left: 0;
+// 		color: #828282;
+// 	}
+
+// 	.product-thumb{
+// 		width: 80px;
+// 		height: 75px;
+// 		margin: 10px auto 5px;
+// 		img{
+// 			height: 75px;
+// 		}
+// 	}
+// 	.product-price{
+// 		position: absolute;
+// 		left: 10px;
+// 		bottom: 45px;
+// 		font-size: $font-size-base;
+// 		color: $brand-color-primary;
+// 	}
+// 	.product-discount{
+// 		display: block;
+// 		position: absolute;
+// 		left: 5px;
+// 		top: 5px;
+// 		width: 35px;
+// 		height: 27px;
+// 		&.discount-superpreco{
+// 			height: 25px;
+// 			bottom:10px;
+// 		}
+// 	}
+
+// 	.item-actions{
+// 		right: 10px;
+// 		top: 10px;
+// 		.button-remove{
+// 			position: absolute;
+// 			top: 0;
+// 			right: 40px;
+// 			margin: 0px;
+// 			padding: 0;
+// 		}
+// 		.button-add{
+// 			font-size:$icon-font-size-big;
+// 		}
+// 		.button-addmore{
+// 			min-width:34px;
+// 			min-height:34px;
+// 			width:34px;
+// 			height:34px;
+// 		}
+
+
+// 	}
+
+// 	.pager{
+// 		position: absolute;
+// 		display: block;
+// 		left: 0;
+// 		width: 100%;
+// 		bottom:0;
+// 		text-align: center;
+// 		color: lighten($dark, 40%);
+// 		font-size: $font-size-small;
+// 	}
+
+// 	.slider{
+// 		margin: 0;
+// 		&.slider-landscape{
+// 			bottom:0;
+// 			height:100%;
+// 		}
+// 	}
+// 	.slider-pager{
+// 		bottom:10px;
+// 	}
+// }
+
+// .flyer-details{
+// 	@include transform(translate3d(0px, 90px, 0px));
+// 	@include transition(all 0.2s ease);
+// 	position: absolute;
+// 	z-index: $z-index-popup;
+// 	bottom:0;
+// 	top:auto;
+// 	left: 0;
+// 	right: 0;
+// 	background-color:$light;
+// 	height:90px;
+// 	.wrapper{
+// 		@include vertical-align;
+// 		color: $dark;
+// 		font-size:$font-size-base - 2;
+// 		padding:10px 60px 10px 10px;
+// 		h1{
+// 			font-size: $font-size-large;
+// 			font-weight: $font-semibold;
+// 			margin:0;
+// 			padding:0;
+// 		}
+// 		.price{
+// 			font-size: $font-size-large;
+// 			font-weight: $font-semibold;
+// 			color: $dark;
+// 		}
+// 	}
+
+// 	&.open{
+// 		@include transform(translate3d(0px, 0px, 0px));
+// 		@include transition(transform 0.2s ease);
+// 		.button-close{
+// 			@include vertical-align;
+// 			position: absolute;
+// 			right: 0px;
+// 			left: auto;
+// 		}
+// 	}
+// }
+
+
+// .modal-light{
+// 	background-color:$light;
+// 	.title{
+// 		color: $dark;
+// 	}
+// 	.button{
+// 		color: $dark;
+// 	}
+// }
+
+
 
 //PLATFORM
 .platform-ios.platform-cordova {
@@ -1175,4 +1183,3 @@ hr{
 		}
 	}
 }
-
