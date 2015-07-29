@@ -271,6 +271,7 @@ hr{
 	}
 }
 
+
 .item-actions-horizontal{
 	bottom: 0;
 	left: 0;
@@ -280,32 +281,39 @@ hr{
 	span{		
 		font-size: $font-size-base +2;
 		line-height:40px;
+		display: none;
 	}
 	.button{
 		position: absolute;
 		min-height:40px;
 		height:40px;
-		line-height:40px;		
-	}
-	.button-addfirst{
-		@include calc(left, "50% - 30px");
+		line-height:40px;
+		@include transform(translate3d(0, 0, 0));		
 	}
 	.button-add{
-		right: 0;		
+		top:0;	
+		color: $brand-color-primary;
+		@include calc(right, "50% - 30px");	
 	}	
 	.button-remove{
-		@include transform(translate3D(0, 0, 0));
-		visibility: visible;
-		left: 0;
-		padding-bottom: 0;
-	}
-	.addButtonAnim{
-		@include transform(translate3d(0, 0, 0) !important);
-	}
-	.removeButtonAnim{
-		@include transform(translate3D(45px, 0, 0));
+		@include calc(left, "50% - 22px");	
 		visibility: hidden;
-	}	
+	}
+	
+	&.addQuantity{
+		span{
+			display: block;
+		}
+		.button-remove{
+			left:0;
+			visibility: visible;
+			padding-bottom: 0;
+		}
+		.button-add{
+			right: 0;
+			color: $dark;
+		}
+	}
 	&.item-actions-horizontal-big{
 		position:relative;
 		height: auto;
