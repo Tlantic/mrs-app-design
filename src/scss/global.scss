@@ -189,7 +189,8 @@ hr{
 	text-transform:uppercase!important;
 }
 .round-square{
-  border-radius:100px!important; 
+  //border-radius:100px!important; 
+  @include border-radius(100px);
 }
 .title{
 	.icon{
@@ -582,12 +583,11 @@ hr{
 				@include transform(translate3D(0%,0,0));
 			}
 		}
-		.addNewProduct{
+		.addNewProduct{			
 			@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
 			margin:0 auto;			
 			background: rgba(255,255,255, 0.2);
 			border: 1px solid rgba(255, 255, 255, 0.15);
-			border-radius: 25px;
 			width: 80px;
 			position: relative;
 			z-index:99;
