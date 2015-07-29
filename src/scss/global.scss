@@ -1175,6 +1175,9 @@ hr{
 		.headerList{
 			height:$bar-height+10!important;		
 		}
+		.has-header{
+			top:$bar-height+10 !important;
+		}
 		.has-subheader{
 			top:95px !important;
 		}
