@@ -236,7 +236,9 @@ hr{
 		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 	}
 	.quantity{
+		@include fontfamily(sans);
 		color:$brand-color-primary;
+		font-size:$font-size-base + 2;
 	}		
 }
 
@@ -259,6 +261,9 @@ hr{
 			font-size:$icon-font-size;
 	    }		
 	}
+	.quantity{
+		display: none;
+	}
 	&.addQuantity{
 		.button-remove{
 			top:0;
@@ -267,6 +272,9 @@ hr{
 		.button-addQuant{
 			top:-5px;	
 			color: $dark;			
+		}
+		.quantity{
+			display:block;
 		}
 
 	}
@@ -289,10 +297,10 @@ hr{
 		min-height:40px;
 		height:40px;
 		line-height:40px;
+		top:0;	
 		@include transform(translate3d(0, 0, 0));		
 	}
 	.button-add{
-		top:0;	
 		color: $brand-color-primary;
 		@include calc(right, "50% - 30px");	
 	}	
@@ -308,34 +316,60 @@ hr{
 		.button-remove{
 			left:0;
 			visibility: visible;
-			padding-bottom: 0;
 		}
 		.button-add{
 			right: 0;
 			color: $dark;
 		}
 	}
-	&.item-actions-horizontal-big{
-		position:relative;
-		height: auto;
-		padding: 20px 0;
-		border:0;
-		.button{
-			&:before{
-				font-size: $icon-font-size-big;
-			}
-			&.button-add{							
-				right: 30px;	
-			}
-			&.button-remove{
-				left: 30px;
-			}
-		}
-		span{
-			font-size: $font-size-large + 10;
-			line-height: 40px;
-		}		
+	
+}
+
+.item-actions-horizontal-big{
+	position:relative;
+	height: auto;
+	padding: 30px 0;
+	border:0;
+	span{
+		display: none;
 	}
+	.button{
+		position: absolute;
+		min-height:40px;
+		height:40px;
+		line-height:40px;
+		top:10px;	
+		@include transform(translate3d(0, 0, 0));		
+		&:before{
+			font-size: $icon-font-size-big;
+		}
+	}
+	.button-add{
+		color: $brand-color-primary;
+		@include calc(right, "50% - 35px");	
+	}	
+	.button-remove{
+		@include calc(left, "50% - 31px");	
+		visibility: hidden;
+	}
+
+	&.addQuantity{
+		span{
+			display: block;
+		}
+		.button-remove{
+			left:0;
+			visibility: visible;
+		}
+		.button-add{
+			right: 0;
+			color: $dark;
+		}
+	}
+	.quantity{
+		font-size: $font-size-large + 10;
+		line-height: 0;
+	}		
 }
 
 .mrs-quick-list{
