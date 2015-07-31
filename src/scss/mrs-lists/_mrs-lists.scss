@@ -184,6 +184,7 @@
 .mrs-product-list{
 	.item{
 		margin:10px 5px;
+		text-align:left;
 		img:first-child{
 			@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 		}
