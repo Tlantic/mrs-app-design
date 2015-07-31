@@ -20,6 +20,7 @@
 		font-size: $font-size-base - 2;
 	}
 	input{
+		@include fontfamily(sans);
 		-webkit-appearance: none;
 		width: 100%;
 		background-color: transparent;
@@ -151,6 +152,7 @@
 	input[type="search"]{
 		@include box-sizing(border-box);
 		@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
+		@include fontfamily(sans);
 		-webkit-appearance: none;
 		width:100%;	
 		height:$bar-height;		

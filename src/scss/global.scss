@@ -114,7 +114,7 @@ hr{
 	border-bottom:solid 1px!important;
 }
 .darkBorder{
-	border-color:rgba(0,0,0, 0.15)!important;
+	border-color:rgba(0,0,0, 0.2)!important;
 }
 .lightBorder{
 	border-color:rgba(255,255,255, 0.5)!important;			
@@ -215,15 +215,7 @@ hr{
 .mega-icon{
 	font-size: $icon-font-size-big + $icon-font-size;	
 }
-.client-logo{
-	background-image: $brandLogo;
-	width: 100%;
-	min-height: 200px;
-	background-size: 180px;
-	background-repeat: no-repeat;
-	background-position: 50%;
-	margin-top:10px;
-}
+
 .loading-spinner{
 	display:block;
 	text-align:center;
