@@ -46,7 +46,7 @@
 				line-height:32px!important;
 				position: relative;
 				&:before{
-					font-size:$icon-font-size + 5;
+					font-size:$icon-font-size;
 					@include transition(all 0.3s ease);
 				}
 			}
@@ -63,7 +63,7 @@
 					//text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 					&:before{
 						@include transition(all 0.3s ease);
-						font-size:$icon-font-size + 20;
+						font-size:$icon-font-size + 10;
 						line-height: $bar-height - 5;
 					}
 				}
