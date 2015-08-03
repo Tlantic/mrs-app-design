@@ -32,10 +32,11 @@
 	}
 	.row-tall{
 		.col{
-			max-height:160px;
+			max-height:140px;
+			min-height:140px;			
 		}
 		.col-50{
-			max-height:325px;	
+			max-height:285px;	
 		}
 	}
 	.col-title{
