@@ -261,19 +261,20 @@
 		.product-name{
 			padding: 0 10px;
 			text-align:left;
+			min-height:48px;
 		}
 		.product-thumb{
 			width: 110px;
 			height: 95px;
-			margin: 0 auto 20px auto;
+			margin: 0 auto 15px auto;
 			img{
 				height: 95px;
 			}
 		}
 		.product-price{
-			position: absolute;
-			left: 10px;
-			bottom: 45px;
+			position: relative;			
+			bottom: 0;
+			padding-left:10px;
 			font-size: $font-size-base + 2;
 		}	
 	}
