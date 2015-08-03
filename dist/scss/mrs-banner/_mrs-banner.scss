@@ -3,7 +3,7 @@ $banner-height: 180px;
 /***************************************/
 
 .mrs-banner{		
-	@include box-shadow(rgba(0, 0, 0, 0.1) 0px 2px 4px 0px);
+	//@include box-shadow(rgba(0, 0, 0, 0.1) 0px 2px 4px 0px);
 	@include transition(all 0.3s cubic-bezier(0, 0.54, 0.73, 0.98));		
 	overflow:hidden;
 	ion-slide{

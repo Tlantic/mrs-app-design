@@ -55,7 +55,7 @@
 .tabbed-slidebox .tsb-icons .scroll a.active {
     @extend .imageBackground;
     @extend .round-square;
-    @include box-shadow (inset 0 1px 2px 0 rgba(0,0,0,0.2));
+    //@include box-shadow (inset 0 1px 2px 0 rgba(0,0,0,0.2));
     background-size:200%;
     border:rgba(255,255,255,0.2);   
     color: $light;  

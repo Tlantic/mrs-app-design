@@ -62,7 +62,7 @@
 	&.bar-footer{
 		background-image: none !important;
 		background-color:$footer-background-color;
-		@include box-shadow(rgba(0, 0, 0, 0.2) 0px -2px 4px 0px);
+		//@include box-shadow(rgba(0, 0, 0, 0.2) 0px -2px 4px 0px);
 		&.card-footer{
 			.title{
 				position: relative;

@@ -1,6 +1,6 @@
 .popup-container{
 	.popup{
-		@include box-shadow(rgba(0, 0, 0, 0.2) 0px 2px 4px 0px);		
+		//@include box-shadow(rgba(0, 0, 0, 0.2) 0px 2px 4px 0px);		
 		position:relative;
 		border-radius: 8px;
 		text-align: center;
@@ -24,7 +24,7 @@
 			width: 100%;
 			border:none ;
 			.button{
-				@include box-shadow(rgba(0, 0, 0, 0.3) 0px 2px 8px 0px);		
+				//@include box-shadow(rgba(0, 0, 0, 0.3) 0px 2px 8px 0px);		
 				@extend .icon-CLOSE;
 				margin:0 auto;
 				width:60px;

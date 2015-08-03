@@ -60,7 +60,7 @@
 					@include transition(all 0.3s ease);
 				}
 				i{
-					text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
+					//text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.2);
 					&:before{
 						@include transition(all 0.3s ease);
 						font-size:$icon-font-size + 20;

@@ -337,7 +337,7 @@
 }
 .item-accordion-parent{
 	&.open{
-		@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));	
+		//@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));	
 		@include appBackgroundImage(normal);
 		font-weight:$font-bold;
 		color:$light;
@@ -364,7 +364,7 @@
 }
 
 .item-accordion {
-  	@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));
+  	//@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));
   	transition: 0.09s all linear;
 	padding: 10px;
 	font-size:$font-size-base - 1;
