@@ -219,6 +219,7 @@ hr{
 .loading-spinner{
 	display:block;
 	text-align:center;
+	padding:20px 0;
 }
 .item-actions{	
 	position:absolute;	
@@ -1231,7 +1232,10 @@ hr{
 	}	
 	.mainList{
 		.headerList{
-			height:$bar-height+10!important;		
+			height:$bar-height+10!important;	
+			.buttons-right{
+				margin-top:7px!important;
+			}	
 		}
 		.has-header{
 			top:$bar-height+10 !important;
