@@ -18,7 +18,7 @@
 			&:before{
 				@include transition(all 0.3s cubic-bezier(0.575, 0.885, 0.520, 1.275));
 				@include transform(translate3D(0,65px,0));
-				@include border-radius(50px 50px 0 0);
+				@include border-radius(10px 10px 0 0);
 				position: absolute;
 				bottom: -5px;	
 				left:50%;
@@ -64,11 +64,11 @@
 					&:before{
 						@include transition(all 0.3s ease);
 						font-size:$icon-font-size + 10;
-						line-height: $bar-height - 5;
+						line-height: $bar-height;
 					}
 				}
 				&:before{
-					@include transform(translate3D(0,0,0));	
+					@include transform(translate3D(0,15px,0));	
 					@include transition(all 0.3s cubic-bezier(0.575, 0.885, 0.520, 1.275));		
 				}
 			}
@@ -78,6 +78,7 @@
 		}		
 	}
 }
+
 
 &.bottomHide{
 	.tabs{
