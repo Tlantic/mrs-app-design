@@ -15,8 +15,7 @@
 				font-size:$font-size-small;		
 				@include fontfamily(sans);
 			}			
-			i{
-				line-height:30px!important;
+			i{				
 				height:30px;
 				position: relative;
 				&:before{

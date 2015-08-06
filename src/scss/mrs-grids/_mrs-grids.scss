@@ -128,6 +128,8 @@
 				display:block;
 				margin:0 auto;
 				font-size: $icon-font-size-big;
+				min-height: $icon-font-size-big + 5;
+				max-height: $icon-font-size-big + 5;
 			}
 			/*background: rgba(255,255,255,0.3);*/			
 			&:first-child{

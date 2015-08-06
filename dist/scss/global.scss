@@ -564,7 +564,7 @@ hr{
 }
 
 //LIST HEADER 
-#page-favorites{
+#page-list{
 	.bar-header{
 		height:$bar-height+10;
 	}
@@ -1224,7 +1224,7 @@ hr{
 			top:$bar-height!important;
 		}
 	}	
-	#page-favorites{
+	#page-list{
 		.headerList{
 			height:$bar-height+10!important;	
 			.buttons-right{
