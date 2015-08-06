@@ -25,150 +25,204 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-addlist:before {
+.icon-arrow-down:before {
   content: "\e600";
 }
-.icon-arrow-down:before {
+.icon-arrow-left:before {
   content: "\e601";
 }
-.icon-arrow-left:before {
+.icon-arrow-right:before {
   content: "\e602";
 }
-.icon-arrow-right:before {
+.icon-arrow-up:before {
   content: "\e603";
 }
-.icon-arrow-up:before {
+.icon-barcode:before {
   content: "\e604";
 }
-.icon-barcode:before {
+.icon-camera:before {
   content: "\e605";
 }
-.icon-camera:before {
+.icon-cart:before {
   content: "\e606";
 }
-.icon-cart:before {
+.icon-chat:before {
   content: "\e607";
 }
-.icon-chat:before {
+.icon-check:before {
   content: "\e608";
 }
-.icon-check:before {
+.icon-clock:before {
   content: "\e609";
 }
-.icon-clock:before {
+.icon-close:before {
   content: "\e60a";
 }
-.icon-close:before {
+.icon-coupons:before {
   content: "\e60b";
 }
-.icon-coupons:before {
+.icon-edit:before {
   content: "\e60c";
 }
-.icon-edit:before {
+.icon-email:before {
   content: "\e60d";
 }
-.icon-email:before {
+.icon-eye:before {
   content: "\e60e";
 }
-.icon-eye:before {
+.icon-facebook:before {
   content: "\e60f";
 }
-.icon-facebook:before {
+.icon-favorites-full:before {
   content: "\e610";
 }
-.icon-favorites-full:before {
+.icon-favorites:before {
   content: "\e611";
 }
-.icon-favorites:before {
+.icon-filter:before {
   content: "\e612";
 }
-.icon-filter:before {
+.icon-flyers:before {
   content: "\e613";
 }
-.icon-flyers:before {
+.icon-gift:before {
   content: "\e614";
 }
-.icon-gift:before {
+.icon-home:before {
   content: "\e615";
 }
-.icon-home:before {
+.icon-inbox:before {
   content: "\e616";
 }
-.icon-inbox:before {
+.icon-info:before {
   content: "\e617";
 }
-.icon-info:before {
+.icon-list-2-add:before {
   content: "\e618";
 }
 .icon-list-2:before {
   content: "\e619";
 }
-.icon-list-3:before {
+.icon-list-3-add:before {
   content: "\e61a";
 }
-.icon-list-4:before {
+.icon-list-3:before {
   content: "\e61b";
 }
-.icon-list:before {
+.icon-list-4-add .path1:before {
   content: "\e61c";
+  color: rgb(0, 0, 0);
 }
-.icon-location:before {
+.icon-list-4-add .path2:before {
   content: "\e61d";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
 }
-.icon-logout:before {
+.icon-list-4-add .path3:before {
   content: "\e61e";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
 }
-.icon-minus:before {
+.icon-list-4-add .path4:before {
   content: "\e61f";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
 }
-.icon-more:before {
+.icon-list-4-add .path5:before {
   content: "\e620";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
 }
-.icon-move:before {
+.icon-list-4-add .path6:before {
   content: "\e621";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
 }
-.icon-order:before {
+.icon-list-4-add .path7:before {
   content: "\e622";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
 }
-.icon-password:before {
+.icon-list-4-add .path8:before {
   content: "\e623";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
 }
-.icon-plus:before {
+.icon-list-4-add .path9:before {
   content: "\e624";
+  margin-left: -1em;
+  color: rgb(0, 0, 0);
 }
-.icon-products:before {
+.icon-list-4:before {
   content: "\e625";
 }
-.icon-search:before {
+.icon-list-5-add:before {
   content: "\e626";
 }
-.icon-settings-2:before {
+.icon-list-5:before {
   content: "\e627";
 }
-.icon-settings:before {
+.icon-list:before {
   content: "\e628";
 }
-.icon-share:before {
+.icon-location:before {
   content: "\e629";
 }
-.icon-sms:before {
+.icon-logout:before {
   content: "\e62a";
 }
-.icon-star-full:before {
+.icon-minus:before {
   content: "\e62b";
 }
-.icon-star:before {
+.icon-more:before {
   content: "\e62c";
 }
-.icon-trash:before {
+.icon-move:before {
   content: "\e62d";
 }
-.icon-user:before {
+.icon-order:before {
   content: "\e62e";
 }
-.icon-view-column:before {
+.icon-password:before {
   content: "\e62f";
 }
-.icon-view-list:before {
+.icon-plus:before {
   content: "\e630";
 }
+.icon-products:before {
+  content: "\e631";
+}
+.icon-search:before {
+  content: "\e632";
+}
+.icon-settings-2:before {
+  content: "\e633";
+}
+.icon-settings:before {
+  content: "\e634";
+}
+.icon-share:before {
+  content: "\e635";
+}
+.icon-sms:before {
+  content: "\e636";
+}
+.icon-star-full:before {
+  content: "\e637";
+}
+.icon-star:before {
+  content: "\e638";
+}
+.icon-trash:before {
+  content: "\e639";
+}
+.icon-user:before {
+  content: "\e63a";
+}
+.icon-view-column:before {
+  content: "\e63b";
+}
+.icon-view-list:before {
+  content: "\e63c";
+}
+
