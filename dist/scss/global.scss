@@ -417,7 +417,7 @@ hr{
 			line-height: $quick-list-height;
 		}
 		.num-items{
-			padding:15px 140px 20px 50px;			
+			padding:10px 10px 0 45px;			
 		}		
 		.button{
 			margin-top:10px;			
@@ -564,7 +564,7 @@ hr{
 }
 
 //LIST HEADER 
-.mainList{
+#page-favorites{
 	.bar-header{
 		height:$bar-height+10;
 	}
@@ -579,8 +579,7 @@ hr{
 	}
 	.bar-subheader{
 		z-index: -1;		
-		display:none;	
-		background-color: rgba(0, 0, 0, 0.5);
+		display:none;			
 		top:$bar-height+10;
 		&.subheaderEnter{
 			display:block;		
@@ -622,8 +621,6 @@ hr{
 		.addNewProduct{			
 			//@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
 			margin:0 auto;			
-			background: rgba(255,255,255, 0.2);
-			border: 1px solid rgba(255, 255, 255, 0.15);
 			width: 80px;
 			position: relative;
 			z-index:99;
@@ -634,8 +631,6 @@ hr{
 			input{
 				width: 100%;
 				padding:25px 10px;
-				background: transparent;
-				color: #FFF;
 			}
 			.addButton{
 				@include transform(rotate(0deg));
@@ -654,8 +649,7 @@ hr{
 			}
 			&.openInput{
 				padding: 0 35px 0 15px;
-				width: 100%;
-				
+				width: 100%;				
 				.addButton{
 					width: 50px;
 					right: 0;
@@ -1230,7 +1224,7 @@ hr{
 			top:$bar-height!important;
 		}
 	}	
-	.mainList{
+	#page-favorites{
 		.headerList{
 			height:$bar-height+10!important;	
 			.buttons-right{
