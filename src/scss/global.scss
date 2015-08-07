@@ -1218,7 +1218,11 @@ hr{
   		}
   		.icon{
 			top:20px;
+	  		&.icon-arrow-left{
+				top:0!important;
+  			}
   		}
+
 	}
 	.has-quicklist {
   		height: auto;
@@ -1228,6 +1232,7 @@ hr{
 	.mrs-quick-list-small {
   		padding-top:$ios-statusbar-height;
   		height:($quick-list-height / 2) + $ios-statusbar-height;
+  		
 	}	
 	.has-quicklist-small {
   		height: auto;
