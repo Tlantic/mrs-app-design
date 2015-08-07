@@ -164,70 +164,83 @@
 .icon-list-5:before {
   content: "\e628";
 }
-.icon-list-add:before {
+.icon-list-add-full .path1:before {
   content: "\e629";
+  color: rgb(0, 0, 0);
 }
-.icon-list:before {
+.icon-list-add-full .path2:before {
   content: "\e62a";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
 }
-.icon-location:before {
+.icon-list-add-full .path3:before {
   content: "\e62b";
+  margin-left: -1em;
+  color: rgb(255, 255, 255);
 }
-.icon-logout:before {
+.icon-list-add:before {
   content: "\e62c";
 }
-.icon-minus:before {
+.icon-list:before {
   content: "\e62d";
 }
-.icon-more:before {
+.icon-location:before {
   content: "\e62e";
 }
-.icon-move:before {
+.icon-logout:before {
   content: "\e62f";
 }
-.icon-order:before {
+.icon-minus:before {
   content: "\e630";
 }
-.icon-password:before {
+.icon-more:before {
   content: "\e631";
 }
-.icon-plus:before {
+.icon-move:before {
   content: "\e632";
 }
-.icon-products:before {
+.icon-order:before {
   content: "\e633";
 }
-.icon-search:before {
+.icon-password:before {
   content: "\e634";
 }
-.icon-settings-2:before {
+.icon-plus:before {
   content: "\e635";
 }
-.icon-settings:before {
+.icon-products:before {
   content: "\e636";
 }
-.icon-share:before {
+.icon-search:before {
   content: "\e637";
 }
-.icon-sms:before {
+.icon-settings-2:before {
   content: "\e638";
 }
-.icon-star-full:before {
+.icon-settings:before {
   content: "\e639";
 }
-.icon-star:before {
+.icon-share:before {
   content: "\e63a";
 }
-.icon-trash:before {
+.icon-sms:before {
   content: "\e63b";
 }
-.icon-user:before {
+.icon-star-full:before {
   content: "\e63c";
 }
-.icon-view-column:before {
+.icon-star:before {
   content: "\e63d";
 }
-.icon-view-list:before {
+.icon-trash:before {
   content: "\e63e";
 }
-
+.icon-user:before {
+  content: "\e63f";
+}
+.icon-view-column:before {
+  content: "\e640";
+}
+.icon-view-list:before {
+  content: "\e641";
+}
