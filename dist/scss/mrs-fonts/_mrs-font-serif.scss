@@ -1,0 +1,22 @@
+/// Font Serifada
+@font-face{
+  font-family: $font-family-serif;
+  src: url("#{$font-path}/serif/caecilialtstdlight.eot");
+  src: url("#{$font-path}/serif/caecilialtstdlight.eot?#iefix") format("embedded-opentype"),
+  url("#{$font-path}/serif/caecilialtstdlight.woff") format("woff"),
+  url("#{$font-path}/serif/caecilialtstdlight.ttf") format("truetype"),
+  url("#{$font-path}/serif/caecilialtstdlight.svg") format("svg");
+  font-weight: $font-light;
+  font-style: normal;
+}
+
+@font-face{
+  font-family: $font-family-serif;
+  src: url("#{$font-path}/serif/caecilialtstdbold.eot");
+  src: url("#{$font-path}/serif/caecilialtstdbold.eot?#iefix") format("embedded-opentype"),
+  url("#{$font-path}/serif/caecilialtstdbold.woff") format("woff"),
+  url("#{$font-path}/serif/caecilialtstdbold.ttf") format("truetype"),
+  url("#{$font-path}/serif/caecilialtstdbold.svg") format("svg");
+  font-weight: $font-bold;
+  font-style: normal;
+}

@@ -1,0 +1,145 @@
+.mrs-grid{	
+	.row{			
+		margin:0;
+		padding:0;
+		.col{			
+			@include box-sizing(border-box);
+			position:relative;			
+			padding:0;			
+			margin-bottom:5px;
+			min-height:40px;
+			max-height:165px;
+			overflow:hidden;
+			line-height:0;
+			.row + .row{				
+				.col{
+					margin-bottom:0;					
+				}
+			}			
+		}	
+		.col-50{
+			margin-right:2px;		
+		}
+		.col-50 + .col-50{
+			margin-right:0;
+			margin-left:2px;
+		}
+	}
+	.row + .row{
+		margin:0;
+	}
+	.row-tall{
+		.col{
+			max-height:140px;
+			min-height:140px;			
+		}
+		.col-50{
+			max-height:285px;	
+		}
+	}
+	.col-title{
+		@include box-sizing(border-box);		
+		position:absolute;		
+		z-index: 1;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		padding: 5px 10px;
+		text-transform: uppercase;
+		@include fontfamily(sans);
+		font-size: $font-size-base + 1;
+		line-height: $font-size-base + 1;
+		color:$light;		
+		background-color:$brand-color;
+	}
+	img{
+		width: 100%;
+	}
+
+	&.mrs-grid-complex{
+		.col-title{		
+			width:120px;
+			height: 100%;
+			left:20px;
+			top:0;
+			padding:90px 0 0 0;		
+			text-align: center;
+			color: $light;
+			//text-shadow: 1px 1px rgba(0,0,0,0.2);
+			font-size: $font-size-large;
+			line-height:$font-size-large - 1;	
+			.icon{
+				border: 1px solid $light;
+				display: block;
+				font-size: $icon-font-size-big;
+				padding: 4px;
+				position:absolute;
+				left:0;
+				right:0;
+				top:10px;
+				margin:auto;
+				max-width:70px;
+				max-height:70px;
+				min-height:70px;
+				color:$dark;
+			}		
+		}
+
+		.col-50 > .col-title{
+			height: 60px;	
+			width:100%;
+			left:0;
+			bottom:10px;
+			top:auto;
+			margin: 0;
+			padding:12px 0 0 60px;
+			text-align:left;
+			.icon{
+				font-size: $icon-font-size;
+				padding: 0px;
+				display: inline-block;
+				left:10px;
+				top:10px;
+				right:auto;
+				min-height:40px;
+				min-width:40px;
+			}		
+		}
+	}
+}
+
+
+
+.mrs-grid-menu{
+	font-family:$font-family-sans-serif;
+	.row{
+		padding:0;
+		margin-bottom:20px;	
+		.col{
+			padding: 0;
+			text-align: center;			
+			margin:0;
+			a{
+				display: block;
+				padding: 15px;
+				min-height: 110px;				
+			}
+			.icon{
+				display:block;
+				margin:0 auto;
+				font-size: $icon-font-size-big;
+				min-height: $icon-font-size-big + 5;
+				max-height: $icon-font-size-big + 5;
+			}
+			/*background: rgba(255,255,255,0.3);*/			
+			&:first-child{
+				background: rgba(255,255,255,0.1);
+			}
+			&:first-child + div{
+				background: rgba(255,255,255,0.2);
+			}
+		}
+	}
+
+}
+
