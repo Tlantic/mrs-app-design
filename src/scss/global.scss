@@ -226,13 +226,17 @@ hr{
 	z-index: 99;
 	text-align: center;
 	.button{	
-		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		// @include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		&.icon:before{
+			font-size:$icon-font-size!important;
+		}	
 	}
+
 	.quantity{
 		@include fontfamily(sans);
 		color:$brand-color-primary;
 		font-size:$font-size-base + 2;
-	}		
+	}	
 }
 
 
@@ -242,35 +246,36 @@ hr{
 	bottom: 10px;
 	max-width:60px;
 	border-left: 1px solid $border-color;
-	.button-remove{
-		top: -17px;
-		z-index: -1;
-		visibility: hidden;
-	}
-	.button-addQuant{
-		top:30px;
-	    color:$brand-color-primary;
-	    &:before{
-			font-size:$icon-font-size;
-	    }		
-	}
-	.quantity{
-		display: none;
-	}
-	&.addQuantity{
-		.button-remove{
-			top:0;
-			visibility: visible;
-		}
-		.button-addQuant{
-			top:-5px;	
-			color: $dark;			
-		}
-		.quantity{
-			display:block;
-		}
+	// .button-remove{
+	// 	top: -17px;
+	// 	z-index: -1;
+	// 	visibility: hidden;
+	// }
+	// .button-addQuant{
+	// 	top:30px;
+	//     color:$brand-color-primary;
+	//     &:before{
+	// 		font-size:$icon-font-size;
+	//     }		
+	// }
+	// .quantity{
+	// 	display: none;
+	// }
 
-	}
+	// &.addQuantity{
+	// 	.button-remove{
+	// 		top:0;
+	// 		visibility: visible;
+	// 	}
+	// 	.button-addQuant{
+	// 		top:-5px;	
+	// 		color: $dark;			
+	// 	}
+	// 	.quantity{
+	// 		display:block;
+	// 	}
+	// }
+
 }
 
 .item-actions-horizontal{
@@ -279,98 +284,112 @@ hr{
 	width: 100%;
 	border-top: 1px solid $border-color;
 	height:40px;
+	white-space: nowrap;
 	span{		
 		font-size: $font-size-base +2;
 		line-height:40px;
 		visibility: hidden;
 	}
 	.button{
-		position: absolute;
-		min-height:40px;
-		height:40px;
-		line-height:40px;
-		top:0;	
-		@include transform(translate3d(0, 0, 0));		
+		display:inline-block;
+		width:50%;
+		position: relative;
+  		top: -4px;
 	}
-	.button-add{
-		color: $brand-color-primary;
-		right:50%;
-		margin-right: -30px;
-	}	
-	.button-remove{
-		left:50%;
-		margin-left:-22px;
-		visibility: hidden;
-		
-	}
-	
-	&.addQuantity{
-		span{
-			visibility: visible;
-		}
-		.button-remove{
-			left:0;
-			visibility: visible;
-			margin-left:0;
-		}
-		.button-add{
-			right: 0;
-			color: $dark;
-			margin-right: 0;
-		}
-	}
+	// .button{
+	// 	position: absolute;
+	// 	min-height:40px;
+	// 	height:40px;
+	// 	line-height:40px;
+	// 	top:0;	
+	// 	@include transform(translate3d(0, 0, 0));		
+	// }
+	// .button-add{
+	// 	color: $brand-color-primary;
+	// 	right:50%;
+	// 	margin-right: -30px;
+	// }	
+	// .button-remove{
+	// 	left:50%;
+	// 	margin-left:-22px;
+	// 	visibility: hidden;		
+	// }
+	// &.addQuantity{
+	// 	span{
+	// 		visibility: visible;
+	// 	}
+	// 	.button-remove{
+	// 		left:0;
+	// 		visibility: visible;
+	// 		margin-left:0;
+	// 	}
+	// 	.button-add{
+	// 		right: 0;
+	// 		color: $dark;
+	// 		margin-right: 0;
+	// 	}
+	// }
 	
 }
 
 .item-actions-horizontal-big{
 	position:relative;
 	height: auto;
-	padding: 30px 0;
+	padding: 25px 0 30px 0;
 	border:0;
+	white-space:nowrap;
 	span{
 		display: none;
 	}
 	.button{
-		position: absolute;
-		min-height:40px;
-		height:40px;
-		line-height:40px;
-		top:10px;	
-		@include transform(translate3d(0, 0, 0));		
-		&:before{
-			font-size: $icon-font-size-big;
+		display:inline-block;
+		width:50%;
+		&.icon:before{
+			font-size: $icon-font-size-big!important;
 		}
-	}
-	.button-add{
-		color: $brand-color-primary;
-		right: 50%;
-		margin-right: -35px;
-	}	
-	.button-remove{
-		left:50%;
-		margin-left:-31px;
-		visibility: hidden;
 	}
 
-	&.addQuantity{
-		span{
-			display: block;
-		}
-		.button-remove{
-			left:0;
-			visibility: visible;
-			margin-left:0;
-		}
-		.button-add{
-			right: 0;
-			color: $dark;
-			margin-right: 0;
-		}
-	}
-	.quantity{
-		font-size: $font-size-large + 10;
-		line-height: 0;
-	}		
+	// .button{
+	// 	position: absolute;
+	// 	min-height:40px;
+	// 	height:40px;
+	// 	line-height:40px;
+	// 	top:10px;	
+	// 	@include transform(translate3d(0, 0, 0));		
+	// 	&:before{
+	// 		font-size: $icon-font-size-big;
+	// 	}
+	// }
+	// .button-add{
+	// 	color: $brand-color-primary;
+	// 	right: 50%;
+	// 	margin-right: -35px;
+	// }	
+	// .button-remove{
+	// 	left:50%;
+	// 	margin-left:-31px;
+	// 	visibility: hidden;
+	// }
+
+	// &.addQuantity{
+	// 	span{
+	// 		display: block;
+	// 	}
+	// 	.button-remove{
+	// 		left:0;
+	// 		visibility: visible;
+	// 		margin-left:0;
+	// 	}
+	// 	.button-add{
+	// 		right: 0;
+	// 		color: $dark;
+	// 		margin-right: 0;
+	// 	}
+	// }
+	// .quantity{
+	// 	font-size: $font-size-large + 10;
+	// 	line-height: 0;
+	// }		
 }
 
 .mrs-quick-list{
@@ -649,7 +668,7 @@ hr{
 			}
 			&.openInput{
 				padding: 0 35px 0 15px;
-				width: 100%;				
+				width: 100%;
 				.addButton{
 					width: 50px;
 					right: 0;
