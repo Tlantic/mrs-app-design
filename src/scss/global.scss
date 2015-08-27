@@ -217,9 +217,11 @@ hr{
 }
 
 .loading-spinner{
+	position: absolute;
 	display:block;
 	text-align:center;
-	padding:20px 0;
+	padding:20px 0;	
+ 	width: 100%;
 }
 .item-actions{	
 	position:absolute;	
