@@ -19,7 +19,8 @@
 			}
 			.icon{
 				@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
-				@include calc(top, "50% - 22px");	
+				top:50%;
+				margin-top: -22px;
 				position: absolute;
 				right: 0px;
 				padding:5px;					
