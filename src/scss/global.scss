@@ -287,6 +287,7 @@ hr{
 	border-top: 1px solid $border-color;
 	height:40px;
 	white-space: nowrap;
+	
 	span{		
 		font-size: $font-size-base +2;
 		line-height:40px;
@@ -690,6 +691,29 @@ hr{
 		}
 		
 	}
+}
+
+.client-logo{
+	background-image: $brandLogo;
+	width: 100%;
+	min-height: 200px;
+	background-size: 180px;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	margin-top:10px;
+}
+.user-profile{
+	display:block;
+	text-align:center;
+	padding-top:40px;	
+	margin-bottom:10px;
+	.profile-name{
+		display:block;
+		text-align:center;
+	}
+}
+.user-actions{
+	padding:20px;	
 }
 
 
@@ -1190,14 +1214,17 @@ hr{
 .platform-android4_1, .platform-android4_2, .platform-android4_3 {
 	.item-actions-horizontal{
 		height:0;
-		span{
+		bottom:-8px;
+		button{
 			position: absolute;
-			left:50%;
+			&:last-child{
+				right: 0;
+			}
 		}
 	}
 }
 
-.platform-ios.platform-cordova {
+.platform-ios {
 	// iOS has a status bar which sits on top of the header.
 	// Bump down everything to make room for it. However, if
 	// if its in Cordova, and set to fullscreen, then disregard the bump.

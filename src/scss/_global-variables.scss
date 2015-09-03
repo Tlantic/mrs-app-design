@@ -22,7 +22,7 @@ $image-path: "../img/" !default;
 $brandLogo: url($image-path + 'client-logo.svg');
 $appBackground: url($image-path +  'backgrounds/gradientBackground.svg');
 $appBackground-transparent:url($image-path + 'backgrounds/backgroundTransparency.svg');
-$backgroundMenuItem: url($image-path + 'backgrounds/bg-itemmenu.svg');
+// $backgroundMenuItem: url($image-path + 'backgrounds/bg-itemmenu.svg');
 $button-background-image:url($image-path + 'backgrounds/buttonBackground.svg');
 
 $quick-list-height:65px;

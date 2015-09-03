@@ -8,7 +8,7 @@
 		font-size: $icon-font-size-big + 45;
 		border-style: solid;
 		border-width: 2px;
-		border-radius: 50%;
+		border-radius: 200px;
 	}
 }
 
@@ -113,6 +113,7 @@
 		margin-top: 0;
 		padding-top: 0;
 		padding-bottom: 0;
+		border-radius:0;
 	}
 	.password{
 		.button{
