@@ -584,59 +584,32 @@ hr{
 
 //LIST HEADER 
 #page-list{
-	.bar-header{
-		height:$bar-height+10;
-	}
-	.has-header{
-		top:$bar-height+10 !important;
-	}
-	.has-subheader{
-		top:95px !important;
-		@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
-		-webkit-transition-delay: 0.4s; /* Safari */
-    	transition-delay: 0.4s;
-	}
-	.bar-subheader{
-		z-index: -1;		
-		display:none;			
-		top:$bar-height+10;
-		&.subheaderEnter{
-			display:block;		
+	.mrs-quick-list{
+		.button{
+			line-height: 42px;
+			&.cancelEdit{
+				@extend .lightText;
+				display: none;
+				position: absolute;
+				top: 50%;
+				margin-top: -15px;
+				left: 5px;
+			}
 		}
+	}
+
+	.moreOptions{
+		@include transform(translate3D(0,- $quick-list-height,0));				
+		@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+		z-index: -1;
 		.button{
 			font-size: $font-size-base - 2;
 		}
 	}
-	.backgroundBlock{
-		position: absolute;
-		top:0;
-		left:0;
-		right: 0;
-		bottom:$footer-height;
-		background-color: rgba(0,0,0,0.6);
-		z-index:5;
-		display: none;
-	}
 	.headerList{
-		.transparent{
-			visibility: hidden;
-		}
-	
-		.editButton{
-			@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
-			line-height:45px;	
-			position:absolute;			
-			&.removeButtons{
-				@include transform(translate3D(-110%,0,0));
-			}
-		}
-		.cancelButton{
-			@extend .editButton;
-			@include transform(translate3D(-180%,0,0));			
-			&.cancelEnter{
-				@include transform(translate3D(0%,0,0));
-			}
-		}
+		top: $quick-list-height;
+		@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+		@include transform(translate3D(0,0,0));	
 		.addNewProduct{			
 			//@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
 			margin:0 auto;			
@@ -651,42 +624,26 @@ hr{
 				width: 100%;
 				padding:25px 10px;
 			}
-			.addButton{
-				@include transform(rotate(0deg));
-				@include transition(all 0.9s cubic-bezier(0.190, 1.000, 0.220, 1.000));				
-				margin:0 auto;
-				border:none;
-				font-size: 27px;
-				position: absolute;
-				width:50px;				
-				right: 13px;	
-				line-height:44px;			
-				&.activated{
-					//@include box-shadow(none);
-					border:none !important;					
-				}
+		}
+	}
+	ion-content{
+		top: $bar-height + $quick-list-height + 10;
+	}
+	&.editMode{
+		.mrs-quick-list{
+			.cancelEdit{
+				display: block;
 			}
-			&.openInput{
-				padding: 0 35px 0 15px;
-				width: 100%;
-				.addButton{
-					width: 50px;
-					right: 0;
-					top: 0;
-					@include transform(rotate(45deg));
-				}
+			.quick-list-header{
+				display: none;
 			}
 		}
-		.icon-barcode{
-			@include transition(all 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
-			&:before{
-				font-size:45px;
-			}
-			&.removeButtons{
-				@include transform(translate3D(100%,0,0));
-			}
+		.moreOptions{
+			@include transform(translate3D(0,0,0));	
 		}
-		
+		.headerList{
+			@include transform(translate3D(0,- $quick-list-height,0));	
+		}
 	}
 }
 
@@ -1245,19 +1202,13 @@ hr{
 	}	
 	#page-list{
 		.headerList{
-			height:$bar-height+10!important;	
-			.buttons-right{
-				margin-top:7px!important;
-			}	
+			top: $quick-list-height + $ios-statusbar-height;
 		}
-		.has-header{
-			top:$bar-height+10 !important;
+
+		ion-content{
+			top: ($bar-height + $ios-statusbar-height+ $quick-list-height) + 10;
 		}
-		.has-subheader{
-			top:95px !important;
-		}
-		.bar-subheader{
-			top:$bar-height+10!important;
-		}
+
+
 	}
 }
