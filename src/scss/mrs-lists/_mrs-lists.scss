@@ -1,7 +1,7 @@
 .mrs-basic-list{
 	padding:10px;
 	.item{
-		@include fontfamily(icons);
+		font-family: $font-family-sans-serif;
 		color:$dark;
 		font-size:$font-size-base + 2;
 		position:relative;
@@ -71,7 +71,7 @@
 
 .editable-list{	
 	.item{	
-		@include fontfamily(icons);
+		font-family: $font-family-sans-serif;
 		color:$dark;
 		padding-left:60px;		
 		padding-top: 15px;
@@ -80,7 +80,7 @@
 			display:none;
 		}	
 		.item-name{						
-			@include fontfamily(icons);
+			font-family: $font-family-sans-serif;
 			color:$dark;
 			font-size:$font-size-base + 2;			
 			@include transform(translate3D(0px,0,0));						
@@ -126,6 +126,7 @@
 .mrs-checkbox-list{
 	overflow:auto;
 	.item-checkbox{	
+		font-family: $font-family-sans-serif;
 	  	padding-bottom:30px;
 	  	padding-top:30px;		
 		background:transparent;
@@ -153,7 +154,7 @@
 		}
 		label{
 			.item-content{
-				@include fontfamily(icons);
+				font-family: $font-family-sans-serif;
 				color:$dark;
 				font-size:$font-size-base + 2;
 				display:block;					
@@ -185,6 +186,56 @@
 				}
 			}		
 		}
+	}
+	.item-coupon{
+		font-family: $font-family-sans-serif;
+		border:solid 1px $border-color;
+		margin: 10px 5px;
+		padding-top:20px;
+		padding-bottom:20px;
+		padding-right:40px;
+		.coupon-value{
+			font-weight:$font-bold;
+			
+			@include vertical-align;
+			position:absolute;			
+			font-size:$font-size-large + 10;
+			letter-spacing:-1px;
+			width:60px;
+			height:60px;
+	    	line-height: 60px;
+    		text-align: center;
+    		left:50px;			
+		}
+
+		.coupon-info{
+		    white-space: normal;
+			padding-left:60px;
+			.coupon-description{
+				font-size:$font-size-base;
+				line-height: $font-size-base;
+			}
+			.coupon-date{
+				font-size:$font-size-small;
+				font-weight:$font-light;
+				color:lighten($dark, 20%);
+			}			
+		}
+			
+		.item-actions{
+			border-left:0;
+			.button{
+				@include vertical-align;
+				-webkit-transform: translateY(50%);
+				-ms-transform: translateY(50%);
+				transform: translateY(50%);
+				&:before{
+					font-size:$icon-font-size + 15 !important;	
+				    line-height: 5px!important;
+				}
+				
+			}
+		}				
 	}
 }
 
@@ -223,8 +274,7 @@
 		}
 	}
 	.product-name{
-		@include fontfamily(icons);
-		color:$dark;		
+		font-family: $font-family-sans-serif;
 		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 		font-size: $font-size-base ;
 		font-weight: $font-regular;
@@ -232,19 +282,22 @@
 		white-space: normal;
 		text-align:left;
 		>div{
-			@include fontfamily(icons);
+			font-family: $font-family-sans-serif;
 			color:$dark;	
 			max-height: 29px;
   			overflow: hidden;
 		}			
 		span{
+			font-family: $font-family-sans-serif;
 			display:block;
+			color:lighten($dark, 20%);
 			font-size: $font-size-base - 2;
 			font-weight: $font-light;				
 			line-height: $font-size-base + 5px;
 		}
 	}
 	.product-price{
+		font-family: $font-family-sans-serif;
 		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 		position: absolute;				
 		bottom:20px;			
@@ -256,6 +309,7 @@
 	}	
 
 	&.dual-column{
+
 		.row{
 			height: 255px;
 			margin-bottom: 10px;
@@ -276,6 +330,7 @@
 			}
 		}
 		.product-name{
+			font-family: $font-family-sans-serif;
 			padding: 0 10px;
 			text-align:left;
 			min-height:48px;
@@ -290,11 +345,55 @@
 			}
 		}
 		.product-price{
+			font-family: $font-family-sans-serif;
 			position: relative;			
 			bottom: 0;
 			padding-left:10px;
 			font-size: $font-size-base + 2;
+			text-align:left;
 		}	
+	}
+	.item-wrapper{
+		position:relative;
+	}
+	.item-category{
+		font-family: $font-family-sans-serif;
+		background-color:transparentize($brand-color, 0.9);
+		text-align:left;
+		padding:5px 10px;
+		text-transform:uppercase;
+	}
+
+	.item-shopping{
+		border:0;
+		border-bottom:solid 1px $border-color;
+		padding:10px 60px 10px 40px;
+		margin-bottom:0px!important;
+		min-height:90px;
+		.product-name{
+			font-family: $font-family-sans-serif;
+			position:relative;
+			.product-quantity{
+				position:absolute;
+				left:-35px;
+				display:block;
+				width:25px;
+				border-right:solid 1px $border-color;	
+				color:lighten($dark, 40%);	
+				text-align:center;
+			}
+		}
+		.product-price{
+			position:relative;
+			bottom:auto;
+			.unit-price{
+				color:lighten($dark, 20%);
+				font-size:$font-size-base - 2;
+				padding-left:10px;
+				margin-left:5px;
+				border-left:solid 1px $border-color;
+			}
+		}
 	}
 }
 

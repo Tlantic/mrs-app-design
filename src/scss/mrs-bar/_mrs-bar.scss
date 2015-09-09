@@ -5,7 +5,7 @@
 	border:0!important;
 	&.bar-header{
 		border:0!important;
-		// background-image: none !important;
+		background-image: none;
 		background-color:transparent;
 		.badge{
 			background-color:$light!important;
@@ -60,9 +60,19 @@
 		}
 	}
 	&.bar-footer{
-		// background-image: none !important;
-		background-color:$footer-background-color;
+		background-image: none;
+		background-color:$brand-color;
 		//@include box-shadow(rgba(0, 0, 0, 0.2) 0px -2px 4px 0px);
+		// @extend .imageBackground;
+		// &:before{
+		// 	content:"";
+		// 	position:absolute;
+		// 	left:0;
+		// 	top:0;
+		// 	right:0;
+		// 	bottom:0;
+		// 	@extend .lighterBackground;
+		// }
 		&.card-footer{
 			.title{
 				position: relative;
@@ -109,5 +119,13 @@
 	}
 }
 
+.header-item{
+	.button-clear{
+		font-size:$font-size-small!important;
+	}
+}
 
+.bar-footer.has-tabs, .has-tabs{
+	bottom:48px;
+}
 
