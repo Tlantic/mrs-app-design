@@ -215,11 +215,11 @@
 		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 		font-size: $font-size-base ;
 		font-weight: $font-regular;
-		line-height: $font-size-base;
+		line-height: $font-size-base + 2;
 		white-space: normal;
 		text-align:left;
 		>div{
-			max-height: 29px;
+			max-height: 32px;
   			overflow: hidden;
 		}			
 		span{
