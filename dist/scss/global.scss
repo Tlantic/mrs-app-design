@@ -647,6 +647,23 @@ hr{
 	}
 }
 
+//modal shopping list
+.shopping-modal{
+	.mrs-quick-list{
+		background-image: none;
+	}
+	ion-content{
+		top: $bar-height + 20;
+	}
+	.bar-footer{
+		background-color: rgba(255,255,255,0.4);
+		.button{
+			width: 100%;
+		}
+		
+	}
+}
+
 
 
 
