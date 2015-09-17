@@ -1,3 +1,63 @@
+.fade-in-animation{
+  opacity: 0;
+    -webkit-transition: opacity 0.3s ease-in;
+       -moz-transition: opacity 0.3s ease-in;
+        -ms-transition: opacity 0.3s ease-in;
+         -o-transition: opacity 0.3s ease-in;
+            transition: opacity 0.3s ease-in;
+
+    &.visible{
+      opacity: 1;
+    }
+}
+
+.animate-show.ng-hide-add{
+   @include transition(max-height 0.5s ease);
+}
+.animate-show.ng-hide-remove{
+  @include transition(max-height 0.5s ease);
+}
+.animate-show {
+  max-height:400px;
+}
+.animate-show.ng-hide {
+  max-height:0;
+}
+
+
+.slide-in-right {
+  -webkit-transform: translateX(100%);
+    transform: translateX(100%); }
+
+.slide-in-right.ng-enter, .slide-in-right > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms; }
+
+.slide-in-right.ng-enter-active, .slide-in-right > .ng-enter-active {
+  -webkit-transform: translateX(0);
+    transform: translateX(0); }
+
+.slide-in-right.ng-leave, .slide-in-right > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms; }
+
+.slide-in-left {
+  -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); }
+
+.slide-in-left.ng-enter, .slide-in-left > .ng-enter {
+  -webkit-transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms;
+  transition: all cubic-bezier(0.1, 0.7, 0.1, 1) 400ms; }
+
+.slide-in-left.ng-enter-active, .slide-in-left > .ng-enter-active {
+  -webkit-transform: translateX(0);
+    transform: translateX(0); }
+
+.slide-in-left.ng-leave, .slide-in-left > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms; }
+
+
 .scale-in {
   -webkit-transform: scale(0.95);
     transform: scale(0.95);

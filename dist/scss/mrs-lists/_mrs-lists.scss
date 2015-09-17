@@ -1,17 +1,17 @@
 .mrs-basic-list{
 	padding:10px;
 	.item{
+		font-family: $font-family-sans-serif;
+		color:$dark;
+		font-size:$font-size-base + 2;
+		text-align:left;
 		position:relative;
 		padding-top:18px;
 		padding-bottom:18px;
 		padding-left:10px;
 		border:0;
-		border-bottom:solid 1px $border-color;
-		color:$dark;
+		border-bottom:solid 1px $border-color;		
 		background-color:transparent;
-		font-family: $font-family-sans-serif;
-		font-size:$font-size-base + 2;
-		text-align:left;
 		&.icon-right{
 			label{
 				right:60px;
@@ -19,7 +19,7 @@
 			.icon{
 				@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 				top:50%;
-				margin-top: -22px;
+				margin-top:-22px;
 				position: absolute;
 				right: 0px;
 				padding:5px;					
@@ -43,6 +43,8 @@
 		}
 	}
 	.item-name{
+		@include fontfamily(icons);
+		color:$dark;		
 		display:block;
 		line-height:normal;
 		white-space:normal;
@@ -68,6 +70,8 @@
 
 .editable-list{	
 	.item{	
+		font-family: $font-family-sans-serif;
+		color:$dark;
 		padding-left:60px;		
 		padding-top: 15px;
 		padding-bottom: 15px;		
@@ -75,9 +79,12 @@
 			display:none;
 		}	
 		.item-name{						
-			margin-left:-50px;
+			font-family: $font-family-sans-serif;
+			color:$dark;
+			font-size:$font-size-base + 2;			
 			@include transform(translate3D(0px,0,0));						
 			@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+			margin-left:-50px;
 		}
 	}
 	.item-avatar{
@@ -118,6 +125,7 @@
 .mrs-checkbox-list{
 	overflow:auto;
 	.item-checkbox{	
+		font-family: $font-family-sans-serif;
 	  	padding-bottom:30px;
 	  	padding-top:30px;		
 		background:transparent;
@@ -145,14 +153,16 @@
 		}
 		label{
 			.item-content{
+				font-family: $font-family-sans-serif;
+				color:$dark;
+				font-size:$font-size-base + 2;
 				display:block;					
 				position:absolute;
 				left:50px;
 				right:0;
 				top:0;
 				padding:5px 0;
-				font-family: $font-family-sans-serif;
-				font-size:$font-size-base + 2;
+		
 				.item-brand{
 					display:block;
 					min-height:10px;
@@ -176,6 +186,56 @@
 			}		
 		}
 	}
+	.item-coupon{
+		font-family: $font-family-sans-serif;
+		border:solid 1px $border-color;
+		margin: 10px 5px;
+		padding-top:20px;
+		padding-bottom:20px;
+		padding-right:40px;
+		.coupon-value{
+			font-weight:$font-bold;
+			
+			@include vertical-align;
+			position:absolute;			
+			font-size:$font-size-large + 10;
+			letter-spacing:-1px;
+			width:60px;
+			height:60px;
+	    	line-height: 60px;
+    		text-align: center;
+    		left:50px;			
+		}
+
+		.coupon-info{
+		    white-space: normal;
+			padding-left:60px;
+			.coupon-description{
+				font-size:$font-size-base;
+				line-height: $font-size-base;
+			}
+			.coupon-date{
+				font-size:$font-size-small;
+				font-weight:$font-light;
+				color:lighten($dark, 20%);
+			}			
+		}
+			
+		.item-actions{
+			border-left:0;
+			.button{
+				@include vertical-align;
+				-webkit-transform: translateY(50%);
+				-ms-transform: translateY(50%);
+				transform: translateY(50%);
+				&:before{
+					font-size:$icon-font-size + 15 !important;	
+				    line-height: 5px!important;
+				}
+				
+			}
+		}				
+	}
 }
 
 
@@ -186,6 +246,8 @@
 
 .mrs-product-list{
 	.item{
+		@include fontfamily(icons);
+		color:$dark;
 		margin:10px 5px;
 		text-align:left;
 		img:first-child{
@@ -211,24 +273,30 @@
 		}
 	}
 	.product-name{
+		font-family: $font-family-sans-serif;
 		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 		font-size: $font-size-base ;
 		font-weight: $font-regular;
-		line-height: $font-size-base + 2;
+		line-height: $font-size-base;
 		white-space: normal;
 		text-align:left;
 		>div{
-			max-height: 32px;
+			font-family: $font-family-sans-serif;
+			color:$dark;	
+			max-height: 29px;
   			overflow: hidden;
 		}			
 		span{
+			font-family: $font-family-sans-serif;
 			display:block;
+			color:lighten($dark, 20%);
 			font-size: $font-size-base - 2;
 			font-weight: $font-light;				
 			line-height: $font-size-base + 5px;
 		}
 	}
 	.product-price{
+		font-family: $font-family-sans-serif;
 		@include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 		position: absolute;				
 		bottom:20px;			
@@ -240,9 +308,10 @@
 	}	
 
 	&.dual-column{
+
 		.row{
 			height: 255px;
-			margin-bottom: 20px;
+			margin-bottom: 10px;
 			.col{
 				position: relative;
 				padding:0;
@@ -260,6 +329,7 @@
 			}
 		}
 		.product-name{
+			font-family: $font-family-sans-serif;
 			padding: 0 10px;
 			text-align:left;
 			min-height:48px;
@@ -268,17 +338,61 @@
 			height: 95px;
 			margin-bottom: 15px;
 			img{
-				display: block;
 				height: 95px;
-				margin:0 auto;
+				display: block;
+				margin: 0 auto;
 			}
 		}
 		.product-price{
+			font-family: $font-family-sans-serif;
 			position: relative;			
 			bottom: 0;
 			padding-left:10px;
 			font-size: $font-size-base + 2;
+			text-align:left;
 		}	
+	}
+	.item-wrapper{
+		position:relative;
+	}
+	.item-category{
+		font-family: $font-family-sans-serif;
+		background-color:transparentize($brand-color, 0.9);
+		text-align:left;
+		padding:5px 10px;
+		text-transform:uppercase;
+	}
+
+	.item-shopping{
+		border:0;
+		border-bottom:solid 1px $border-color;
+		padding:10px 60px 10px 40px;
+		margin-bottom:0px!important;
+		min-height:90px;
+		.product-name{
+			font-family: $font-family-sans-serif;
+			position:relative;
+			.product-quantity{
+				position:absolute;
+				left:-35px;
+				display:block;
+				width:25px;
+				border-right:solid 1px $border-color;	
+				color:lighten($dark, 40%);	
+				text-align:center;
+			}
+		}
+		.product-price{
+			position:relative;
+			bottom:auto;
+			.unit-price{
+				color:lighten($dark, 20%);
+				font-size:$font-size-base - 2;
+				padding-left:10px;
+				margin-left:5px;
+				border-left:solid 1px $border-color;
+			}
+		}
 	}
 }
 
@@ -340,35 +454,40 @@
 .item-accordion-parent{
 	&.open{
 		//@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));	
-		@include appBackgroundImage(normal);
-		font-weight:$font-bold;
-		color:$light;
+		//@include appBackgroundImage(normal);
+		color:$dark;
+		span{
+			font-weight:$font-bold;
+		}
 	}
 	&.has-children{
 		position:relative;
 		&:before{
 			@include fontfamily(icons);
-			@extend .icon-arrow-down;
+			@extend .icon-arrow-right;
+			@include transition (all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 			content:"";
 			position:absolute;
 			right:0;
 			display:block;
 			width:40px;
-			height:40px;
 			font-size:$icon-font-size;
 		}
 		&.open{
 			&:before{
-				@extend .icon-arrow-up;
+				@include transform(rotateZ(90deg));
 			}
+			
+			
 		}
 	}
 }
 
 .item-accordion {
   	//@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));
-  	transition: 0.09s all linear;
-	padding: 10px;
+  	//transition: 0.09s all linear;
+	padding: 20px 30px !important;
+	background-image: none !important;
 	font-size:$font-size-base - 1;
 	position:relative;
 	&:after{

@@ -1,10 +1,10 @@
 a{
-	@include fontfamily(sans);
+	font-family: $font-family-sans-serif;
 	text-decoration: none;
 	color: inherit;
 }
 h1{
-	@include fontfamily(sans);
+	font-family: $font-family-sans-serif;
 	font-size: $font-size-large;
 	font-weight: $font-light;
 	&.title{
@@ -12,15 +12,15 @@ h1{
 	}
 }
 h2{
-	@include fontfamily(sans);
+	font-family: $font-family-sans-serif;
 	font-size: $font-size-base + 1;
 	font-weight: $font-light;
 }
 p{
-	@include fontfamily(sans);
+	font-family: $font-family-sans-serif;
 }
 small{
-	@include fontfamily(sans);
+	font-family: $font-family-sans-serif;
 	font-size:$font-size-small;
 	color: lighten($base-color, 50%);
 }
@@ -235,7 +235,7 @@ hr{
 	}
 
 	.quantity{
-		@include fontfamily(sans);
+		font-family: $font-family-sans-serif;
 		color:$brand-color-primary;
 		font-size:$font-size-base + 2;
 	}	
@@ -524,7 +524,7 @@ hr{
 	}
 }
 #details-top{
-	@include fontfamily(sans);
+	font-family: $font-family-sans-serif;
 	.row{
 		position:relative;
 		padding:10px;		
@@ -587,59 +587,39 @@ hr{
 
 //LIST HEADER 
 #page-list{
-	.bar-header{
-		height:$bar-height+10;
-	}
-	.has-header{
-		top:$bar-height+10 !important;
-	}
-	.has-subheader{
-		top:95px !important;
-		@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
-		-webkit-transition-delay: 0.4s; /* Safari */
-    	transition-delay: 0.4s;
-	}
-	.bar-subheader{
-		z-index: -1;		
-		display:none;			
-		top:$bar-height+10;
-		&.subheaderEnter{
-			display:block;		
+	.mrs-quick-list{
+		#toggleButton{
+			@include transform(translate3D(0,0,0));
 		}
+		
 		.button{
-			font-size: $font-size-base - 2;
+			line-height: 42px;
 		}
 	}
-	.backgroundBlock{
-		position: absolute;
-		top:0;
-		left:0;
-		right: 0;
-		bottom:$footer-height;
-		background-color: rgba(0,0,0,0.6);
-		z-index:5;
-		display: none;
+	.mrs-basic-list{
+		margin-bottom: 0;
 	}
-	.headerList{
-		.transparent{
-			visibility: hidden;
-		}
-	
-		.editButton{
+	.bar-header{
+		.headerButton{
+			top:50%;
+			margin-top:-22px;
+			position:absolute;
+			@include transform(translate3D(0,0,0));	
 			@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
-			line-height:45px;	
-			position:absolute;			
-			&.removeButtons{
-				@include transform(translate3D(-110%,0,0));
+			&.removeButton{
+				left:5px;
+				@include transform(translate3D(-110%,0,0));	
+
+			}
+			&.cancelButton{
+				@include transform(translate3D(110%,0,0));	
+
 			}
 		}
-		.cancelButton{
-			@extend .editButton;
-			@include transform(translate3D(-180%,0,0));			
-			&.cancelEnter{
-				@include transform(translate3D(0%,0,0));
-			}
-		}
+	}
+
+	.headerList{
+		top: $quick-list-height;
 		.addNewProduct{			
 			//@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
 			margin:0 auto;			
@@ -647,47 +627,44 @@ hr{
 			position: relative;
 			z-index:99;
 			@include transition(all 0.3s cubic-bezier(0.190, 1.000, 0.220, 1.000));
-			&.slideForm{
-				@include transform(translate3D(0%,-200%,0));
-			}
+
 			input{
 				width: 100%;
 				padding:25px 10px;
 			}
-			.addButton{
-				@include transform(rotate(0deg));
-				@include transition(all 0.9s cubic-bezier(0.190, 1.000, 0.220, 1.000));				
-				margin:0 auto;
-				border:none;
-				font-size: 27px;
-				position: absolute;
-				width:50px;				
-				right: 13px;	
-				line-height:44px;			
-				&.activated{
-					//@include box-shadow(none);
-					border:none !important;					
-				}
-			}
-			&.openInput{
-				padding: 0 35px 0 15px;
-				width: 100%;
-				.addButton{
-					width: 50px;
-					right: 0;
-					top: 0;
-					@include transform(rotate(45deg));
-				}
+		}
+	}
+	ion-content{
+		top: $bar-height + $quick-list-height + 10;
+
+	}
+	&.editMode{
+		.mrs-quick-list{
+			
+			#toggleButton{
+				@include transform(translate3D(0%,-150%,0));
 			}
 		}
-		.icon-barcode{
-			@include transition(all 0.5s cubic-bezier(0.190, 1.000, 0.220, 1.000));
-			&:before{
-				font-size:45px;
+
+		.bar-header{
+			.headerButton{
+				@include transform(translate3D(0,0,0));	
 			}
-			&.removeButtons{
-				@include transform(translate3D(100%,0,0));
-			}
+		}
+	}
+}
+//modal shopping list
+.shopping-modal{
+	.mrs-quick-list{
+		background-image: none;
+	}
+	ion-content{
+		top: $bar-height + 20;
+	}
+	.bar-footer{
+		background-color: rgba(255,255,255,0.4);
+		.button{
+			width: 100%;
 		}
 		
 	}
@@ -1240,18 +1217,7 @@ hr{
 	}
 
 	.mrs-quick-list{
-		padding-top:$ios-statusbar-height;
-  		height: $quick-list-height + $ios-statusbar-height;	
-  		.start-button{
-			top: 35px;
-  		}
-  		.icon{
-			top:20px;
-	  		&.icon-arrow-left{
-				top:0!important;
-  			}
-  		}
-
+  		height: $quick-list-height + $ios-statusbar-height !important;	
 	}
 	.has-quicklist {
   		height: auto;
@@ -1279,19 +1245,16 @@ hr{
 	}	
 	#page-list{
 		.headerList{
-			height:$bar-height+10!important;	
-			.buttons-right{
-				margin-top:7px!important;
-			}	
+			top: $quick-list-height + $ios-statusbar-height;
 		}
-		.has-header{
-			top:$bar-height+10 !important;
+
+		ion-content{
+			top: ($bar-height + $ios-statusbar-height+ $quick-list-height) + 10;
 		}
-		.has-subheader{
-			top:95px !important;
-		}
-		.bar-subheader{
-			top:$bar-height+10!important;
+	}
+	.shopping-modal{
+		ion-content{
+			top: $bar-height + $ios-statusbar-height + 20 !important;
 		}
 	}
 }
