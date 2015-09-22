@@ -20,6 +20,7 @@
 		font-size: $font-size-base - 2;
 	}
 	input{
+		@include fontfamily(sans);
 		-webkit-appearance: none;
 		width: 100%;
 		background-color: transparent;
@@ -112,6 +113,7 @@
 		margin-top: 0;
 		padding-top: 0;
 		padding-bottom: 0;
+		border-radius:0;
 	}
 	.password{
 		.button{
@@ -122,7 +124,6 @@
 
 .search-bar{
 	padding:10px 5px;
-	margin-bottom:10px;
 	.row{
 		.col{
 			padding:0;
@@ -150,7 +151,8 @@
 	position:relative;
 	input[type="search"]{
 		@include box-sizing(border-box);
-		@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
+		//@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
+		@include fontfamily(sans);
 		-webkit-appearance: none;
 		width:100%;	
 		height:$bar-height;		
@@ -159,7 +161,7 @@
 		font-weight: 300;
 		border:solid 1px lighten($dark, 60%);
 		border-radius:4px;
-		line-height:$bar-height;
+		//line-height:$bar-height;
 	}
 	.button{
 		position:absolute;

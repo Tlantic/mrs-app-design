@@ -36,11 +36,11 @@
         <!-- HORIZONTAL SLIDER-->
         <ion-scroll direction="x" class="horizontal-scroller" scrollbar-x="false">
           <!-- ng-repeat das categorias-->
-          <div class="button mrs-button-small round-square uppercase darkText button-light">Category 1</div>
-          <div class="button mrs-button-small round-square uppercase darkText button-light active">Category 2</div>
-          <div class="button mrs-button-small round-square uppercase darkText button-light">Category 3</div>
-          <div class="button mrs-button-small round-square uppercase darkText button-light">Category 4</div>
-          <div class="button mrs-button-small round-square uppercase darkText button-light">Category 5</div>
+          <div class="button mrs-button-small round-square uppercase darkText mrs-button-transparent">Category 1</div>
+          <div class="button mrs-button-small round-square uppercase darkText mrs-button-transparent active">Category 2</div>
+          <div class="button mrs-button-small round-square uppercase darkText mrs-button-transparent">Category 3</div>
+          <div class="button mrs-button-small round-square uppercase darkText mrs-button-transparent">Category 4</div>
+          <div class="button mrs-button-small round-square uppercase darkText mrs-button-transparent">Category 5</div>
         </ion-scroll>
 
 
@@ -54,7 +54,7 @@
             
             <!-- NOTE: WHEN USING <A HREF> LINKS -> ADD ITEM-LINK CLASS -->
             <div class="item item-link">
-              <a href="#/app/catalog/products/list">
+              <a ui-sref="app.catalog.products.list">
                 <span bo-text="subCategory.DisplayName">Clicar para produtos</span>
               </a>
             </div>

@@ -1,21 +1,13 @@
 //IONIC
-@import 
-'../../lib/ionic/scss/variables';
-
-// @import 
-// '../../lib/ionic/scss/variables',
-// '../../lib/ionic/scss/mixins',
-// '../../lib/ionic/scss/tabs',
-// '../../lib/ionic/scss/scaffolding',
-// '../../lib/ionic/scss/reset';
+@import '../../lib/ionic/scss/variables';
 
 //MRS VARIABLES AND MIXINS
-@import 
+@import
 '../global-variables',
 '../mrs-mixins/index',
 '../global';
 
 //MRS MODULE
-@import 
+@import
 '../mrs-fonts/index',
 'mrs-tabs';

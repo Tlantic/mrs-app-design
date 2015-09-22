@@ -1,0 +1,13 @@
+//IONIC
+@import '../../lib/ionic/scss/variables';
+
+//MRS VARIABLES AND MIXINS
+@import
+'../global-variables',
+'../mrs-mixins/index',
+'../global';
+
+//MRS MODULE
+@import
+'../mrs-buttons/index',
+'mrs-popups';

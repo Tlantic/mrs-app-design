@@ -1,5 +1,5 @@
 .fade-in-animation{
-	opacity: 0;
+  opacity: 0;
     -webkit-transition: opacity 0.3s ease-in;
        -moz-transition: opacity 0.3s ease-in;
         -ms-transition: opacity 0.3s ease-in;
@@ -7,21 +7,21 @@
             transition: opacity 0.3s ease-in;
 
     &.visible{
-    	opacity: 1;
+      opacity: 1;
     }
 }
 
 .animate-show.ng-hide-add{
-	 @include transition(max-height 0.5s ease);
+   @include transition(max-height 0.5s ease);
 }
 .animate-show.ng-hide-remove{
-	@include transition(max-height 0.5s ease);
+  @include transition(max-height 0.5s ease);
 }
 .animate-show {
-	max-height:400px;
+  max-height:400px;
 }
 .animate-show.ng-hide {
-	max-height:0;
+  max-height:0;
 }
 
 
@@ -56,3 +56,48 @@
 .slide-in-left.ng-leave, .slide-in-left > .ng-leave {
   -webkit-transition: all ease-in-out 250ms;
   transition: all ease-in-out 250ms; }
+
+
+.scale-in {
+  -webkit-transform: scale(0.95);
+    transform: scale(0.95);
+    opacity: 0;
+}
+.scale-in.ng-enter,
+.scale-in > .ng-enter {
+  -webkit-transition: all cubic-bezier(.1, .7, .1, 1) 450ms;
+  transition: all cubic-bezier(.1, .7, .1, 1) 450ms;
+}
+.scale-in.ng-enter-active,
+.scale-in > .ng-enter-active {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.scale-in.ng-leave,
+.scale-in > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+}
+
+.scale-grow {
+  -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 0;
+}
+.scale-grow.ng-enter,
+.scale-grow > .ng-enter {
+  -webkit-transition: all cubic-bezier(.1, .7, .1, 1) 450ms;
+  transition: all cubic-bezier(.1, .7, .1, 1) 450ms;
+}
+.scale-grow.ng-enter-active,
+.scale-grow > .ng-enter-active {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+.scale-grow.ng-leave,
+.scale-grow > .ng-leave {
+  -webkit-transition: all ease-in-out 250ms;
+  transition: all ease-in-out 250ms;
+}

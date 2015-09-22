@@ -1,6 +1,4 @@
-.mrs-grid{
-	margin-top:20px;
-	font-family:$font-family-sans-serif;
+.mrs-grid{	
 	.row{			
 		margin:0;
 		padding:0;
@@ -32,10 +30,11 @@
 	}
 	.row-tall{
 		.col{
-			max-height:160px;
+			max-height:140px;
+			min-height:140px;			
 		}
 		.col-50{
-			max-height:325px;	
+			max-height:285px;	
 		}
 	}
 	.col-title{
@@ -66,7 +65,7 @@
 			padding:90px 0 0 0;		
 			text-align: center;
 			color: $light;
-			text-shadow: 1px 1px rgba(0,0,0,0.2);
+			//text-shadow: 1px 1px rgba(0,0,0,0.2);
 			font-size: $font-size-large;
 			line-height:$font-size-large - 1;	
 			.icon{
@@ -129,6 +128,8 @@
 				display:block;
 				margin:0 auto;
 				font-size: $icon-font-size-big;
+				min-height: $icon-font-size-big + 5;
+				max-height: $icon-font-size-big + 5;
 			}
 			/*background: rgba(255,255,255,0.3);*/			
 			&:first-child{

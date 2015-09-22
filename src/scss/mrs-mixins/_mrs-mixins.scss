@@ -41,6 +41,12 @@
   transform: translateY(-50%);
 }
 
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius!important;
+     -moz-border-radius: $radius!important;
+      -ms-border-radius: $radius!important;
+          border-radius: $radius!important;
+}
 
 @mixin gradient ($color1, $color2){
 	background: -webkit-gradient(linear, left top, right top, from($color1), to($color2));
@@ -64,4 +70,15 @@
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
+}
+
+
+@function black($opacity){
+    @return rgba(0,0,0,$opacity)
+}
+@function white($opacity){
+    @return rgba(255,255,255,$opacity)
+}
+@mixin letterpress($opacity){
+    text-shadow:white($opacity) 0 1px 0;
 }

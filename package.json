@@ -1,6 +1,6 @@
 {
   "name": "mrs-app-design",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "MRS App Design Core patterns to build Apps in lightning speed!",
   "repository": {
     "type": "git",
@@ -11,22 +11,21 @@
     "mrs",
     "design"
   ],
-  "author": "Pedro Simeão Carvalho",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Tlantic/mrs-app-design/issues"
   },
   "homepage": "https://github.com/Tlantic/mrs-app-design",
   "devDependencies": {
-    "gulp": "^3.8.11",
+    "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",
     "gulp-csso": "^1.0.0",
-    "gulp-debug": "^2.0.1",
+    "gulp-debug": "^2.1.0",
     "gulp-foreach": "^0.1.0",
-    "gulp-imagemin": "^2.2.1",
+    "gulp-imagemin": "^2.3.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.0.1",
-    "gulp-scss-lint": "^0.2.0",
-    "path": "^0.11.14"
+    "gulp-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.3.1",
+    "path": "^0.12.7"
   }
 }

@@ -1,6 +1,6 @@
 ///VARIAVEIS DE FONTS
 $font-path: "../lib/fonts" !default;
-$font-version: "1.0.2" !default;
+$font-version: "1.0.5" !default;
 $font-family-sans-serif: "sans-serif-font";
 $font-family-serif: "serif-font";
 $font-icons: "customer-font";
@@ -19,21 +19,19 @@ $subcategory-top-height: 150px;
 
 ///VARIAVEIS DE IMAGENS
 $image-path: "../img/" !default;
-$brandLogo: url($image-path + 'logoMonteserrat.png');
+$brandLogo: url($image-path + 'client-logo.svg');
 $appBackground: url($image-path +  'backgrounds/gradientBackground.svg');
 $appBackground-transparent:url($image-path + 'backgrounds/backgroundTransparency.svg');
-$backgroundMenuItem: url($image-path + 'backgrounds/bg-itemmenu.svg');
+// $backgroundMenuItem: url($image-path + 'backgrounds/bg-itemmenu.svg');
 $button-background-image:url($image-path + 'backgrounds/buttonBackground.svg');
 
-$quick-list-height:70px;
-
+$quick-list-height:65px;
 
 ///VARIAVEIS DE CORES
 $base-color: #000;
 $base-background-color: #FDFDFD;
-$brand-color-primary:#00A651;
+$brand-color-primary:#1FA947;
 $brand-color-secondary:#FFC907;
-$brand-color-blue:#0070BA;
 $highlight-color:#DD1921;
 $titleColor: #5A5A5A;
 $badge-color:#D0021B; 
@@ -48,7 +46,7 @@ $header-color:#fff;
 ///FOOTER
 $footer-background-color:#444;
 $footer-color:$base-color;
-$footer-height:60px;
+$footer-height:48px;
 
 ///BUTTONS
 $button-border-radius:4px !default;
@@ -64,6 +62,3 @@ $product-item-photo-height: 160px;
 /// DROPDOWN MODAL
 $dropdown-modal-height: 190px;
 
-///PRODUCTS SLIDER
-$slider-item-height:100px;
-$slider-thumb-width: 90px;
