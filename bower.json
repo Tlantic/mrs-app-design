@@ -1,10 +1,7 @@
 {
   "name": "mrs-app-design",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "homepage": "https://github.com/Tlantic/mrs-app-design",
-  "authors": [
-    "Pedro Simeão Carvalho <pesimeao@gmail.com>"
-  ],
   "description": "MRS App Design Core patterns to build Apps in lightning speed!",
   "keywords": [
     "tlantic",
