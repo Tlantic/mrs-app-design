@@ -639,8 +639,7 @@ hr{
 
 	}
 	&.editMode{
-		.mrs-quick-list{
-			
+		.mrs-quick-list{			
 			#toggleButton{
 				@include transform(translate3D(0%,-150%,0));
 			}
@@ -1242,10 +1241,17 @@ hr{
 		.headerList{
 			top: $quick-list-height + $ios-statusbar-height;
 		}
+		
+		.bar-header{
+			.headerButton{
+				padding-top:10px;			
+			}
+		}
 
 		ion-content{
 			top: ($bar-height + $ios-statusbar-height+ $quick-list-height) + 10;
 		}
+
 	}
 	#shopping-modal{
 		ion-content{
