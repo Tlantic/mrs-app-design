@@ -654,19 +654,15 @@ hr{
 	}
 }
 //modal shopping list
-.shopping-modal{
-	.mrs-quick-list{
-		background-image: none;
-	}
+#shopping-modal{
 	ion-content{
-		top: $bar-height + 20;
+		top:$quick-list-height; 
 	}
 	.bar-footer{
 		background-color: rgba(255,255,255,0.4);
 		.button{
 			width: 100%;
 		}
-		
 	}
 }
 
@@ -1252,9 +1248,9 @@ hr{
 			top: ($bar-height + $ios-statusbar-height+ $quick-list-height) + 10;
 		}
 	}
-	.shopping-modal{
+	#shopping-modal{
 		ion-content{
-			top: $bar-height + $ios-statusbar-height + 20 !important;
+			top:$quick-list-height + $ios-statusbar-height; 
 		}
 	}
 }
