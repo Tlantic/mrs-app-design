@@ -435,7 +435,7 @@ hr{
 			position: absolute;
 			left: 0;
 			top: 0;
-			font-size: $icon-font-size-big;
+			font-size: $icon-font-size-big - 10;
 			line-height: $quick-list-height;
 		}
 		.num-items{
