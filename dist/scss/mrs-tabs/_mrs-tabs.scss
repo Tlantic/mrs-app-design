@@ -1,5 +1,6 @@
 .mrs-tabs{
 	.tabs{
+		@include justify-content(space-between);
 		border: 0;
 		border-color: transparent;
 		border-top: transparent;
@@ -8,7 +9,8 @@
 
 		.tab-item{
 			position: relative;			
-			border:0;		
+			border:0;	
+			overflow: visible;	
 			span{					
 				position:relative;
 				display:block;
@@ -17,6 +19,7 @@
 			}			
 			i{				
 				height:30px;
+				line-height:30px!important;
 				position: relative;
 				&:before{
 					font-size:$icon-font-size;
