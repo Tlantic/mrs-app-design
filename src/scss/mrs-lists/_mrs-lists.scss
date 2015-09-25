@@ -41,6 +41,7 @@
 				padding-left:10px;		
 			}
 		}
+
 	}
 	.item-name{
 		@include fontfamily(icons);
@@ -74,6 +75,11 @@
 			.message-date{
 				color:lighten($dark, 30%);
 			}
+		}
+	}
+	&.mrs-icon-list{
+		.item{
+			padding-left:50px;
 		}
 	}
 }
