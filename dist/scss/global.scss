@@ -836,6 +836,55 @@ hr{
 }
 
 
+#page-stores{
+	.list{
+		.item{
+	 		margin-bottom:1px;
+			padding:10px 20px 10px 80px;
+			.icon{
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
+			}
+			&:before{
+				position: absolute;
+				right: 0;
+				top: 50%;
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);				
+			}
+		}
+	}
+
+}
+
+
+#page-store-detail{
+	.store-map{
+		display: block;
+		width: 100%;
+		height: 260px;
+		img{
+			height: 100%;
+		}		
+	}
+	.store-adress{
+		padding:20px 20px 0 20px;
+		position: relative;
+		.icon{
+			position: absolute;
+			right: 10px;
+			top:10px;
+		}
+	}
+	.store-actions{
+		padding:20px;
+	}
+}
+
+
 #page-login{
 	ion-content{
 		@extend .content-wrapper-20;
