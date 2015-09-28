@@ -41,7 +41,6 @@
 				padding-left:10px;		
 			}
 		}
-
 	}
 	.item-name{
 		@include fontfamily(icons);
@@ -182,18 +181,26 @@
 				z-index:99;
 			}	
 		}
+
 		label{
 			.item-content{
+				@extend .row;
 				font-family: $font-family-sans-serif;
-				color:$dark;
-				font-size:$font-size-base + 2;
+				font-size:$font-size-base;
 				display:block;					
 				position:absolute;
 				left:50px;
 				right:0;
 				top:0;
-				padding:5px 0;
-		
+				padding:5px 0;	
+				height:100%;
+				>div{
+					@extend .col;
+					@extend .col-center;
+					position:relative;
+					margin:0;
+					padding:0;
+				}	
 				.item-brand{
 					display:block;
 					min-height:10px;
@@ -513,6 +520,7 @@
 }
 
 .item-accordion {
+  	//@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));
   	//transition: 0.09s all linear;
 	padding: 20px 30px !important;
 	// background-image: none !important;
