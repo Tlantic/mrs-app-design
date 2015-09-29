@@ -8,14 +8,14 @@
 		height:48px;
 
 		.tab-item{
+			font-family: $font-family-sans-serif;
 			position: relative;			
 			border:0;	
 			overflow: visible;	
-			span{					
+			.tab-title{					
 				position:relative;
 				display:block;
-				font-size:$font-size-small;		
-				@include fontfamily(sans);
+				font-size:$font-size-small;						
 			}			
 			i{				
 				height:30px;
@@ -26,10 +26,14 @@
 				}
 			}
 			.badge{			
-				line-height:16px!important;			
+				line-height:16px!important;						
+				font-size:12px;
+				border-radius: 100px!important;		
+				padding:4px 9px;
+				top:-10px;
+				right:calc(50% - 30px);
 			}
-			&.tab-item-active{			
-				// overflow: visible;					
+			&.tab-item-active{							
 			}
 			&.activated{
 				opacity: 1 !important;
@@ -49,7 +53,7 @@
 	display: block;
 	position: absolute;
 	background: rgba(221, 25, 33, 0.7);
-	border-radius: 100%;
+	border-radius: 200px;
 	transform: scale(0);
 	-webkit-transform: scale(0);
 	left: 50%;
