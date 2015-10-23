@@ -1,5 +1,7 @@
 /********* MODULE VARIABLES ************/
 $banner-height: 180px;
+$banner-small-height: 80px;
+
 /***************************************/
 
 .mrs-banner{		
@@ -24,7 +26,8 @@ $banner-height: 180px;
 		}
 	}
 	&.mrs-banner-small{
-		height:115px;
+		// height:115px;
+		height:$banner-small-height;
 	}
 	
 	/*

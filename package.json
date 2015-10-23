@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Tlantic/mrs-app-design",
   "devDependencies": {
+    "documentjs": "^0.3.1",
     "gulp": "^3.9.0",
     "gulp-clean": "^0.3.1",
     "gulp-csso": "^1.0.0",

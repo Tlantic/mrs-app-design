@@ -241,25 +241,23 @@ hr{
 	max-width:60px;
 	border-left: 1px solid $border-color;
 }
+
 .item-actions-horizontal{
-	bottom: 0;
-	left: 0;
-	width: 100%;
+	@extend .row;
+	@extend .row-stretch;
+	top:160px;
+	padding: 0;
+    margin: 0;
+    width: 100%;
 	border-top: 1px solid $border-color;
-	height:40px;
-	white-space: nowrap;
-	span{		
-		font-size: $font-size-base +2;
-		line-height:40px;
-		visibility: hidden;
-	}
 	.button{
-		display:inline-block;
-		width:50%;
-		position: relative;
-  		top: -4px;
+		@extend .col;
+		border:0!important;
+		margin:0!important;
+		padding:0!important;
 	}	
 }
+
 .item-actions-horizontal-big{
 	position:relative;
 	height: auto;
@@ -374,6 +372,16 @@ hr{
 }
 
 
+.checkedItem{
+	opacity:0.5;
+	pointer-events: none;
+	background-color:darken($light, 15%);
+	.checkbox-icon{
+		display:none;
+	}
+}
+
+
 // PRICE STYLES
 .item-price{
 	font-family: $font-family-sans-serif;
@@ -401,9 +409,6 @@ hr{
 		}
 	}
 	.mrs-grid{
-		.row{
-			// margin-bottom:5px;
-		}
 		.col{
 			max-height:140px;
 		}
@@ -456,6 +461,7 @@ hr{
 				margin:0;
 			}
 			.col{
+				min-height:54px;	
 				background:transparent;
 				padding:0;
 				margin:0;				
@@ -474,13 +480,16 @@ hr{
 			}
 			a{
 				padding:0;
-				min-height:50px;			
+				min-height:54px;			
 				.icon{
 					max-height: 41px;
 					min-height: 41px;											
 				}				
 			}
-		}		
+		}
+		&:before{
+			height:54px!important;
+		}			
 	}
 	.has-subheader{
 		top:98px;
@@ -521,8 +530,20 @@ hr{
 #page-categories{
 	.mrs-grid{
 		margin-bottom:20px;
+		.row{
+			.col{
+				min-height: 140px;
+			}
+		}
 	} 
 }
+
+#page-products-list{
+	.bar-list-actions{		
+		
+	}
+}
+
 
 //modal LIST
 #list-modal{
@@ -555,15 +576,15 @@ hr{
 }
 
 
-
 .details-item-photo{
 	margin-bottom:20px;
 	min-height: 185px;
 	text-align:center;
-	img{
+	img{		
 		width: auto;
 		max-height:160px;
 		margin:0 auto;
+
 	}
 }
 #details-top{
@@ -755,17 +776,10 @@ hr{
 	}
 	.empty-state{
 		>.icon{
-			@extend .round-square;
 			margin:0 auto 20px auto;
-			border:solid 3px darken($border-color, 40%);
 			height:110px;
 			width:110px;
 			position:relative;
-			&:before{
-				position:absolute;
-				left:-8px;
-				top:-8px;
-			}			
 		}
 		.mrs-grid{
 			margin:20px;
@@ -884,16 +898,7 @@ hr{
 
 //PLATFORM
 .platform-android4_1, .platform-android4_2, .platform-android4_3 {
-	.item-actions-horizontal{
-		height:0;
-		bottom:-8px;
-		button{
-			position: absolute;
-			&:last-child{
-				right: 0;
-			}
-		}
-	}
+	
 }
 
 .platform-ios {
@@ -919,25 +924,25 @@ hr{
   		bottom: $quick-list-height + $ios-statusbar-height;
 
 	}	
-	.mrs-quick-list-small {
-  		padding-top:$ios-statusbar-height;
-  		height:($quick-list-height / 2) + $ios-statusbar-height;
+	// .mrs-quick-list-small {
+ //  		padding-top:$ios-statusbar-height;
+ //  		height:($quick-list-height / 2) + $ios-statusbar-height;
   		
-	}	
-	.has-quicklist-small {
-  		height: auto;
-  		bottom:($quick-list-height / 2) + $ios-statusbar-height;
+	// }	
+	// .has-quicklist-small {
+ //  		height: auto;
+ //  		bottom:($quick-list-height / 2) + $ios-statusbar-height;
 
-		.bar-header:not(.bar-subheader) {   
-			height:$bar-height;
-			> * {
-				margin-top: 0px!important;
-			}
-		}
-		.has-header{
-			top:$bar-height!important;
-		}
-	}	
+	// 	.bar-header:not(.bar-subheader) {   
+	// 		height:$bar-height;
+	// 		> * {
+	// 			margin-top: 0px!important;
+	// 		}
+	// 	}
+	// 	.has-header{
+	// 		top:$bar-height!important;
+	// 	}
+	// }	
 	#page-list{
 		.headerList{
 			top: $quick-list-height + $ios-statusbar-height;

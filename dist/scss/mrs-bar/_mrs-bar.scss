@@ -28,38 +28,35 @@
 		}
 	}
 	&.bar-refine-order{
-		background:transparent;
-		background-color: rgba(0,0,0, 0.5);
-		padding:0;
-		font-size: $font-size-base + 1;
-		line-height: $font-size-small;
-		color: $light;
-		.refine-button{
-			position: relative;
-			padding: 8px 0 0 15px;
-			font-family: $font-family-sans-serif;
-			text-transform: uppercase;
-			font-weight: $font-regular;
-			font-size: $font-size-base;
-			span{
-				font-size: $font-size-small;
-				text-transform: none;
-				font-weight: $font-light;
-
+		height:$bar-height;
+		.mrs-grid{
+			.row{
+				margin:0;
+				padding:0;
+				.col{
+					margin:0;
+					padding:0;
+				}
 			}
-			&:first-child{
-				border-right:solid 1px rgba(255,255,255,0.1);
-			}
-			&:before{
-				position: absolute;
-				right: 0;
-				top: 0;
-				font-size: $icon-font-size + 5;
-				font-family: $font-icons;
-
+			a{					
+				text-align:left;
+				min-height:auto;	
+				line-height:normal;
+				padding:0 10px;
+				.action-name{
+					display:block;
+					font-size:$font-size-base;					
+					text-transform:uppercase;	
+				}				
+				.action-state{
+					display:block;					
+					font-size:$font-size-small;
+					color:transparentize($dark, 0.5);
+				}			
 			}
 		}
 	}
+
 	&.bar-footer{
 		background-image: none;
 		background:transparent;
