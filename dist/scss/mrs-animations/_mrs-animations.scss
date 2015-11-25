@@ -12,10 +12,14 @@
 }
 
 .animate-show.ng-hide-add{
-   @include transition(max-height 0.5s ease);
+   // @include transition(max-height 0.5s ease);
+   -webkit-transition: max-height 0.5s ease;
+           transition: max-height 0.5s ease;
 }
 .animate-show.ng-hide-remove{
-  @include transition(max-height 0.5s ease);
+  // @include transition(max-height 0.5s ease);
+   -webkit-transition: max-height 0.5s ease;
+           transition: max-height 0.5s ease;
 }
 .animate-show {
   max-height:400px;

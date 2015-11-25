@@ -1,6 +1,17 @@
-// MRS App Design
+//IONIC
+@import
+'../lib/ionic/scss/variables',
+'../lib/ionic/scss/mixins',
+'../lib/ionic/scss/button';
+
+//MRS VARIABLES AND MIXINS
 @import
 'mrs-mixins/index',
+'global';
+
+
+// MRS App Design
+@import
 'mrs-buttons/index',
 'mrs-fonts/index',
 'mrs-forms/index',

@@ -1,9 +1,16 @@
+@import 
+'../global-variables',
+'../color-variables';
+
 .mrs-grid{	
 	.row{			
 		margin:0;
 		padding:0;
 		.col{			
-			@include box-sizing(border-box);
+			
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
 			position:relative;			
 			padding:0;			
 			margin-bottom:5px;
@@ -38,7 +45,9 @@
 		}
 	}
 	.col-title{
-		@include box-sizing(border-box);		
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;		
 		position:absolute;		
 		z-index: 1;
 		bottom: 0;
@@ -46,10 +55,10 @@
 		right: 0;
 		padding: 5px 10px;
 		text-transform: uppercase;
-		@include fontfamily(sans);
+		font-family: "sans-serif-font";
 		font-size: $font-size-base + 1;
 		line-height: $font-size-base + 1;
-		color:$light;		
+		color:#fff;		
 		background-color:$brand-color;
 	}
 	img{
@@ -64,12 +73,12 @@
 			top:0;
 			padding:90px 0 0 0;		
 			text-align: center;
-			color: $light;
+			color: #fff;
 			//text-shadow: 1px 1px rgba(0,0,0,0.2);
 			font-size: $font-size-large;
 			line-height:$font-size-large - 1;	
 			.icon{
-				border: 1px solid $light;
+				border: 1px solid #fff;
 				display: block;
 				font-size: $icon-font-size-big;
 				padding: 4px;

@@ -12,7 +12,7 @@
 			display: none;
 		}
 		.popup-body{
-			@include fontfamily(sans);
+			font-family: $font-family-sans-serif;
 			font-size: $font-size-base;
 			padding: 0;
 		}
@@ -104,7 +104,7 @@
 		}
 	}
 	.quantity{
-		@include fontfamily(sans);
+		font-family: $font-family-sans-serif;
 		float: right;
 		display: inline-block;
 		border: 1px solid $brand-color-primary;

@@ -1,3 +1,4 @@
+@import '../global-variables';
 
 .bar{
 	font-family:$font-family-sans-serif!important;
@@ -8,18 +9,18 @@
 		background-image: none;
 		background-color:transparent;
 		.badge{
-			background-color:$light!important;
-			color:$dark;
+			background-color:#fff!important;
+			color:#000;
 		}
 	}
 	&.header-clear{
-		background-color:$light!important;
+		background-color:#fff!important;
 		background-image:none;
 		-moz-box-shadow:none;
 		box-shadow:none;
 	}
 	&.bar-subheader{
-		background-color:transparentize($light, 0.3);
+		background-color:transparentize(#fff, 0.3);		
 		.button-bar{
 			.button{
 				text-transform: uppercase;
@@ -51,7 +52,8 @@
 				.action-state{
 					display:block;					
 					font-size:$font-size-small;
-					color:transparentize($dark, 0.5);
+					// color:transparentize($dark, 0.5);
+					color:rgba(0,0,0, 0.5);
 				}			
 			}
 		}
@@ -76,7 +78,7 @@
 			.button{
 				font-family:$font-family-sans-serif!important;
 				font-size: $font-size-small;
-				color:$light;
+				color:#fff;
 				&:before{
 					font-family: $font-icons;
 					font-size: $icon-font-size!important;

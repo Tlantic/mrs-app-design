@@ -1,7 +1,7 @@
 /********* MODULE VARIABLES ************/
 $banner-height: 180px;
 $banner-small-height: 80px;
-
+$slider-pager-size: 6px;
 /***************************************/
 
 .mrs-banner{		
@@ -19,7 +19,7 @@ $banner-small-height: 80px;
 			width: $slider-pager-size;
 			height: $slider-pager-size;
 			border-radius:20px;
-			background-color: $dark;
+			background-color: #000;
 			.icon{
 				display:none;
 			}

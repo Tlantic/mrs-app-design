@@ -1,9 +1,12 @@
+@import '../global-variables';
+
+
 .mrs-form-wrapper{
 	padding-right:20px;
 	padding-left:20px;
 	padding-top: 10px;
 	font-size: $font-size-base;
-	font-family:$font-family-sans-serif;
+	font-family: "sans-serif-font";
 	.icon{
 		font-size: $icon-font-size-big + 45;
 		border-style: solid;
@@ -20,7 +23,7 @@
 		font-size: $font-size-base - 2;
 	}
 	input{
-		@include fontfamily(sans);
+		font-family: "sans-serif-font";
 		-webkit-appearance: none;
 		width: 100%;
 		background-color: transparent;
@@ -52,55 +55,55 @@
 
 
 .mrs-form-light{
-	color:$light;
+	color:#fff;
 	input[type="text"], 
 	input[type="password"],
 	input[type="search"],
 	input[type="number"],
 	input[type="email"],
 	input[type="tel"]{
-		color: $light;		
+		color: #fff;		
 		border-bottom: 1px solid rgba(255,255,255,0.3);
 		&::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-			color: $light;
+			color: #fff;
 		}
 		&:-moz-placeholder, textarea:-moz-placeholder {
-			color: $light;
+			color: #fff;
 		}	
 	}
 	label{
-		color:$light;
+		color:#fff;
 	}
 	.icon-eye{
-		color:$light;
+		color:#fff;
 	}
 	.button{
-		color:$light;
+		color:#fff;
 	}
 }
 
 .mrs-form-dark{
-	color:$dark;
+	color:#000;
 	input[type="text"], 
 	input[type="password"],
 	input[type="search"],
 	input[type="number"],
 	input[type="email"],
 	input[type="tel"]{
-		color: $dark;		
+		color: #000;		
 		border-bottom: 1px solid rgba(0,0,0,0.3);
 		&::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-			color: $dark;
+			color: #000;
 		}
 		&:-moz-placeholder, textarea:-moz-placeholder {
-			color: $dark;
+			color: #000;
 		}	
 	}
 	label{
-		color:$dark;
+		color:#000;
 	}
 	.icon-eye{
-		color:$dark;
+		color:#000;
 	}
 }
 
@@ -137,7 +140,7 @@
 		// border:0;
 		line-height:40px;
 		font-size: $icon-font-size;
-		color:$dark;
+		color:#000;
 		margin:2px auto;
 		background-color:transparent;
 		border-radius: 40px;
@@ -145,22 +148,21 @@
 	}
 }
 
-
-
-
 .search-item{	
 	position:relative;
 	input[type="search"]{
-		@include box-sizing(border-box);
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;		
 		//@include box-shadow(0 1px 2px 0 rgba(0,0,0,0.1));
-		@include fontfamily(sans);
+		font-family: $font-family-sans-serif;
 		-webkit-appearance: none;
 		width:100%;	
 		height:$bar-height;		
 		padding-left: 20px !important;
 		font-size: $font-size-base +1;
 		font-weight: 300;
-		border:solid 1px lighten($dark, 60%);
+		border:solid 1px lighten(#000, 60%);
 		border-radius:4px;
 		//line-height:$bar-height;
 	}
@@ -172,7 +174,7 @@
 		max-width:44px;
 		max-height:44px;
 		padding:0;
-		color:$dark;
+		color:#000;
 		&:before{
 			line-height:44px;
 		}
@@ -184,14 +186,14 @@
 			border-color:rgba(255,255,255, 0.15) !important;
 			color: #FFF;	
 			&::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
-				color: $light;
+				color: #fff;
 			}
 			&:-moz-placeholder, textarea:-moz-placeholder {
-				color: $light;
+				color: #fff;
 			}	
 		}
 		.button{
-			color:$light;
+			color:#fff;
 		}
 	}
 }

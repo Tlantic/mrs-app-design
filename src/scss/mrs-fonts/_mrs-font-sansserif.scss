@@ -1,27 +1,27 @@
-/// Font Não Serifada
+@import '../font-variables';
 
+/// Font Não Serifada
 @font-face {
-  font-family: $font-family-sans-serif;
+  font-family: "sans-serif-font";
   src: url("#{$font-path}/sans-serif/SourceSansPro300.woff2?v=#{$font-version}") format("woff2"),
          url("#{$font-path}/sans-serif/SourceSansPro300.ttf?v=#{$font-version}") format("truetype");
-  font-weight: $font-light;
+  font-weight: 300;
 }
 @font-face {
-  font-family: $font-family-sans-serif;
+  font-family: "sans-serif-font";
   src: url("#{$font-path}/sans-serif/SourceSansProregular.woff2?v=#{$font-version}") format("woff2"),
          url("#{$font-path}/sans-serif/SourceSansProregular.ttf?v=#{$font-version}") format("truetype");
-  font-weight: $font-regular;
+  font-weight: 400;
 }
 @font-face {
-  font-family: $font-family-sans-serif;
+  font-family: "sans-serif-font";
   src: url("#{$font-path}/sans-serif/SourceSansPro600.woff2?v=#{$font-version}") format("woff2"),
          url("#{$font-path}/sans-serif/SourceSansPro600.ttf?v=#{$font-version}") format("truetype");
-  font-weight: $font-semibold;
+  font-weight: 600;
 }
 @font-face {
-  font-family: $font-family-sans-serif;
+  font-family: "sans-serif-font";
   src: url("#{$font-path}/sans-serif/SourceSansPro700.woff2?v=#{$font-version}") format("woff2"),
          url("#{$font-path}/sans-serif/SourceSansPro700.ttf?v=#{$font-version}") format("truetype");
-  font-weight: $font-bold;
+  font-weight: 700;
 }
-

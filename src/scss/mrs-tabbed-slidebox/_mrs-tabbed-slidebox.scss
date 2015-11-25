@@ -1,3 +1,4 @@
+@import '../color-variables';
 .tabbed-slidebox .slider {
   height: 100%;
 }
@@ -43,7 +44,7 @@
 
 .tabbed-slidebox .tsb-icons .scroll a{
   display: inline-block;
-  @include fontfamily(sans);
+  font-family: $font-family-sans-serif;
   width:auto;
   font-size:$font-size-base - 1;    
   text-transform:uppercase;
