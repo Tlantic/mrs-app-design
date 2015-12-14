@@ -287,9 +287,9 @@
 				opacity: 0.6;
 				.lineThrough{
 					// @include transition(all 0.4s cubic-bezier(1, 0, 0, 0.82));
-					-webkit-transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
-           			transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
-					right:0px;
+					// -webkit-transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
+     				// transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
+					right:10px;
 				}
 			}		
 		}
@@ -602,7 +602,7 @@
 		&:before{
 			// @include fontfamily(icons);
 			font-family: "customer-font";
-			@extend .icon-arrow-right;
+			@extend .icon-plus;
 			// @include transition (all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 			-webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -617,9 +617,9 @@
 		}
 		&.open{
 			&:before{
-				// @include transform(rotateZ(90deg));
-				-webkit-transform: rotateZ(90deg);
-				transform: rotateZ(90deg);
+				// @include transform(rotateZ(45deg));
+				-webkit-transform: rotateZ(45deg);
+				transform: rotateZ(45deg);
 			}
 			
 			
@@ -630,20 +630,21 @@
 .item-accordion {
   	//@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));
   	//transition: 0.09s all linear;
-	padding: 20px 30px !important;
 	// background-image: none !important;
+	background-color:lighten($brand-color, 50%)!important;
+	padding: 20px 30px !important;
 	font-size:$font-size-base - 1;
 	position:relative;
-	&:after{
-		@extend .lighterBackground;
-		content:"";
-		position:absolute;
-		left:0;
-		top:0;
-		right:0;
-		bottom:0;
-		z-index:-1;		
-	}
+	// &:after{
+	// 	// @extend .lighterBackground;
+	// 	content:"";
+	// 	position:absolute;
+	// 	left:0;
+	// 	top:0;
+	// 	right:0;
+	// 	bottom:0;
+	// 	z-index:-1;		
+	// }
 }
 
 .item-accordion.ng-hide {
