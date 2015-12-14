@@ -945,7 +945,9 @@ hr{
 		}
 		&.editMode{
 			ion-content{
-				top:118px!important;
+				// ++++++ COMENTADO ATÉ COLOCARMOS O SECONDARY HEADER +++++++
+				// ++++++ COM AS OPCOES ADICIONAR A LISTA / REMOVER   +++++++ 
+				// top:118px!important;
 			}
 		}		
 	}	

@@ -11,7 +11,7 @@
 
 .tabbed-slidebox .slider-slide {
   padding-top: 0px;
-  color: $dark;
+  color: #000;
   background-color: #fff;
   text-align: center;
 }
@@ -46,7 +46,7 @@
   display: inline-block;
   font-family: $font-family-sans-serif;
   width:auto;
-  font-size:$font-size-base - 1;    
+  font-size:$font-size-base;    
   text-transform:uppercase;
   text-decoration: none;
   padding: 5px 10px;
@@ -54,10 +54,12 @@
 }
 
 .tabbed-slidebox .tsb-icons .scroll a.active {
-    @extend .imageBackground;
-    @extend .round-square;
-    //@include box-shadow (inset 0 1px 2px 0 rgba(0,0,0,0.2));
-    background-size:200%;
-    border:rgba(255,255,255,0.2);   
-    color: $light;  
+    // @extend .imageBackground;
+    // @extend .round-square;
+    // @include box-shadow (inset 0 1px 2px 0 rgba(0,0,0,0.2));
+    // background-size:200%;
+    // border:rgba(255,255,255,0.2);   
+    color: $brand-color;
+    font-weight:700;
+    border-bottom:solid 4px $brand-color;
 }
