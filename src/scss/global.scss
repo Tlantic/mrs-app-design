@@ -253,7 +253,7 @@ hr{
 .item-actions-horizontal{
 	@extend .row;
 	@extend .row-stretch;
-	top:160px;
+	top:200px;
 	padding: 0;
     margin: 0;
     width: 100%;
@@ -455,53 +455,11 @@ hr{
 		.cancelselect{
 			display: none;
 		}
-	}
-	.bar-subheader{
-		display: none;
-		overflow:hidden;
-		padding:0;
-		height:54px;		
-		.mrs-grid{
-			margin:0;
-			padding:0;
-			width:100%;
-			.row{
-				margin:0;
-			}
-			.col{
-				min-height:54px;	
-				background:transparent;
-				padding:0;
-				margin:0;				
-				&:after{
-					content:"";
-					position:absolute;
-					display:block;
-					width:1px;					
-					left:0;
-					top:8px;
-					bottom:2px;
-				}
-				&:first-child:after{
-					display:none;
-				}
-			}
-			a{
-				padding:0;
-				min-height:54px;			
-				.icon{
-					max-height: 41px;
-					min-height: 41px;											
-				}				
-			}
+		.removeButton{
+			display: none;
 		}
-		&:before{
-			height:54px!important;
-		}			
 	}
-	.has-subheader{
-		top:98px;
-	}
+
 	.item-actions{
 		.button{
 			@include vertical-align;
@@ -512,7 +470,7 @@ hr{
 	}
 
 	&.editMode{
-		.bar-subheader{
+		.removeButton{
 			display: block !important;
 		}
 		.bar-header{
@@ -526,10 +484,12 @@ hr{
 				.cancelselect{
 					display: block;
 				}
+				
 			}
 		}
-		ion-content{
-			top: $bar-height + $bar-subheader-height + 10;
+		.item-actions{
+			-webkit-transform: translate3D(60px,0,0);
+    		transform: translate3D(60px,0,0);
 		}
 	}	
 }
@@ -708,6 +668,15 @@ hr{
 			}
 		}		
 	}
+
+	.item-actions{
+		.button{
+			@include vertical-align;
+			-webkit-transform: translateY(50%);
+			-ms-transform: translateY(50%);
+			transform: translateY(50%);
+		}
+	}
 	.headerList{
 		top: $quick-list-height;
 		height:$quick-list-height - 10!important;
@@ -780,6 +749,10 @@ hr{
 			.headerButton{
 				@include transform(translate3D(0,0,0));	
 			}
+		}
+		.item-actions{
+			-webkit-transform: translate3D(60px,0,0);
+    		transform: translate3D(60px,0,0);
 		}
 	}
 	.empty-state{
