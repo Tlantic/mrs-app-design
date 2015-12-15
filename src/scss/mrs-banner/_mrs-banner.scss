@@ -8,10 +8,19 @@ $slider-pager-size: 6px;
 	//@include box-shadow(rgba(0, 0, 0, 0.1) 0px 2px 4px 0px);	
 	overflow:hidden;
 	ion-slide{
-		height: 100%;	
-		max-height:$banner-height;
+		height: 0;	
+		// max-height:$banner-height;
 		overflow:hidden;
 		line-height:0;
+		background-color:lighten($dark, 65%);
+		padding-bottom:14%;
+		position:relative;
+		img{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+		}
 	}
 	.slider-pager{
 		bottom:10px;
@@ -42,9 +51,9 @@ $slider-pager-size: 6px;
 }
 
 @media (min-width: 375px) {
-	.mrs-banner ion-slide{			
-		max-height:$banner-height * 2;
-	}
+	// .mrs-banner ion-slide{			
+	// 	max-height:$banner-height * 2;
+	// }
  }
  /*
  *** INCLUIR ESTA CLASS EM LIST-INTORE  ***
