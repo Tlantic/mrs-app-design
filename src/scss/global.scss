@@ -189,6 +189,7 @@ hr{
 }
 .round-square{
   @include border-radius(100px);
+  -webkit-background-clip: padding-box;
 }
 .title{
 	.icon{
@@ -201,9 +202,9 @@ hr{
 	position: absolute !important;
 	background-color:$badge-color!important;
 }
-.activated{
-	opacity: 0.8!important;
-}
+
+
+
 .item-icon-left{
 	position:relative;
 }
@@ -875,11 +876,16 @@ hr{
 }
 
 
-
+.activated{
+	opacity: 1!important;
+}
 
 //PLATFORM
-.platform-android4_1, .platform-android4_2, .platform-android4_3 {
-	
+
+.platform-android.grade-a{
+	.activated{
+		opacity: 0.8!important;
+	}
 }
 
 .platform-ios {
@@ -895,6 +901,10 @@ hr{
 				margin-top: 20px;
 			}
 		}
+	}
+
+	.activated{
+		opacity: 0.8;
 	}
 
 	.mrs-quick-list{

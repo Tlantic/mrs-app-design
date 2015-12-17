@@ -37,6 +37,7 @@ $slider-pager-size: 6px;
 	&.mrs-banner-small{
 		// height:115px;
 		height:$banner-small-height;
+		background-color:lighten($dark, 65%);
 	}
 	
 	/*
