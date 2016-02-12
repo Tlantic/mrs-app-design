@@ -85,7 +85,11 @@
     text-shadow:white($opacity) 0 1px 0;
 }
 
-
+@mixin boxSizing(){
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; 
+}
 
 // Flexbox Mixins
 // --------------------------------------------------
