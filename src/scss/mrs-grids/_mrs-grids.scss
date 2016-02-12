@@ -33,6 +33,7 @@ padding-bottom:43.5%;
 		.col-50 + .col-50{
 			margin-right:0;
 			margin-left:2px;
+
 		}
 	}
 	.row + .row{
@@ -41,7 +42,8 @@ padding-bottom:43.5%;
 	.row-tall{
 		.col{
 			// max-height:140px;
-			// min-height:140px;			
+			// min-height:140px;		
+			padding-bottom:87%;	
 		}
 		.col-50{
 			// max-height:285px;	
@@ -65,10 +67,11 @@ padding-bottom:43.5%;
 		background-color:$brand-color;
 	}
 	img{
-position: absolute;
-top: 0;
-left: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
+		
 	}
 
 	&.mrs-grid-complex{
@@ -97,7 +100,11 @@ left: 0;
 				max-height:70px;
 				min-height:70px;
 				color:$dark;
-			}		
+			}	
+			.title-name{
+				@include vertical-align;
+			}
+
 		}
 
 		.col-50 > .col-title{
@@ -107,7 +114,7 @@ left: 0;
 			bottom:10px;
 			top:auto;
 			margin: 0;
-			padding:12px 0 0 60px;
+			padding:0 0 0 60px;
 			text-align:left;
 			.icon{
 				font-size: $icon-font-size;

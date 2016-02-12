@@ -396,6 +396,15 @@
 			background-color:darken($light, 5%);
 		}
 	}
+	.promotion-date{
+		font-family: $font-family-sans-serif;
+		display:block;
+		color:rgb(56,103,171);
+		font-size: $font-size-base;			
+		line-height: $font-size-base + 5px;
+		text-align: center;
+
+	}
 	.product-name{
 		font-family: "sans-serif-font";
 		// @include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
