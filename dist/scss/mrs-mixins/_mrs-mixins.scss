@@ -2,12 +2,12 @@
 
 @mixin fontfamily($font-type:'sans') {
    @if $font-type == 'sans' {
-	font-family: $font-family-sans-serif;
+  font-family: $font-family-sans-serif;
    } @else if $font-type == 'serif'{
-	font-family: $font-family-serif;
+  font-family: $font-family-serif;
    }
    @else if $font-type == 'icons'{
- 	font-family: $font-icons;   
+  font-family: $font-icons;   
    }
 }
 
@@ -21,15 +21,15 @@
 
 
 @mixin appBackgroundImage($image:'normal') {
-	@if $image == 'normal' {
-		background-image:$appBackground;
-	} @else if $image == 'transparent'{
-		background-image:$appBackground-transparent;
-	}
-	
-	background-repeat: no-repeat;
-	background-position: 0;
-	background-size: cover;
+  @if $image == 'normal' {
+    background-image:$appBackground;
+  } @else if $image == 'transparent'{
+    background-image:$appBackground-transparent;
+  }
+  
+  background-repeat: no-repeat;
+  background-position: 0;
+  background-size: cover;
 }
 
 @mixin vertical-align {
@@ -46,30 +46,32 @@
      -moz-border-radius: $radius!important;
       -ms-border-radius: $radius!important;
           border-radius: $radius!important;
+-webkit-background-clip: padding-box;
+        background-clip: padding-box;          
 }
 
 @mixin gradient ($color1, $color2){
-	background: -webkit-gradient(linear, left top, right top, from($color1), to($color2));
-	background: -webkit-linear-gradient(top, $color1, $color2);
-	background: -moz-linear-gradient(top, $color1, $color2);
-	background: -o-linear-gradient(top, $color1, $color2);
-	background: -ms-linear-gradient(top, $color1, $color2);
-	background: linear-gradient(top, $color1, $color2);
-	background-color: $color1;
+  background: -webkit-gradient(linear, left top, right top, from($color1), to($color2));
+  background: -webkit-linear-gradient(top, $color1, $color2);
+  background: -moz-linear-gradient(top, $color1, $color2);
+  background: -o-linear-gradient(top, $color1, $color2);
+  background: -ms-linear-gradient(top, $color1, $color2);
+  background: linear-gradient(top, $color1, $color2);
+  background-color: $color1;
 }
 
 @mixin elipsisText($fontSize:$font-size-base, $lineHeight:1.4, $linesToShow:2){
-	$font-size:$fontSize;
-	$line-height: $lineHeight;
-	$lines-to-show: $linesToShow;
-	display: block; /* Fallback for non-webkit */
-	display: -webkit-box;
-	height: $font-size*$line-height*$lines-to-show + 5; /* Fallback for non-webkit */
-	line-height: $line-height;
-	-webkit-line-clamp: $lines-to-show;
-	-webkit-box-orient: vertical;
-	overflow: hidden;
-	text-overflow: ellipsis;
+  $font-size:$fontSize;
+  $line-height: $lineHeight;
+  $lines-to-show: $linesToShow;
+  display: block; /* Fallback for non-webkit */
+  display: -webkit-box;
+  height: $font-size*$line-height*$lines-to-show + 5; /* Fallback for non-webkit */
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
@@ -83,7 +85,11 @@
     text-shadow:white($opacity) 0 1px 0;
 }
 
-
+@mixin boxSizing(){
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box; 
+}
 
 // Flexbox Mixins
 // --------------------------------------------------

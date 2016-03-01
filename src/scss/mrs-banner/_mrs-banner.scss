@@ -12,7 +12,7 @@ $slider-pager-size: 6px;
 		// max-height:$banner-height;
 		overflow:hidden;
 		line-height:0;
-		background-color:lighten($dark, 65%);
+		background-color:lighten(#000, 75%);
 		padding-bottom:14%;
 		position:relative;
 		img{
@@ -37,7 +37,7 @@ $slider-pager-size: 6px;
 	&.mrs-banner-small{
 		// height:115px;
 		height:$banner-small-height;
-		background-color:lighten($dark, 65%);
+		background-color:lighten(#000, 75%);
 	}
 	
 	/*

@@ -89,7 +89,7 @@
 	}
 	.title{
 		font-family:$font-family-sans-serif!important;
-		font-weight: $font-light;
+		// font-weight: $font-light;
 		font-size: $font-size-base + 2;
 		text-transform: uppercase;
 	}
@@ -104,15 +104,16 @@
 		}
 		&.button-clear{
 			font-size: $font-size-base;
+			font-weight:600;
 		}
 	}
 }
 
-.header-item{
-	.button-clear{
-		font-size:$font-size-small!important;
-	}
-}
+// .header-item{
+// 	.button-clear{
+// 		font-size:$font-size-small!important;
+// 	}
+// }
 
 .bar-footer.has-tabs, .has-tabs{
 	bottom:48px;

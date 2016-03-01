@@ -2,22 +2,34 @@
 '../global-variables',
 '../color-variables';
 
+@mixin vertical-align {
+  display:block;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
 .mrs-grid{	
 	.row{			
 		margin:0;
 		padding:0;
-		.col{			
-			
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-			position:relative;			
+		.col{						
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;			
 			padding:0;			
 			margin-bottom:5px;
-			min-height:40px;
-			max-height:165px;
-			overflow:hidden;
 			line-height:0;
+			// min-height:40px;
+			// max-height:165px;	
+position:relative;						
+height: 0;
+overflow: hidden;
+background-color:lighten($dark, 65%);
+padding-bottom:43.5%;
+
 			.row + .row{				
 				.col{
 					// margin-bottom:0;					
@@ -30,6 +42,7 @@
 		.col-50 + .col-50{
 			margin-right:0;
 			margin-left:2px;
+
 		}
 	}
 	.row + .row{
@@ -37,11 +50,12 @@
 	}
 	.row-tall{
 		.col{
-			max-height:140px;
-			min-height:140px;			
+			// max-height:140px;
+			// min-height:140px;		
+			padding-bottom:87%;	
 		}
 		.col-50{
-			max-height:285px;	
+			// max-height:285px;	
 		}
 	}
 	.col-title{
@@ -62,7 +76,11 @@
 		background-color:$brand-color;
 	}
 	img{
+		position: absolute;
+		top: 0;
+		left: 0;
 		width: 100%;
+		
 	}
 
 	&.mrs-grid-complex{
@@ -91,7 +109,11 @@
 				max-height:70px;
 				min-height:70px;
 				color:$dark;
-			}		
+			}	
+			.title-name{
+				@include vertical-align;
+			}
+
 		}
 
 		.col-50 > .col-title{
@@ -101,7 +123,7 @@
 			bottom:10px;
 			top:auto;
 			margin: 0;
-			padding:12px 0 0 60px;
+			padding:0 0 0 60px;
 			text-align:left;
 			.icon{
 				font-size: $icon-font-size;

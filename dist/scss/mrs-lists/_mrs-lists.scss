@@ -33,10 +33,9 @@
 				right:60px;
 			}
 			.icon{
-// @include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
--webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-
+				// @include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+				-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 
 				top:50%;
 				margin-top:-22px;
@@ -47,11 +46,10 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 					font-size: $icon-font-size - 5;
 				}
 				&.activated{		
-// @include transform(scale(0.8));
--webkit-transform: scale(0.8);
-transform: scale(0.8);
-
-					opacity: 0.8!important;				
+					// @include transform(scale(0.8));
+					// -webkit-transform: scale(0.8);
+					// transform: scale(0.8);
+					// opacity: 0.8!important;				
 				}
 			}
 		}
@@ -132,27 +130,30 @@ transform: scale(0.8);
 		label{		
 			display:none;
 		}	
+		// .item-info{
+			
+		// }
 		.item-name{						
 			font-family: "sans-serif-font";
 			color:$dark;
 			font-size:$font-size-base + 2;			
-// @include transform(translate3D(0px,0,0));		
--webkit-transform: translate3D(0px,0,0);
-transform: translate3D(0px,0,0);
-
-// @include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
--webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-
+			-webkit-transform: translate3D(0px,0,0);
+			transform: translate3D(0px,0,0);
+			-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+			transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			margin-left:-50px;
 		}
 	}
 	.item-avatar{
 		text-align:left;
-		background-position:40px center;		
+		// background-position:40px center;		
 		.product-thumb{
-			left: 60px;	
+			-webkit-transform: translate3D(0px,-50%,0);
+			transform: translate3D(0px,-50%,0);
+			-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+			transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 		}
+
 		label{			
 			z-index:99;
 			padding: 45px 7px;
@@ -177,9 +178,13 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			}
 			img:first-child{
 				// @include transform(translate3D(50px,0,0));				
-				-webkit-transform: translate3D(50px,0,0);
-				transform: translate3D(50px,0,0);
+				// -webkit-transform: translate3D(50px,0,0);
+				// transform: translate3D(50px,0,0);
 			}
+			.product-thumb{			
+				-webkit-transform: translate3D(50px,-50%,0)!important;
+				transform: translate3D(50px,-50%,0)!important;
+			}			
 			.product-name{
 				// @include transform(translate3D(50px,0,0));				
 				-webkit-transform: translate3D(50px,0,0);
@@ -192,14 +197,14 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			}
 			.item-actions{
 				// @include transform(translate3D(60px,0,0));		
-				-webkit-transform: translate3D(60px,0,0);
-				transform: translate3D(60px,0,0);		
+				// -webkit-transform: translate3D(60px,0,0);
+				// transform: translate3D(60px,0,0);		
 			}		
 			&.item-avatar{
 				text-align:left;
 				background-position:40px center!important;
 				.product-thumb{
-					left: 60px!important;
+					// left: 60px!important;
 				}
 			}
 		}
@@ -276,9 +281,9 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 				opacity: 0.6;
 				.lineThrough{
 					// @include transition(all 0.4s cubic-bezier(1, 0, 0, 0.82));
-					-webkit-transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
-           			transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
-					right:0px;
+					// -webkit-transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
+     				// transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
+					right:10px;
 				}
 			}		
 		}
@@ -349,8 +354,8 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 		text-align:left;
 		img:first-child{
 			// @include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
-			-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-					transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+			// -webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+			// 		transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 		}
 		&.item-avatar{
 			padding-left:105px!important;
@@ -365,9 +370,14 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 				height: 90px;
 				left: 5px;
 				top: 50%;
-				-webkit-transform: translateY(-50%);
-				-ms-transform: translateY(-50%);
-				transform: translateY(-50%);
+
+				// -webkit-transform: translate3D(0,-50%,0);
+				// transform: translate3D(0,-50%,0);
+
+				  -webkit-transform: translateY(-50%);
+					-ms-transform: translateY(-50%);
+  				transform: translateY(-50%);
+
 				z-index:10;
 				text-align:center;
 				overflow:hidden;
@@ -386,11 +396,22 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			background-color:darken($light, 5%);
 		}
 	}
+	.promotion-date{
+		font-family: $font-family-sans-serif;
+		display:block;
+		color:rgb(56,103,171);
+		font-size: $font-size-base;			
+		line-height: $font-size-base + 5px;
+		text-align: center;
+
+	}
 	.product-name{
 		font-family: "sans-serif-font";
 		// @include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
+		
 		-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 		transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		
 		font-size: $font-size-base ;
 		font-weight: $font-regular;
 		line-height: $font-size-base;
@@ -423,8 +444,8 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 
 	.item-actions-vertical{
 		// @include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
-		-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-		transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		// -webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+		// transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 	}	
 
 	&.dual-column{
@@ -433,7 +454,7 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			// height: 210px;
 			margin-bottom: 10px;
 			.col{
-				height: 210px;
+				height: 250px;
 				position: relative;
 				padding:0;
 				margin-right: 5px;
@@ -445,16 +466,15 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 				a{
 					display:block;					
 					// min-height: 200px;
-					height: 210px;
+					// height: 210px;
 				}	
 			}
 		}
 		.product-name{
-			display:none;
-			// font-family: $font-family-sans-serif;
-			// padding: 0 10px;
-			// text-align:left;
-			// min-height:48px;
+			font-family: $font-family-sans-serif;
+			padding: 0 10px;
+			text-align:left;
+			min-height:48px;
 		}
 		.product-thumb{
 			height: 130px;
@@ -592,7 +612,7 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 		&:before{
 			// @include fontfamily(icons);
 			font-family: "customer-font";
-			@extend .icon-arrow-right;
+			@extend .icon-plus;
 			// @include transition (all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 			-webkit-transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			transition: all 0.3s cubic-bezier(0.215, 0.610, 0.355, 1.000);
@@ -607,9 +627,9 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 		}
 		&.open{
 			&:before{
-				// @include transform(rotateZ(90deg));
-				-webkit-transform: rotateZ(90deg);
-				transform: rotateZ(90deg);
+				// @include transform(rotateZ(45deg));
+				-webkit-transform: rotateZ(45deg);
+				transform: rotateZ(45deg);
 			}
 			
 			
@@ -620,20 +640,21 @@ transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 .item-accordion {
   	//@include box-shadow (0 2px 4px 0 rgba(0,0,0,0.2));
   	//transition: 0.09s all linear;
-	padding: 20px 30px !important;
 	// background-image: none !important;
+	background-color:lighten($brand-color, 50%)!important;
+	padding: 20px 30px !important;
 	font-size:$font-size-base - 1;
 	position:relative;
-	&:after{
-		@extend .lighterBackground;
-		content:"";
-		position:absolute;
-		left:0;
-		top:0;
-		right:0;
-		bottom:0;
-		z-index:-1;		
-	}
+	// &:after{
+	// 	// @extend .lighterBackground;
+	// 	content:"";
+	// 	position:absolute;
+	// 	left:0;
+	// 	top:0;
+	// 	right:0;
+	// 	bottom:0;
+	// 	z-index:-1;		
+	// }
 }
 
 .item-accordion.ng-hide {
