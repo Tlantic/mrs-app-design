@@ -1,4 +1,7 @@
 /// FONT DE ICONS
+/// VERSION: 2.1
+/// LAST UPDATE: 7/3/2016
+
 @font-face {
   font-family: 'customer-font';
   src:url('#{$font-path}/icons/customer-fontv2.eot?w39upw');
@@ -25,153 +28,158 @@
 }
 
 .icon-arrow-down:before {
-	content: "\e600";
+    content: "\e900";
 }
 .icon-arrow-left:before {
-	content: "\e601";
+    content: "\e901";
 }
 .icon-arrow-right:before {
-	content: "\e602";
+    content: "\e902";
 }
 .icon-arrow-up:before {
-	content: "\e603";
+    content: "\e903";
 }
 .icon-barcode:before {
-	content: "\e604";
+    content: "\e904";
 }
 .icon-camera:before {
-	content: "\e605";
+    content: "\e905";
 }
 .icon-cart:before {
-	content: "\e606";
+    content: "\e906";
+}
+.icon-categories:before {
+    content: "\e907";
 }
 .icon-chat:before {
-	content: "\e607";
+    content: "\e908";
 }
 .icon-check:before {
-	content: "\e608";
+    content: "\e909";
 }
 .icon-clock-full:before {
-	content: "\e609";
+    content: "\e90a";
 }
 .icon-clock:before {
-	content: "\e60a";
+    content: "\e90b";
 }
 .icon-close:before {
-	content: "\e60b";
+    content: "\e90c";
 }
 .icon-coupons:before {
-	content: "\e60c";
+    content: "\e90d";
 }
 .icon-edit:before {
-	content: "\e60d";
+    content: "\e90e";
 }
 .icon-email:before {
-	content: "\e60e";
+    content: "\e90f";
 }
 .icon-eye:before {
-	content: "\e60f";
+    content: "\e910";
 }
 .icon-facebook:before {
-	content: "\e610";
+    content: "\e911";
 }
 .icon-favorite-list-full:before {
-	content: "\e611";
+    content: "\e912";
 }
 .icon-favorite-list:before {
-	content: "\e612";
+    content: "\e913";
 }
 .icon-filter:before {
-	content: "\e613";
+    content: "\e914";
 }
 .icon-flyers:before {
-	content: "\e614";
+    content: "\e915";
 }
 .icon-gift:before {
-	content: "\e615";
+    content: "\e916";
 }
 .icon-home:before {
-	content: "\e616";
+    content: "\e917";
 }
 .icon-inbox:before {
-	content: "\e617";
+    content: "\e918";
 }
 .icon-info:before {
-	content: "\e618";
+    content: "\e919";
 }
 .icon-list:before {
-	content: "\e619";
+    content: "\e91a";
 }
 .icon-location:before {
-	content: "\e61a";
+    content: "\e91b";
 }
 .icon-logout:before {
-	content: "\e61b";
+    content: "\e91c";
 }
 .icon-main-list-full:before {
-	content: "\e61c";
+    content: "\e91d";
 }
 .icon-main-list:before {
-	content: "\e61d";
+    content: "\e91e";
 }
 .icon-minus:before {
-	content: "\e61e";
+    content: "\e91f";
 }
 .icon-more:before {
-	content: "\e61f";
+    content: "\e920";
 }
 .icon-move:before {
-	content: "\e620";
+    content: "\e921";
 }
 .icon-order:before {
-	content: "\e621";
+    content: "\e922";
 }
 .icon-password:before {
-	content: "\e622";
+    content: "\e923";
 }
 .icon-plus:before {
-	content: "\e623";
+    content: "\e924";
 }
 .icon-products:before {
-	content: "\e624";
+    content: "\e925";
+}
+.icon-promotion-full:before {
+    content: "\e926";
+}
+.icon-promotion:before {
+    content: "\e927";
 }
 .icon-search:before {
-	content: "\e625";
+    content: "\e928";
 }
 .icon-settings-2:before {
-	content: "\e626";
+    content: "\e929";
 }
 .icon-settings:before {
-	content: "\e627";
+    content: "\e92a";
 }
 .icon-share:before {
-	content: "\e628";
+    content: "\e92b";
 }
 .icon-sms:before {
-	content: "\e629";
+    content: "\e92c";
 }
 .icon-star-full:before {
-	content: "\e62a";
+    content: "\e92d";
 }
 .icon-star:before {
-	content: "\e62b";
+    content: "\e92e";
 }
 .icon-trash:before {
-	content: "\e62c";
-}
-.icon-triangle:before {
-	content: "\e62d";
+    content: "\e92f";
 }
 .icon-user:before {
-	content: "\e62e";
+    content: "\e930";
 }
 .icon-view-card:before {
-	content: "\e62f";
+    content: "\e931";
 }
 .icon-view-column:before {
-	content: "\e630";
+    content: "\e932";
 }
 .icon-view-list:before {
-	content: "\e631";
+    content: "\e933";
 }
-
