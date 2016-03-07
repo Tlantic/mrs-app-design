@@ -350,33 +350,34 @@
 		// @include fontfamily(icons);
 		font-family: "customer-font";
 		color:$dark;
-		margin:5px 5px;
+		margin:0 5px; 
 		text-align:left;
+		border:0;
+		border-bottom:solid 1px lighten($dark, 60%);
+
 		img:first-child{
 			// @include transition (all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000));
 			// -webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			// 		transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 		}
 		&.item-avatar{
-			padding-left:105px!important;
+			padding-left:80px!important;
 			min-height: 115px!important;
 			max-height: 115px!important;
 			padding-right: 60px;
-
+			.product-name{
+				font-size: $font-size-base + 1 ;			
+			}
 			.product-thumb{
 				position:absolute;
 				content:"";
-				width: 90px;
-				height: 90px;
+				width: 70px;
+				height: 70px;
 				left: 5px;
 				top: 50%;
-
-				// -webkit-transform: translate3D(0,-50%,0);
-				// transform: translate3D(0,-50%,0);
-
-				  -webkit-transform: translateY(-50%);
-					-ms-transform: translateY(-50%);
-  				transform: translateY(-50%);
+				-webkit-transform: translateY(-50%);
+				-ms-transform: translateY(-50%);
+				transform: translateY(-50%);
 
 				z-index:10;
 				text-align:center;
@@ -384,8 +385,8 @@
 		
 				img{
 					@include vertical-align;
-					max-width: 90px;
-					max-height: 90px;
+					max-width: 70px;
+					max-height: 70px;
 					height: auto;
 					width: auto;
 					margin:0 auto;			
@@ -452,18 +453,18 @@
 		
 		.row{
 			// height: 210px;
-			margin-bottom: 10px;
+			// margin-bottom: 10px;
 			.col{
 				height: 250px;
 				position: relative;
-				padding:0;
-				margin-right: 5px;
+				padding:0;				
 				background-color:$light;
-				border:solid 1px lighten($dark, 60%);
+				// border:solid 1px lighten($dark, 60%);
+				border-bottom:solid 1px lighten($dark, 60%);
 				&:first-child{
-					margin-right: 5px;
+					border-right:solid 1px lighten($dark, 60%);
 				}		
-				a{
+				.grid-item{
 					display:block;					
 					// min-height: 200px;
 					// height: 210px;

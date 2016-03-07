@@ -12,6 +12,13 @@
 			background-color:#fff!important;
 			color:#000;
 		}
+		.button{
+			.icon{
+				&:before{
+					font-size:$icon-font-size + 4!important;	
+				}	
+			}
+		}
 	}
 	&.header-clear{
 		background-color:#fff!important;
