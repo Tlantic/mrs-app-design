@@ -250,13 +250,41 @@ hr{
 		font-size:$font-size-base + 2;
 	}	
 }
+
+
+.promotion-description{
+	font-weight:bold;
+	color: $textColor;
+	font-size:$font-size-base;
+}
+.promotion-price{
+	@include boxSizing;
+	position:relative;
+	padding-left:35px;					
+	font-size: $font-size-large;
+	font-weight:bold;
+	color: $brand-color;
+    min-width: 90px;					
+	line-height: 25px;
+	&:before{
+		@extend .icon-promotion-full;	
+		font-family: "customer-font";
+		font-size:$icon-font-size;
+		font-weight:normal;
+		position:absolute;
+		left:0;
+		line-height:25px;
+	}
+}
+
 .item-actions-vertical{	
 	@include display-flex;
 	@include flex-direction(column);
 	right: 0px;
 	top: 0px !important;
-	bottom: 0px;
+	// bottom: 0px;
 	max-width:60px;
+	height: 115px;
 	// border-left: 1px solid $border-color;
 	
     .icon{
