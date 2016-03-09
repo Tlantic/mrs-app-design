@@ -2,20 +2,6 @@
 '../color-variables',
 '../mrs-mixins/index';
 
-// @mixin vertical-align {
-//   display:block;
-//   position: relative;
-//   top: 50%;
-//   -webkit-transform: translateY(-50%);
-//   -ms-transform: translateY(-50%);
-//   transform: translateY(-50%);
-// }
-// @mixin calc($property, $expression) { 
-//   #{$property}: -webkit-calc(#{$expression}); 
-//   #{$property}: calc(#{$expression}); 
-// } 
-
-
 .mrs-basic-list{
 	padding:10px;
 	.item{
@@ -494,6 +480,9 @@
 				&.col-promotion{
 					height:200px;
 				}
+				&.col-flyer{
+					height:300px;
+				}
 				.grid-item{
 					display:block;					
 					// min-height: 200px;
@@ -507,7 +496,6 @@
 							min-width:45%;
 							max-width:45%;
 							height:150px;
-
 						}
 						.product-name{
 							@include boxSizing;
@@ -523,6 +511,23 @@
 							padding-top:15px;
 							.promotion-description{
 								padding-left:10px;
+							}
+						}
+					}
+					&.item-flyer{
+						.product-thumb{							
+							height:120px;
+						}
+						.product-price{
+							padding-left:10px;
+							top:0;
+						}
+						.promotion-info{
+							.promotion-description{
+								padding-left:10px;
+							    padding-top: 10px;
+    			    			line-height: $font-size-base;
+    			    			min-height:38px;
 							}
 						}
 					}
