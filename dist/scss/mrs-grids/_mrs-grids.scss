@@ -164,10 +164,10 @@
 				max-height: $icon-font-size-big + 5;
 			}
 			&:first-child{
-				background: rgba(255,255,255,0.1);
+				background: rgba(255,255,255,0.2);
 			}
 			&:first-child + div{
-				background: rgba(255,255,255,0.2);
+				background: rgba(255,255,255,0.1);
 			}
 		}
 	}

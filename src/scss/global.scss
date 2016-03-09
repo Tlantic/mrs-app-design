@@ -251,8 +251,9 @@ hr{
 	}	
 }
 
-
-.promotion-description{
+.promotion-info{
+	.promotion-description{
+	font-family: $font-family-sans-serif;
 	font-weight:bold;
 	color: $textColor;
 	font-size:$font-size-base;
@@ -260,7 +261,8 @@ hr{
 .promotion-price{
 	@include boxSizing;
 	position:relative;
-	padding-left:35px;					
+	padding-left:35px;
+	font-family: $font-family-sans-serif;					
 	font-size: $font-size-large;
 	font-weight:bold;
 	color: $brand-color;
@@ -275,6 +277,8 @@ hr{
 		left:0;
 		line-height:25px;
 	}
+}
+
 }
 
 .item-actions-vertical{	
@@ -601,49 +605,81 @@ hr{
 		}
 	}	
 }
-
-
-.details-item-photo{
-	margin-bottom:20px;
-	min-height: 185px;
-	text-align:center;
-	img{		
-		width: auto;
-		max-height:160px;
-		margin:0 auto;
-
-	}
-}
-#details-top{
-	font-family: $font-family-sans-serif;
-	min-height:90px;
-	.row{
-		position:relative;
-		padding:10px;		
-	}
-	.item-name{
-		font-size: $font-size-base + 2;
-		font-weight: $font-regular;
-		width:100%;
-		span{
-			display:block;
-			color:lighten($textColor, 20%);	
-			font-size: $font-size-base + 1;
+#page-details{
+	.details-item-photo{
+		background-color:$light;		
+		min-height: 185px;
+		text-align:center;
+		img{		
+			width: auto;
+			max-height:160px;
+			margin:0 auto;
 		}
 	}
-	.item-price{
-		min-width:80px;
-		text-align:right;
+	#details-top{
+		font-family: $font-family-sans-serif;
+		min-height:90px;
+		.row{
+			position:relative;
+			padding:10px;		
+		}
+		.item-name{
+			font-size: $font-size-base + 2;
+			font-weight: $font-regular;
+			width:100%;
+			span{
+				display:block;
+				color:lighten($textColor, 20%);	
+				font-size: $font-size-base + 1;
+			}
+		}
+		.item-price{
+			min-width:80px;
+			text-align:right;
+		}
+		.item-description{
+			padding:20px 10px;
+		}
 	}
-	.item-description{
-		padding:20px 10px;
+	.item-secondary-actions{
+		position: absolute;
+		bottom:0;
+		margin: 0;
+	}	
+
+	.promotion-info{
+		@include boxSizing;
+		@include display-flex;
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		padding:15px;
+		.promotion-description{
+			font-size: $font-size-base + 2;
+			max-width:45%;
+
+		}
+		.promotion-price{
+			font-size: $font-size-large + 10;
+			padding-left:50px;			
+			line-height:35px;
+			&:before{
+				font-size: $icon-font-size-big;
+				line-height:35px;
+			}
+		}
 	}
+
+	.promotion-date{
+		@include boxSizing;
+		display:block;
+		padding:0 15px 10px 15px;
+		font-family: $font-family-sans-serif;
+		font-size:$font-size-base - 1;
+		color:lighten($dark, 20%);
+		text-align:center;
+	}
+
 }
-.item-secondary-actions{
-	position: absolute;
-	bottom:0;
-	margin: 0;
-}	
 
 
 // .horizontal-scroller{
