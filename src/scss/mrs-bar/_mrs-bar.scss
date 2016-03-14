@@ -116,11 +116,11 @@
 	}
 }
 
-// .header-item{
-// 	.button-clear{
-// 		font-size:$font-size-small!important;
-// 	}
-// }
+.header-item{
+	.button{
+		font-size: $font-size-base - 1 !important;
+	}
+}
 
 .bar-footer.has-tabs, .has-tabs{
 	bottom:48px;

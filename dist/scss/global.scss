@@ -726,18 +726,18 @@ hr{
 	}
 	.bar-header{
 		.headerButton{
+			@include transform(translate3D(0,0,0));	
+			@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
+			font-size:$font-size-base - 1!important;		
 			top:50%;
 			margin-top:-22px;
 			position:absolute;
-			@include transform(translate3D(0,0,0));	
-			@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 			&.removeButton{
 				left:5px;
 				@include transform(translate3D(-110%,0,0));	
 			}
 			&.cancelButton{
 				@include transform(translate3D(110%,0,0));	
-
 			}
 		}
 	}
