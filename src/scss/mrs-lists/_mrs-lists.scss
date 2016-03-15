@@ -394,7 +394,7 @@
 				@include boxSizing;
 				@include display-flex;
 				@include flex-direction(row);
-				@include justify-content(space-between);
+				@include justify-content(flex-start);
 				padding:0 5px;
 				position:absolute;
 				bottom:0;
@@ -402,6 +402,9 @@
 				right:0;
 				height:25px;
 				line-height: 25px;
+				.promotion-description{
+					min-width: 62px;
+				}
 				.promotion-price{
 					text-align:right;
 				}
