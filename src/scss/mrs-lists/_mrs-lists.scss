@@ -136,6 +136,7 @@
 	}
 	.item-avatar{
 		text-align:left;
+
 		// background-position:40px center;		
 		.product-thumb{
 			-webkit-transform: translate3D(0px,-50%,0);
@@ -355,17 +356,18 @@
 	}
 	.mrs-item{
 		@include boxSizing;
+		font-family: $font-family-sans-serif;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		position: relative;
 		display:block;
-		font-family: "customer-font";
 		color:$dark;
 		margin:0 5px; 
 		text-align:left;
 		border:0;
     	padding: 16px;
+    	// padding:0;
     	background-color:$light;
 		.product-name{
 			font-family: "sans-serif-font";
@@ -486,6 +488,14 @@
 				padding:0;				
 				background-color:$light;			
 				border-bottom:solid 1px lighten($dark, 60%);
+				.item-grid{
+					display:block;			
+					padding:0;		
+					.promotion-info{
+						display:none;
+					}
+				}			
+
 				&.col + .col{
 					border-left:solid 1px lighten($dark, 60%);				
 				}		
@@ -495,7 +505,7 @@
 						@include boxSizing;
 						@include display-flex;
 						@include flex-direction(row);
-						@include justify-content(space-between);						
+						@include justify-content(flex-start);						
 						.product-thumb{							
 							min-width:45%;
 							max-width:45%;
@@ -505,7 +515,7 @@
 							@include boxSizing;
 							padding:10px 10px 0 10px;														
 							font-size: $font-size-base + 1;
-							line-height: $font-size-base + 2;							
+							line-height: $font-size-base + 2;	
 						}
 						.product-price{
 							padding-left:10px;
@@ -518,15 +528,7 @@
 							}
 						}					
 					}
-				}
-				.item-grid{
-					display:block;					
-					// min-height: 200px;
-					// height: 210px;
-					.promotion-info{
-						display:none;
-					}
-				}					
+				}						
 			}
 		}
 		.product-name{
@@ -674,6 +676,20 @@
 			margin-bottom: 1px;
 		}	
 	}
+	.mrs-item{
+		font-size: $font-size-base;
+		background: rgba(255,255,255,0.6);
+		border:none;
+		text-align:left;
+		&:first-child{
+			margin-top: 15px;
+		}
+		&.border-bottom{
+			border-bottom:1px solid rgba(195,195,195,0.5);
+			margin-bottom: 1px;
+		}	
+	}
+
 	.item-divider{
 		font-weight:$font-light;
 		font-size:$font-size-base;
