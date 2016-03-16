@@ -253,32 +253,31 @@ hr{
 
 .promotion-info{
 	.promotion-description{
-	font-family: $font-family-sans-serif;
-	font-weight:bold;
-	color: $textColor;
-	font-size:$font-size-base;
-}
-.promotion-price{
-	@include boxSizing;
-	position:relative;
-	padding-left:35px;
-	font-family: $font-family-sans-serif;					
-	font-size: $font-size-large;
-	font-weight:bold;
-	color: $brand-color;
-    min-width: 90px;					
-	line-height: 25px;
-	&:before{
-		@extend .icon-promotion-full;	
-		font-family: "customer-font";
-		font-size:$icon-font-size;
-		font-weight:normal;
-		position:absolute;
-		left:0;
-		line-height:25px;
+		font-family: $font-family-sans-serif;
+		font-weight:bold;
+		color: $textColor;
+		font-size:$font-size-base;
 	}
-}
-
+	.promotion-price{
+		@include boxSizing;
+		position:relative;
+		padding-left:35px;
+		font-family: $font-family-sans-serif;					
+		font-size: $font-size-large;
+		font-weight:bold;
+		color: $brand-color;
+	    min-width: 90px;					
+		line-height: 25px;
+		&:before{
+			@extend .icon-promotion-full;	
+			font-family: "customer-font";
+			font-size:$icon-font-size;
+			font-weight:normal;
+			position:absolute;
+			left:0;
+			line-height:25px;
+		}
+	}
 }
 
 .item-actions-vertical{	
@@ -305,9 +304,6 @@ hr{
 		    top: 50%;
 		    left: 0;
 		    right: 0;
-
-
-
 		}
     }
 }
@@ -546,7 +542,7 @@ hr{
 				}
 				.cancelselect{
 					display: block;
-				}
+				}				
 			}
 			.back-button{
 				display:none;
@@ -682,36 +678,6 @@ hr{
 	}
 
 }
-
-
-// .horizontal-scroller{
-// 	overflow: scroll;
-// 	white-space: nowrap;
-// 	height:47px;	  
-//   	padding: 4px 0;
-// 	.button{
-// 		  line-height: 42px;
-// 		  height: 40px!important;
-// 		  min-height: 40px;
-// 		  padding-right: 10px;
-// 		  padding-left: 10px;
-
-// 		&.active{
-// 			@extend .imageBackground;
-// 			background-size:200%;
-// 			border:rgba(255,255,255,0.2);
-// 			color: $light;	
-// 		}
-// 	}
-// }
-
-// .subheader-scroller{
-// 	height:47px;
-// 	padding:0;
-// }
-// .subheader-scroller ~ .has-subheader{
-// 	top:91px!important;
-// }
 
 //LIST HEADER 
 #page-list{
@@ -1011,25 +977,7 @@ hr{
   		bottom: $quick-list-height + $ios-statusbar-height;
 
 	}	
-	// .mrs-quick-list-small {
- //  		padding-top:$ios-statusbar-height;
- //  		height:($quick-list-height / 2) + $ios-statusbar-height;
-  		
-	// }	
-	// .has-quicklist-small {
- //  		height: auto;
- //  		bottom:($quick-list-height / 2) + $ios-statusbar-height;
 
-	// 	.bar-header:not(.bar-subheader) {   
-	// 		height:$bar-height;
-	// 		> * {
-	// 			margin-top: 0px!important;
-	// 		}
-	// 	}
-	// 	.has-header{
-	// 		top:$bar-height!important;
-	// 	}
-	// }	
 	#page-list{
 		.headerList{
 			top: $quick-list-height + $ios-statusbar-height;
