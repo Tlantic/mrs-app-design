@@ -383,7 +383,7 @@
 			>div{
 				font-family: "sans-serif-font";
 				color:$dark;	
-				max-height: 47px;
+				max-height: 30px;
 	  			overflow: hidden;
 
 			}			
@@ -410,6 +410,11 @@
 		}
 
 		&.item-promotion{
+			.product-name{
+				>div{
+					max-height: 47px;
+				}
+			}
 			.promotion-info{
 				@include display-flex;
 			}			
@@ -548,7 +553,8 @@
 			font-family: $font-family-sans-serif;
 			padding: 0 10px;
 			text-align:left;
-			min-height:48px;
+			// min-height:48px;
+		
 		}
 		.product-thumb{
 			height: 130px;
@@ -641,10 +647,12 @@
 					.promotion-info{
 						display:block!important;
 						.promotion-description{
-							padding-left:10px;
-						    padding-top: 5px;
+							// padding-left:10px;
+						 //    padding-top: 5px;
+						    padding:5px 0 5px 10px;
 			    			line-height: $font-size-base;
-			    			min-height:38px;
+			    			// min-height:38px;
+			    			// background-color:red;
 						}
 					}
 				}
