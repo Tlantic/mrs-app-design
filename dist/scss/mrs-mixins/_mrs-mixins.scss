@@ -97,12 +97,12 @@
 // https://github.com/philipwalton/solved-by-flexbox
 
 @mixin display-flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: -webkit-box!important;
+  display: -webkit-flex!important;
+  display: -moz-box!important;
+  display: -moz-flex!important;
+  display: -ms-flexbox!important;
+  display: flex!important;
 }
 
 @mixin display-inline-flex {

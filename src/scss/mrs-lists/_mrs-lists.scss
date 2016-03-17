@@ -484,10 +484,12 @@
 		.row{
 			.col{
 				height: 250px;
+				max-width:50%;
 				position: relative;
 				padding:0;				
 				background-color:$light;			
 				border-bottom:solid 1px lighten($dark, 60%);
+				border-right:solid 1px lighten($dark, 60%);				
 				.item-grid{
 					display:block;			
 					padding:0;		
@@ -497,10 +499,11 @@
 				}			
 
 				&.col + .col{
-					border-left:solid 1px lighten($dark, 60%);				
+					border-right:0;				
 				}		
 				&.col-highlight{
 					height:200px;
+					max-width:100%;
 					.item-grid{
 						@include boxSizing;
 						@include display-flex;
@@ -521,10 +524,13 @@
 							padding-left:10px;
 						}
 
-						.promotion-info{
+						.promotion-info{							
 							padding-top:15px;
 							.promotion-description{
 								padding-left:10px;
+							}
+							.promotion-price{
+								margin-left:-10px;
 							}
 						}					
 					}
