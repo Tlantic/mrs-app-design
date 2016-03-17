@@ -487,13 +487,13 @@ hr{
 
 	}	
 	.suggested-products{
+		margin:5px;
 		h1{
-			padding:10px;
-			margin:0;
-		}
-		.slide-wrapper{
-			position:relative;
-		}
+			padding:10px 10px 0 10px;
+			text-transform:uppercase;			
+			color:$dark;
+			font-weight:400;
+		}		
 	}
 }
 
