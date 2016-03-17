@@ -493,7 +493,19 @@ hr{
 			text-transform:uppercase;			
 			color:$dark;
 			font-weight:400;
-		}		
+		}	
+
+		.swiper-slide{
+			width: 96%; 
+			.row{
+				padding:0;
+				.col{
+				    border-right: solid 1px #dddddd!important;
+				    height:270px!important;
+				}
+			}
+		}
+
 	}
 }
 

@@ -487,13 +487,25 @@ hr{
 
 	}	
 	.suggested-products{
+		margin:5px;
 		h1{
-			padding:10px;
-			margin:0;
+			padding:10px 10px 0 10px;
+			text-transform:uppercase;			
+			color:$dark;
+			font-weight:400;
+		}	
+
+		.swiper-slide{
+			width: 96%; 
+			.row{
+				padding:0;
+				.col{
+				    border-right: solid 1px #dddddd!important;
+				    height:270px!important;
+				}
+			}
 		}
-		.slide-wrapper{
-			position:relative;
-		}
+
 	}
 }
 

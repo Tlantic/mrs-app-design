@@ -402,6 +402,7 @@
 			transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);		
 			// position: absolute;				
 			// top:70px;	
+			
 		}
 		.promotion-info{
 			display:none;
@@ -411,6 +412,10 @@
 			.promotion-info{
 				@include display-flex;
 			}			
+			.product-price{				
+				color:lighten($dark, 30%)!important;
+				font-size: $font-size-base - 1 ;	
+			}
 		}
 		
 		&.item-avatar{
@@ -462,7 +467,7 @@
 					@include justify-content(flex-start);
 					padding:0 5px;
 					position:absolute;
-					bottom:0;
+					bottom:5px;
 					left:0;
 					right:0;
 					height:25px;
@@ -633,7 +638,7 @@
 						display:block!important;
 						.promotion-description{
 							padding-left:10px;
-						    padding-top: 10px;
+						    padding-top: 5px;
 			    			line-height: $font-size-base;
 			    			min-height:38px;
 						}
