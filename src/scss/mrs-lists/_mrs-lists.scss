@@ -377,14 +377,15 @@
 			
 			font-size: $font-size-base ;
 			font-weight: $font-regular;
-			line-height: $font-size-base;
+			line-height: $font-size-base + 1;
 			white-space: normal;
 			text-align:left;
 			>div{
 				font-family: "sans-serif-font";
 				color:$dark;	
-				max-height: 30px;
+				max-height: 47px;
 	  			overflow: hidden;
+
 			}			
 			span{
 				font-family: "sans-serif-font";
@@ -428,8 +429,9 @@
 				font-size: $font-size-base + 1 ;			
 			}
 			.product-price{
-				position: absolute;				
-				top:70px;	
+				position:relative;
+				// position: absolute;				
+				// top:70px;	
 			}
 			.product-thumb{
 				position:absolute;
@@ -531,9 +533,11 @@
 
 						.promotion-info{	
 							@include flex-direction(column);						
-							padding-top:15px;							
+							padding-top:5px;							
 							.promotion-description{
 								padding-left:10px;
+								max-height:32px;
+								line-height:$font-size-base + 1;;
 							}
 						}					
 					}
