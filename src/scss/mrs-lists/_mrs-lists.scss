@@ -524,13 +524,11 @@
 							padding-left:10px;
 						}
 
-						.promotion-info{							
-							padding-top:15px;
+						.promotion-info{	
+							@include flex-direction(column);						
+							padding-top:15px;							
 							.promotion-description{
 								padding-left:10px;
-							}
-							.promotion-price{
-								margin-left:-10px;
 							}
 						}					
 					}
