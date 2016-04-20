@@ -21,8 +21,9 @@ h1{
 }
 h2{
 	font-family: $font-family-sans-serif;
-	font-size: $font-size-base + 1;
+	font-size: $font-size-base + 2;
 	font-weight: $font-light;
+	color:$textColor;
 }
 p{
 	font-family: $font-family-sans-serif;
@@ -438,9 +439,9 @@ hr{
 .appversion{
 	display:block;
 	text-align:center;
-	color:lighten($base-color, 40%);
-	font-size:$font-size-base - 4;
-	line-height:$font-size-base - 1;
+	color:$textColor;
+	font-size:$font-size-small;
+	line-height:$font-size-small;
 }
 
 
@@ -488,12 +489,12 @@ hr{
 	}	
 	.suggested-products{
 		margin:5px;
-		h1{
+		h2{
 			padding:10px 10px 0 10px;
 			text-transform:uppercase;			
-			color:$dark;
+			color:$textColor;
 			font-weight:400;
-		}	
+		}			
 
 		.swiper-slide{
 			width: 96%; 

@@ -390,7 +390,7 @@
 			span{
 				font-family: "sans-serif-font";
 				display:block;
-				color:lighten($dark, 20%);
+				color:$textColor-light;
 				font-size: $font-size-base - 2;
 				font-weight: $font-light;				
 				line-height: $font-size-base + 5px;
@@ -419,7 +419,7 @@
 				@include display-flex;
 			}			
 			.product-price{				
-				color:lighten($dark, 30%)!important;
+				// color:$textColor;
 				font-size: $font-size-base - 1 ;	
 			}
 		}
