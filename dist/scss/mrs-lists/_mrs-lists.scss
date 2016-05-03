@@ -113,9 +113,9 @@
 	.item{			
 		font-family: "sans-serif-font";
 		color:$dark;
-		padding-left:60px;		
-		padding-top: 15px;
-		padding-bottom: 15px;		
+		// padding-left:60px;		
+		// padding-top: 15px;
+		// padding-bottom: 15px;		
 		label{		
 			display:none;
 		}	
@@ -159,6 +159,7 @@
 	}
 	&.editMode{
 		.item{
+			// padding-left:60px;		
 			label{
 				display:block;	
 			}
@@ -208,6 +209,31 @@
 	}	
 }
 
+
+.item-checkbox{	
+	.checkbox{
+		.item-content{
+			@extend .row;
+			position:absolute;
+			left:50px;
+			right:0;
+			top:0;
+			padding:5px 0;	
+			height:100%;
+			>div{
+				@extend .col;
+				@extend .col-center;
+				position:relative;
+				margin:0;
+				padding:0;
+			}	
+		}	
+		input:checked  ~ .item-content{
+			opacity: 0.6;
+		}		
+	}
+}	
+
 .mrs-checkbox-list{
 	overflow:auto;
 	.item-checkbox{	
@@ -240,7 +266,7 @@
 		}
 
 
-		label{
+		.checkbox{
 			.item-content{
 				@extend .row;
 				font-family: "sans-serif-font";
@@ -334,6 +360,7 @@
 		}				
 	}
 }
+
 
 
 .item-divider{

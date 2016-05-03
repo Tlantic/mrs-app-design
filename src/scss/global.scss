@@ -40,6 +40,19 @@ hr{
 	margin:10px 10px;
 }
 
+.mrs-arrow-icon{
+	/* Allows sizing by changing the icon’s font-size */
+	width: 1em; height: 1em;
+	/* Nice visual alignment for icons alongside text */
+	vertical-align: -0.15em;
+	/* Default path fill = value of the color property */
+	fill: currentColor;
+	/* Paths and strokes that overflow the viewBox can show in IE.
+	If you use normalize.css, it already sets this. */
+	overflow: hidden;
+	margin:10px;
+}
+
 .displayBlock{
 	display: block !important;
 }
@@ -364,7 +377,7 @@ hr{
 	color:$light;
 	z-index: 99;
 	overflow: hidden;
-
+	
 	/* QUICK LIST HEADER */
 	.quick-list-header{	
 		@include box-sizing(border-box);
@@ -730,11 +743,14 @@ hr{
 	.addNewProduct{		
 		display:block;
 		padding:0px 10px;
-		margin:0;
+		margin:5px 0;
 		position:relative;
 		form{
 			padding:0;
 			margin:0;
+			input{
+				margin:0;
+			}
 		}		
 		.button{
 			position:absolute;
@@ -744,8 +760,10 @@ hr{
 			max-width:44px;
 			max-height:44px;
 			padding:0;
+			color:$brand-color;
 			&:before{
 				line-height:44px;
+				font-size:$icon-font-size-big;
 			}
 		}		
 	}
@@ -760,66 +778,217 @@ hr{
 	}
 	.headerList{
 		top: $quick-list-height;
-		height:$quick-list-height - 10!important;
+		height:45px;
 		padding:0;
-
-		.mrs-grid{
-			margin:0;
-			padding:0;
-			width:100%;
-			.row{
-				margin:0;
-			}
-			.col{
-				background:transparent;
-				padding:0;
-				margin:0;				
-				&:after{
-					content:"";
-					position:absolute;
-					display:block;
-					width:1px;					
-					left:0;
-					top:8px;
-					bottom:2px;
-					background-color:rgba(0,0,0,0.2);
+		
+		.listQuickAdd{
+			@include boxSizing;
+			@include display-flex;
+			@include flex-direction(row);
+			@include justify-content(space-between);
+			padding:0 20px;
+			.listQuickAdd-button{
+				@include boxSizing;
+				@include display-flex;
+				@include flex-direction(row);
+				@include justify-content(flex-start);
+				.icon{					
+					font-size:$icon-font-size + 4;				
+					width:40px;
 				}
-				&:first-child:after{
-					display:none;
-				}
-			}
-			a{
-				padding:0;
-				min-height:50px;		
-				.icon{
-					font-size:$icon-font-size + 10;
-					max-height: 41px;
-					min-height: 41px;							
-					&:before{
-						position:relative;
-						top:-6px;
-					}
-				}
-				span{
+				.listQuickAdd-button-title{
 					font-size:$font-size-small;
 					opacity:0.5;
-				}
+					line-height:45px;
+				}				
 			}
 		}
+	}
 
-		&:before{		
-			height:$quick-list-height - 10!important;
+	ion-content{
+		top: $bar-height + $quick-list-height;		
+	}
+
+	.checkbox{
+		display:none;
+		position:absolute;
+		left:0;
+		top:0;
+		bottom:0;
+		width: 100%;
+		z-index:99; 					
+		.checkbox-icon{
+			@include transform(translate3D(-50%,-50%,0));	
+			position: absolute;						
+			display:block;
+		    top: 50%;				    
+		    left: 25px;					
+		}	 
+	}	
+
+
+
+	.reminderList{
+		@extend .editable-list;
+		padding:0 10px;
+		.reminderList-item{
+			// @extend .item;				// CLASS DO IONIC
+			// @extend .item-checkbox;  	// CLASS DO IONIC
+			@include display-flex;
+			@include flex-direction(row);
+			@include boxSizing;			
+			position:relative;			
+			font-family: $font-family-sans-serif;
+			color:$dark;
+			font-size:$font-size-base + 2;
+			text-align:left;
+			padding-top:10px;
+			padding-bottom:10px;	
+			padding-left:10px;
+			background-color:transparent;
+			border:0;
+			border-bottom:solid 1px $border-color;
+
+			.reminderList-item-name{
+				font-size: $font-size-base;
+				-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+			}		
 		}
 	}
-	ion-content{
-		top: $bar-height + $quick-list-height + 10;		
+
+
+	.shoppingList{
+		@extend .editable-list;
+		padding:0 10px;
+		.shoppingList-item{
+			// @extend .item;				
+			// @extend .item-checkbox;  				
+			// background-color:red;
+			@include display-flex;
+			@include flex-direction(row);
+			@include justify-content(space-between);
+			@include boxSizing;
+			position:relative;
+			padding:5px 0;
+			border-bottom:solid 1px $border-color;					
+			background-color:$light;
+			.shoppingList-item-thumb{
+				position:relative;
+				width:50px;
+				max-width:50px;
+				min-width:50px;
+				-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				img{					
+					@include transform(translate3D(-50%,-50%,0));	
+					position: absolute;		
+					display: block;								
+				    top: 50%;				    
+				    left: 50%;			
+				    // width:100%;	
+				    max-height:50px;	    
+				}
+			}
+			.shoppingList-item-info{
+				@include display-flex;
+				@include flex-direction(column);
+				@include justify-content(center);
+				@include flex(1,1, auto);
+				-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				padding:5px 0 5px 5px;
+				.shoppingList-item-info-name{
+					font-family: $font-family-sans-serif;
+					color:$dark;
+					font-size:$font-size-base + 1;
+					.shoppingList-item-info-name-item{
+						word-break: break-all;
+						max-height:60px;
+						overflow:hidden;
+					}
+					.shoppingList-item-info-name-brand{
+						color:$textColor-light;
+						font-size:$font-size-small + 1;
+					}
+
+				}				
+				.shoppingList-item-info-promotion{
+					.shoppingList-item-info-promotion-description{
+						color:$textColor;
+						font-family: $font-family-sans-serif;
+						font-size:$font-size-small + 1;
+						line-height:$font-size-small + 1;
+					}
+					.shoppingList-item-info-promotion-price{
+						color:$brand-color;
+						font-family: $font-family-sans-serif;
+						font-size:$font-size-base + 2;
+						font-weight:$font-bold;
+					}
+					
+				}				
+			}
+			.shoppingList-item-quantity{
+				@include display-flex;
+				@include flex-direction(column);
+				@include justify-content(space-between);
+				min-width:40px;
+				max-width:40px;				
+				overflow:hidden;
+				.shoppingList-item-quantity-button{
+					.arrow-up{
+						font-size:$icon-font-size;		
+						color:$brand-color;
+						margin:0;
+					}
+					.arrow-down{
+						font-size:$icon-font-size;		
+						color:$brand-color;
+						margin:0;
+					}
+				}
+
+				.shoppingList-item-quantity-number{
+					font-family: $font-family-sans-serif;
+					font-size:$font-size-base;					
+					text-align:center;
+				}
+			}
+			.shoppingList-item-price{
+				@include display-flex;
+				@include flex-direction(column);
+				@include justify-content(center);
+				width:70px;
+				max-width:70px;
+				min-width:70px;
+				margin-right:3px;
+				color:$brand-color;
+				font-family: $font-family-sans-serif;
+				font-size:$font-size-base + 1;
+				font-weight:$font-bold;
+				text-align:right;
+			}
+			
+
+
+		}
 	}
+
+
+
+
 	.item-checkbox{
 		.icon-search{
 			@include transform(translate3D(0,0,0));	
 		}
 	}
-	&.editMode{
+
+
+	&.editMode{	
+		.checkbox{
+			display:block!important;
+		}
 		.mrs-quick-list{			
 			#toggleButton{
 				@include transform(translate3D(0%,-150%,0));
@@ -835,6 +1004,30 @@ hr{
 			-webkit-transform: translate3D(60px,0,0);
     		transform: translate3D(60px,0,0);
 		}
+		.reminderList{
+			.reminderList-item{		
+				.reminderList-item-name{
+					@include transform(translate3D(50px,0,0));						
+				}
+
+			}
+		}
+		.shoppingList{
+			.shoppingList-item{
+				.checkbox{
+					display:block;
+				}
+				.shoppingList-item-thumb{
+					@include transform(translate3D(50px,0,0));			
+				}
+				.shoppingList-item-info{
+					@include transform(translate3D(50px,0,0));			
+				}
+			}	
+		}
+		
+
+
 	}
 	.empty-state{
 		>.icon{
@@ -847,7 +1040,52 @@ hr{
 			margin:20px;
 			border-top:solid 1px $border-color;
 		}
-	}		
+	}
+
+	.listTotal{
+		@include display-flex;
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		@include align-items(center);
+		@include boxSizing;
+
+		position:fixed;
+		bottom:48px;
+		left:0;
+		right:0;
+		height:44px;
+		background-color:#FAFAFA;
+		padding:8px;
+		.listTotal-notice{
+			color:$textColor-light;
+			font-family: $font-family-sans-serif;
+			font-size:$font-size-small;			
+			line-height:$font-size-small;
+		}
+		.listTotal-total{
+			@include display-flex;
+			@include flex-direction(row);
+			@include justify-content(flex-end);
+			@include align-items(center);
+			@include boxSizing;
+			min-width:145px;
+
+			.listTotal-total-label{
+				color:$dark;
+				font-family: $font-family-sans-serif;
+				font-size:$font-size-base - 1;			
+				text-transform:uppercase;
+				padding:0 5px 0 0;
+			}
+			.listTotal-total-value{
+				color:$brand-color;
+				font-family: $font-family-sans-serif;
+				font-size:$font-size-large;	
+				font-weight:$font-bold;		
+			}
+		}
+	}
+
 }
 
 
@@ -1006,7 +1244,7 @@ hr{
 			}
 		}
 		ion-content{
-			top: ($bar-height + $ios-statusbar-height+ $quick-list-height) + 10;
+			top: ($bar-height + $ios-statusbar-height+ $quick-list-height);
 		}
 
 	}
