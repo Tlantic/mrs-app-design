@@ -798,18 +798,24 @@ hr{
 			@include display-flex;
 			@include flex-direction(row);
 			@include justify-content(space-between);
-			padding:0 20px;
+			padding:0 0 0 25px;
 			.listQuickAdd-button{
 				@include boxSizing;
 				@include display-flex;
 				@include flex-direction(row);
 				@include justify-content(flex-start);
+				@include flex(1);
+				// width:50%;
 				.icon{					
 					font-size:$icon-font-size + 4;				
 					width:40px;
 				}
+				.listQuickAdd-button-icon{
+					font-size:26px;				
+					width:44px;
+				}
 				.listQuickAdd-button-title{
-					font-size:$font-size-small;
+					font-size:$font-size-base;
 					opacity:0.5;
 					line-height:45px;
 				}				
@@ -984,9 +990,11 @@ hr{
 				overflow:hidden;
 				.shoppingList-item-quantity-button{
 					.arrow-up{
-						font-size:$icon-font-size;		
+						font-size:34px;		
 						color:$brand-color;
 						margin:0;
+						width:40px;
+						text-align:center;
 					}
 					.arrow-down{
 						font-size:$icon-font-size;		
