@@ -52,6 +52,18 @@ hr{
 	overflow: hidden;
 	margin:10px;
 }
+.mrs-customer-icon{
+	/* Allows sizing by changing the icon’s font-size */
+	width: 1em; height: 1em;
+	/* Nice visual alignment for icons alongside text */
+	vertical-align: -0.15em;
+	/* Default path fill = value of the color property */
+	fill: currentColor;
+	/* Paths and strokes that overflow the viewBox can show in IE.
+	If you use normalize.css, it already sets this. */
+	overflow: hidden;
+	margin:10px;
+}
 
 .displayBlock{
 	display: block !important;
@@ -843,18 +855,37 @@ hr{
 			color:$dark;
 			font-size:$font-size-base + 2;
 			text-align:left;
-			padding-top:10px;
-			padding-bottom:10px;	
+			padding-top:0px;
+			padding-bottom:0px;	
 			padding-left:10px;
 			background-color:transparent;
 			border:0;
 			border-bottom:solid 1px $border-color;
-
-			.reminderList-item-name{
-				font-size: $font-size-base;
-				-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-				transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-			}		
+			.reminderList-item-wrapper{
+				@include display-flex;
+				@include align-items(center);	
+				@include justify-content(stretch);
+				@include boxSizing;			
+				width:100%;
+				.reminderList-item-name{
+					@include flex(1);
+					@include boxSizing;
+					font-size: $font-size-base;
+					-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+					transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+				}	
+				.reminderList-item-icon{
+					width:50px;
+					min-width:50px;
+					max-width:50px;
+					text-align:center;									
+					.setprice{
+						font-size:24px;
+						color:$dark;
+					}
+				}
+			}
+				
 		}
 	}
 
@@ -886,9 +917,9 @@ hr{
 					position: absolute;		
 					display: block;								
 				    top: 50%;				    
-				    left: 50%;			
-				    // width:100%;	
+				    left: 50%;							    
 				    max-height:50px;	    
+					max-width:100%;	
 				}
 			}
 			.shoppingList-item-info{
