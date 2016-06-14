@@ -858,6 +858,7 @@ hr{
 			padding-top:0px;
 			padding-bottom:0px;	
 			padding-left:10px;
+			padding-right:0px;
 			background-color:transparent;
 			border:0;
 			border-bottom:solid 1px $border-color;
@@ -884,8 +885,21 @@ hr{
 						color:$dark;
 					}
 				}
+				.reminderList-item-price{
+					color:$brand-color;
+					font-size:$font-size-base + 1;
+					font-weight:bold;
+					text-align:right;
+					span{
+						@include boxSizing;			
+						padding:4px;
+						font-size: $font-size-small;
+						border:solid 1px $border-color;
+						border-radius: 3px;
+						color:$textColor-light;
+					}
+				}
 			}
-				
 		}
 	}
 
