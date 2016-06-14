@@ -25,7 +25,7 @@
 			border:none ;
 			.button{
 				//@include box-shadow(rgba(0, 0, 0, 0.3) 0px 2px 8px 0px);		
-				@extend .icon-CLOSE;
+				@extend .icon-close;
 				margin:0 auto;
 				width:60px;
 				max-width:60px;
