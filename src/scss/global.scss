@@ -420,7 +420,7 @@ hr{
 			line-height: 12px!important;			
 		}	
 		#toggleButton{
-			padding:0 40px;			
+			padding:0 25px;			
 		}
 		.continue-button{			
 			text-align:left;
@@ -762,6 +762,7 @@ hr{
 			margin:0;
 			input{
 				margin:0;
+				border-radius:0;
 			}
 		}		
 		.button{
@@ -798,7 +799,7 @@ hr{
 			@include display-flex;
 			@include flex-direction(row);
 			@include justify-content(space-between);
-			padding:0 0 0 25px;
+			// padding:0 0 0 25px;
 			.listQuickAdd-button{
 				@include boxSizing;
 				@include display-flex;
@@ -868,6 +869,7 @@ hr{
 			background-color:transparent;
 			border:0;
 			border-bottom:solid 1px $border-color;
+			height:45px;
 			.reminderList-item-wrapper{
 				@include display-flex;
 				@include align-items(center);	
@@ -876,10 +878,13 @@ hr{
 				width:100%;
 				.reminderList-item-name{
 					@include flex(1);
-					@include boxSizing;
-					font-size: $font-size-base;
+					@include boxSizing;					
 					-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 					transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+					.reminderList-item-name-input{
+						background-color:transparent;
+						font-size: $font-size-base;
+					}
 				}	
 				.reminderList-item-icon{
 					width:50px;
@@ -895,20 +900,25 @@ hr{
 					@include display-flex;
 					@include align-items(center);	
 					@include justify-content(flex-end);
-					@include boxSizing;			
-					color:$brand-color;
-					font-size:$font-size-base + 1;
-					font-weight:bold;
-					text-align:right;
-					.reminderList-item-price-change{
-						@include boxSizing;			
-						padding:4px;
-						margin:0 0 0 6px;
-						font-size: $font-size-small;
-						border:solid 1px $border-color;
-						border-radius: 3px;
-						color:$textColor-light;
+					@include boxSizing;				
+					max-width:80px;				
+					.reminderList-item-price-input{
+						color:$brand-color;
+						font-size:$font-size-base + 1;
+						font-weight:bold;
+						text-align:right;
+						background-color:transparent;
 					}
+
+				}
+				.reminderList-item-setprice{
+					@include boxSizing;			
+					padding:4px;
+					margin:0 0 0 6px;
+					font-size: $font-size-small;
+					border:solid 1px $border-color;
+					border-radius: 3px;
+					color:$textColor-light;
 				}
 			}
 		}
@@ -931,6 +941,7 @@ hr{
 			border-bottom:solid 1px $border-color;					
 			background-color:$light;
 			.shoppingList-item-thumb{
+				margin:0 0 0 2px;
 				position:relative;
 				width:50px;
 				max-width:50px;
@@ -1082,6 +1093,9 @@ hr{
 				.shoppingList-item-info{
 					@include transform(translate3D(50px,0,0));			
 				}
+				.shoppingList-item-quantity{
+					display:none!important;
+				}
 			}	
 		}
 		
@@ -1108,7 +1122,7 @@ hr{
 		@include align-items(center);
 		@include boxSizing;
 
-		position:fixed;
+		position:absolute;
 		bottom:48px;
 		left:0;
 		right:0;
