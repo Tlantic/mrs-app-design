@@ -892,13 +892,18 @@ hr{
 					}
 				}
 				.reminderList-item-price{
+					@include display-flex;
+					@include align-items(center);	
+					@include justify-content(flex-end);
+					@include boxSizing;			
 					color:$brand-color;
 					font-size:$font-size-base + 1;
 					font-weight:bold;
 					text-align:right;
-					span{
+					.reminderList-item-price-change{
 						@include boxSizing;			
 						padding:4px;
+						margin:0 0 0 6px;
 						font-size: $font-size-small;
 						border:solid 1px $border-color;
 						border-radius: 3px;
