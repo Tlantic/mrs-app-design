@@ -812,8 +812,8 @@ hr{
 					width:40px;
 				}
 				.listQuickAdd-button-icon{
-					font-size:26px;				
-					width:44px;
+					font-size:22px;				
+					padding: 2px 0px;
 				}
 				.listQuickAdd-button-title{
 					font-size:$font-size-base;
@@ -866,7 +866,7 @@ hr{
 			padding-bottom:0px;	
 			padding-left:10px;
 			padding-right:0px;
-			background-color:transparent;
+			background-color:$light;
 			border:0;
 			border-bottom:solid 1px $border-color;
 			height:45px;
@@ -881,6 +881,7 @@ hr{
 					@include boxSizing;					
 					-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 					transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
+					font-size: $font-size-base;
 					.reminderList-item-name-input{
 						background-color:transparent;
 						font-size: $font-size-base;
