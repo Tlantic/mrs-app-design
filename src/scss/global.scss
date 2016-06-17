@@ -1175,10 +1175,31 @@ hr{
 		padding:8px;
 		width:100%;
 		.listTotal-notice{
+					@include display-flex;
+		@include flex-direction(row);
+		@include justify-content(flex-start);
+		@include align-items(center);
+		@include boxSizing;
+		.listTotal-notice-icon{
+			@include boxSizing;
+			padding:6px;
+			border-radius:100px;
+			width:26px;
+			height:26px;
+			background-color:$brand-color;
+			font-weight:bold;
+			text-align:center;
+			color:$light;
+			font-size:14px;
+			line-height: 11px;
+		}
+		.listTotal-notice-text{
 			color:$textColor-light;
 			font-family: $font-family-sans-serif;
 			font-size:$font-size-small;			
 			line-height:$font-size-small;
+		}
+			
 		}
 		.listTotal-total{
 			@include display-flex;
