@@ -295,7 +295,8 @@ hr{
 		font-family: $font-family-sans-serif;					
 		font-size: $font-size-large;
 		font-weight:bold;
-		color: $brand-color;
+		// color: $brand-color;
+		color:$highlight-color--red;
 	    min-width: 90px;					
 		line-height: 25px;
 		&:before{
@@ -982,6 +983,7 @@ hr{
 
 				}				
 				.shoppingList-item-info-promotion{
+					display:none;
 					.shoppingList-item-info-promotion-description{
 						color:$textColor;
 						font-family: $font-family-sans-serif;
@@ -991,13 +993,22 @@ hr{
 					.shoppingList-item-info-promotion-price{
 						@include display-flex;
 						@include flex-direction(row);
+						@include justify-content(space-between);
+						@include align-items(center);
+						@include boxSizing;
+						// color:$brand-color;
+						color:$highlight-color--red;
+						font-family: $font-family-sans-serif;
+						font-size:$font-size-base + 1;
+						font-weight:$font-bold;
+						text-align:left;
+						.shoppingList-item-info-promotion-price-wrapper{
+							@include display-flex;
+						@include flex-direction(row);
 						@include justify-content(flex-start);
 						@include align-items(center);
 						@include boxSizing;
-						color:$brand-color;
-						font-family: $font-family-sans-serif;
-						font-size:$font-size-base + 2;
-						font-weight:$font-bold;
+						}
 					}
 					.shoppingList-item-info-promotion-icon{
 						font-weight:normal;
@@ -1018,14 +1029,14 @@ hr{
 				max-width:40px;				
 				overflow:hidden;
 				.shoppingList-item-quantity-button{
-					height:50px;
+					height:40px;
 					.arrow-up{
 						font-size:34px;		
 						color:$brand-color;
 						margin:0;
 						width:40px;
 						text-align:center;
-						height:50px;
+						height:40px;
 					}
 					.arrow-down{
 						font-size:$icon-font-size;		
@@ -1044,17 +1055,14 @@ hr{
 			.shoppingList-item-price{
 				@include display-flex;
 				@include flex-direction(row);
-				@include justify-content(flex-start);
+				@include justify-content(space-between);
+				@include align-items(center);
 				margin-bottom:4px;
-				// width:70px;
-				// max-width:70px;
-				// min-width:70px;
-				// margin-right:3px;
-				// color:$brand-color;
-				color: $textColor;
+				color:$brand-color;
+				// color:$highlight-color--red;
 				font-family: $font-family-sans-serif;
 				font-size:$font-size-base + 1;
-				// font-weight:$font-bold;
+				font-weight:$font-bold;
 				text-align:left;
 				span{
 					padding:0 3px;
@@ -1062,19 +1070,29 @@ hr{
 				.shoppingList-item-price-quantity{
 					font-weight:bold;
 				}
-				.shoppingList-item-price-subtotal{
-					font-weight:bold;
-					color:$dark;
-				}
-
+				
 			}
-			
-
-
+			.shoppingList-item-price-subtotal{
+				@include boxSizing;
+				font-weight:bold;
+				color:$brand-color;
+				// color:$highlight-color--red;
+				font-size:$font-size-base + 4;
+				padding: 6px 12px;
+				border-radius:50px;
+				border:solid 1px $border-color;
+			}
+			&.item-promotion{
+				.shoppingList-item-price{
+					display:none!important;
+				}
+				.shoppingList-item-info-promotion{
+					display:block;
+				}
+			}
 		}
+
 	}
-
-
 
 
 	.item-checkbox{
@@ -1128,8 +1146,6 @@ hr{
 			}	
 		}
 		
-
-
 	}
 	.empty-state{
 		>.icon{
@@ -1187,7 +1203,6 @@ hr{
 			}
 		}
 	}
-
 }
 
 
