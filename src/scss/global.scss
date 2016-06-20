@@ -737,14 +737,16 @@ hr{
 	}
 	.bar-header{
 		.headerButton{
+			@include boxSizing;
 			@include transform(translate3D(0,0,0));	
 			@include transition(all 0.4s cubic-bezier(0.190, 1.000, 0.220, 1.000));
 			font-size:$font-size-base - 1!important;		
 			top:50%;
 			margin-top:-22px;
 			position:absolute;
+			padding-left:8px;
 			&.removeButton{
-				left:5px;
+				// left:5px;
 				@include transform(translate3D(-110%,0,0));	
 			}
 			&.cancelButton{
@@ -804,7 +806,7 @@ hr{
 				@include boxSizing;
 				@include display-flex;
 				@include flex-direction(row);
-				@include justify-content(flex-start);
+				@include justify-content(center);
 				@include flex(1);
 				// width:50%;
 				.icon{					
@@ -902,7 +904,8 @@ hr{
 					@include align-items(center);	
 					@include justify-content(flex-end);
 					@include boxSizing;				
-					max-width:80px;				
+					max-width:80px;			
+					padding-right:10px;	
 					.reminderList-item-price-input{
 						color:$brand-color;
 						font-size:$font-size-base + 1;
@@ -1175,30 +1178,26 @@ hr{
 		padding:8px;
 		width:100%;
 		.listTotal-notice{
-					@include display-flex;
-		@include flex-direction(row);
-		@include justify-content(flex-start);
-		@include align-items(center);
-		@include boxSizing;
-		.listTotal-notice-icon{
+			@include display-flex;
+			@include flex-direction(row);
+			@include justify-content(flex-start);
+			@include align-items(center);
 			@include boxSizing;
-			padding:6px;
-			border-radius:100px;
-			width:26px;
-			height:26px;
-			background-color:$brand-color;
-			font-weight:bold;
-			text-align:center;
-			color:$light;
-			font-size:14px;
-			line-height: 11px;
-		}
-		.listTotal-notice-text{
-			color:$textColor-light;
-			font-family: $font-family-sans-serif;
-			font-size:$font-size-small;			
-			line-height:$font-size-small;
-		}
+			.listTotal-notice-icon{
+				@include boxSizing;
+				width:20px;
+				padding:6px;
+				font-weight:bold;
+				text-align:center;
+				color:$textColor-light;
+				font-size:14px;
+			}
+			.listTotal-notice-text{
+				color:$textColor-light;
+				font-family: $font-family-sans-serif;
+				font-size:$font-size-small;			
+				line-height:$font-size-small;
+			}
 			
 		}
 		.listTotal-total{
