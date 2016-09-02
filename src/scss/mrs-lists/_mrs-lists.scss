@@ -435,6 +435,11 @@
 		.promotion-info{
 			display:none;
 		}
+		.product-additional-info{
+			position: absolute;
+			right: 10px;
+			bottom:0;
+		}
 
 		&.item-promotion{
 			.product-name{
