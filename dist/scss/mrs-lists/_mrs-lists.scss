@@ -291,6 +291,7 @@
 					font-size:$font-size-base - 1;
 				}
 				.lineThrough{
+					@include transition(all 0.4s cubic-bezier(1, 0, 0, 0.82));
 					position: absolute;
 					top: 15px;
 					left:0;
@@ -302,10 +303,7 @@
 			input:checked  ~ .item-content{
 				opacity: 0.6;
 				.lineThrough{
-					// @include transition(all 0.4s cubic-bezier(1, 0, 0, 0.82));
-					// -webkit-transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
-     				// transition: all 0.4s cubic-bezier(1, 0, 0, 0.82);
-					right:10px;
+					right:15px;
 				}
 			}		
 		}
