@@ -501,30 +501,84 @@ hr{
 
 // ++++ PAGE HOME +++ 
 #page-home{	
-	.search-bar{
-		margin-bottom:5px;		
-		.row{
-			padding:0 0 0 5px;
-		}
-		// .col-20{
-		// 	margin-left:5px;
-		// }
-		.search-item{
-			@extend .col-80;
+	// .search-bar{
+	// 	// .col-20{
+	// 	// 	margin-left:5px;
+	// 	// }
+	// 	.search-item{
+	// 		@extend .col-80;
+	// 	}
+	// }
+
+	%banner-style{
+		width: 100%; 
+		&:before{
+			content:"";
+			display:block;
+			position:absolute;
+			z-index:-1;
+			bottom: 16px;
+			left: 30px;
+			right: 30px;
+			height:40px;
+			box-shadow: 0px 1px 15px 0px rgba(31,169,71,0.45), 0px 1px 15px 0px rgba(0,0,0,0.50);			
 		}
 	}
+
+	.advertising-module{
+		min-height:180px;		
+		img{
+			-webkit-clip-path: inset(10px 8px round 8px);
+		}
+		.swiper-slide{
+			@extend %banner-style;	
+		}
+		.image-default-wrapper{
+			position:relative;
+			@extend %banner-style;
+		}
+	}
+
+	.mrs-secondary-banner{
+		@include box-sizing(border-box);
+		position:relative;
+		display:block;
+		height:150px;
+		padding:8px;
+		overflow:hidden;
+		img{
+			width:100%;
+		}
+		&:before{
+			content:"";
+			display:block;
+			position:absolute;
+			z-index:-1;
+			bottom: 25px;
+			left: 30px;
+			right: 30px;
+			height:40px;
+			box-shadow: 0px -18px 37px 0px rgba(0,0,0,0.54);
+		}
+	}
+
+	
+
+
 	.mrs-grid{
 		.col{
 			max-height:140px;
 		}
+	}
 
-	}	
 	.suggested-products{
 		margin:5px;
 		h2{
-			padding:10px 10px 0 10px;
+			position:relative;
+			padding:4px 10px 0 10px;
+			margin-top:15px;
 			text-transform:uppercase;			
-			color:$textColor;
+			color:$brand-color;
 			font-weight:400;
 		}			
 
@@ -534,12 +588,28 @@ hr{
 				padding:0;
 				.col{
 				    border-right: solid 1px #dddddd!important;
-				    height:270px!important;
+				    height:270px!important;				    
 				}
 			}
 		}
-
 	}
+	.loyalty-products{
+		@extend .suggested-products;
+		h2{			
+			padding-left: 30px;
+			&::before{
+				content:"";
+				position:absolute;
+				display:block;
+				width:25px;
+				height:25px;
+				background-image:$loyalty-icon;
+				left:0;
+				top:0;			
+			}
+		}
+	}
+
 }
 
 // ++++ PAGE MORE +++ 
@@ -1423,6 +1493,14 @@ hr{
   		bottom: $quick-list-height + $ios-statusbar-height;
 
 	}	
+
+
+	#page-home{
+		ion-content{
+			padding-top:$ios-statusbar-height;
+		}
+	}		
+
 
 	#page-list{
 		.headerList{

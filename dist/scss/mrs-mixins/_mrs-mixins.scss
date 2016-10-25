@@ -21,12 +21,7 @@
 
 
 @mixin appBackgroundImage($image:'normal') {
-  @if $image == 'normal' {
-    background-image:$appBackground;
-  } @else if $image == 'transparent'{
-    background-image:$appBackground-transparent;
-  }
-  
+  background-image:$appBackground;
   background-repeat: no-repeat;
   background-position: 0;
   background-size: cover;
