@@ -278,36 +278,67 @@ hr{
 }
 
 .promotion-info{
+	@include boxSizing;
+	@include display-flex;
+	@include flex-direction(row);
+	@include justify-content(space-between);	
+	@include align-items(center);
+	padding-top:4px;
+	line-height:$font-size-small - 1;
+	// height:30px;
 	.promotion-description{
+		@include flex(1);
+		padding:0 0 0 2px;
 		font-family: $font-family-sans-serif;
-		font-weight:bold;
-		color: $textColor;
-		font-size:$font-size-base;
+		font-weight:normal;
+		color: $highlight-color--red;
+		font-size:$font-size-small - 1;
+	    line-height:$font-size-small - 1;
 	    word-wrap: break-word;
     	white-space: normal;
-	    max-height: 38px;
     	overflow: hidden;
+
+
 	}
 	.promotion-price{
+		@include flex(0);
 		@include boxSizing;
-		position:relative;
-		padding-left:35px;
+		position:relative;		
 		font-family: $font-family-sans-serif;					
-		font-size: $font-size-large;
+		font-size: $font-size-base;
 		font-weight:bold;
-		// color: $brand-color;
 		color:$highlight-color--red;
-	    min-width: 90px;					
-		line-height: 25px;
-		&:before{
-			@extend .icon-promotion-full;
-			font-family: "customer-font";
-			font-size:$icon-font-size;
+		text-align:right;
+		span{
+			display:block;
+			text-align:right;
+			font-size:$font-size-small - 1;
+			color:$textColor-light;
+			line-height:10px;
 			font-weight:normal;
-			position:absolute;
-			left:0;
-			line-height:25px;
 		}
+		// &:before{
+		// 	@extend .icon-promotion-full;
+		// 	font-family: "customer-font";
+		// 	font-size:$icon-font-size;
+		// 	font-weight:normal;
+		// 	position:absolute;
+		// 	left:0;
+		// 	line-height:25px;
+		// }
+	}
+	.promotion-icon{
+		max-width:18px;
+		height:18px;
+		font-size:18px;
+		color:$highlight-color--red;
+		img{
+			width:100%;
+		}
+		.mrs-customer-icon{
+			margin:0;
+		}
+		
 	}
 }
 
@@ -494,14 +525,6 @@ hr{
 
 // ++++ PAGE HOME +++ 
 #page-home{	
-	// .search-bar{
-	// 	// .col-20{
-	// 	// 	margin-left:5px;
-	// 	// }
-	// 	.search-item{
-	// 		@extend .col-80;
-	// 	}
-	// }
 
 	%banner-style{
 		width: 100%; 
@@ -521,14 +544,14 @@ hr{
 	.advertising-module{
 		min-height:180px;		
 		img{
-			-webkit-clip-path: inset(10px 8px round 8px);
+			// -webkit-clip-path: inset(10px 8px round 8px);
 		}
 		.swiper-slide{
-			@extend %banner-style;	
+			// @extend %banner-style;	
 		}
 		.image-default-wrapper{
 			position:relative;
-			@extend %banner-style;
+			// @extend %banner-style;
 		}
 	}
 
@@ -551,11 +574,42 @@ hr{
 			left: 30px;
 			right: 30px;
 			height:40px;
-			box-shadow: 0px -18px 37px 0px rgba(0,0,0,0.54);
+			box-shadow: 0px -18px 37px 0px rgba(0,0,0,0.55);
 		}
 	}
 
 	
+	.welcome-message{
+		@include box-sizing(border-box);
+		display:block;
+		position:relative;
+		widht:100%;
+		padding:12px 22px;
+		background-color:$light;		
+		font-family: $font-family-sans-serif;
+		&::before{
+			content:"";
+			display:block;
+			position:absolute;
+			z-index:-1;
+			bottom: 0px;
+			left: 30px;
+			right: 30px;
+			height:10px;
+			box-shadow: 0px -18px 37px 0px rgba(0,0,0,0.55);
+		}
+		.welcome-message-greeting{
+			display:block;
+			font-size: $font-size-large + 10;
+			color: $brand-color;
+			font-weight:$font-light;
+			padding-bottom:4px;
+		}
+		.welcome-message-question{
+			font-size: $font-size-base;
+			color: $textColor-light;
+		}
+	}
 
 
 	.mrs-grid{
@@ -581,7 +635,7 @@ hr{
 				padding:0;
 				.col{
 				    border-right: solid 1px #dddddd!important;
-				    height:270px!important;				    
+				    height:255px!important;				    
 				}
 			}
 		}
@@ -602,7 +656,40 @@ hr{
 			}
 		}
 	}
+}
 
+
+.accelerators{
+	@include box-sizing(border-box);
+	padding:8px;
+	display:block;
+	overflow-y:scroll;
+	white-space:nowrap;
+	.accelerators-button{
+		@include box-sizing(border-box);
+		display:inline-block;
+		vertical-align:top;
+		width:105px;
+		height:95px;
+		background: $light;
+		border: 1px solid $border-color;
+		border-radius: 4px;
+		padding:4px 8px;
+		text-align:center;
+		.accelerators-button-icon{
+			display:block;
+			color:$brand-color;
+			font-size:30px;
+			height:55px;
+			line-height:55px;
+		}
+		.accelerators-button-label{
+			font-size: $font-size-small;
+			color: $textColor-light;
+			line-height: $font-size-small + 1;
+			white-space:normal;
+		}
+	}
 }
 
 // ++++ PAGE MORE +++ 
