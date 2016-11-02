@@ -412,9 +412,9 @@
 			-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
 			color:$dark;	
-			font-size: $font-size-base ;
+			font-size: $font-size-base - 1 ;
 			font-weight: $font-regular;
-			line-height: $font-size-base;
+			line-height: $font-size-base + 1;
 			white-space: normal;
 			text-align:left;
 			>div{
@@ -465,7 +465,7 @@
 		&.item-avatar{
 			padding-left:75px!important;
 			min-height: 90px!important;
-			max-height: 90px!important;
+			max-height: 90px;
 			padding-right: 0px;
 			border-bottom:solid 1px lighten($dark, 60%);
 
@@ -474,7 +474,7 @@
 				content:"";
 				width: 70px;
 				height: 70px;
-				left: 5px;
+				left: 0px;
 				top: 50%;
 				-webkit-transform: translateY(-50%);
 				-ms-transform: translateY(-50%);
@@ -542,35 +542,37 @@
 				&.col + .col{
 					border-right:0;				
 				}		
-				&.col-highlight{
-					height:200px;
-					max-width:100%;
-					.item-grid{
-						@include boxSizing;
-						@include display-flex;
-						@include flex-direction(row);
-						@include justify-content(flex-start);						
-						.product-thumb{							
-							min-width:45%;
-							max-width:45%;
-							height:150px;
-						}
-						.product-name{
-							@include boxSizing;
-							padding:0;														
-							font-size: $font-size-base + 1;
-							line-height: $font-size-base + 2;	
-						}
-						.promotion-info{
-							padding-top:6px;
-						}		
-					}
-				}						
+				// &.col-highlight{
+				// 	height:200px;
+				// 	max-width:100%;
+				// 	.item-grid{
+				// 		@include boxSizing;
+				// 		@include display-flex;
+				// 		@include flex-direction(row);
+				// 		@include justify-content(flex-start);						
+				// 		.product-thumb{							
+				// 			min-width:45%;
+				// 			max-width:45%;
+				// 			height:150px;
+				// 		}
+				// 		.product-name{
+				// 			@include boxSizing;
+				// 			padding:0;														
+				// 			font-size: $font-size-base + 1;
+				// 			line-height: $font-size-base + 2;	
+				// 		}
+				// 		.promotion-info{
+				// 			padding-top:6px;
+				// 		}		
+				// 	}
+				// }						
 			}
 		}
 		.product-name{
 			font-family: $font-family-sans-serif;
-			// min-height:48px;
+			padding:2px 0;
+			max-height:51px;
+			overflow:hidden;
 		}
 		.product-thumb{
 			height: 120px;

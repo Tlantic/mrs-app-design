@@ -27,6 +27,8 @@
 	text-transform:uppercase;
 	line-height: $button-height;
 	border-width:0;
+	border-radius:2px;
+	position:relative;
 	&:after{
 		font-family: "customer-font";
 	}
@@ -57,11 +59,11 @@
 
 	&.button-close{
 		// @include vertical-align;
-display:block;
-top: 50%;
--webkit-transform: translateY(-50%);
--ms-transform: translateY(-50%);
-transform: translateY(-50%);
+		display:block;
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
 		position: absolute;
 		left: -40px;
 		z-index: 10;
@@ -175,8 +177,12 @@ transform: translateY(-50%);
 
 .button-facebook{
 	background-color:#385185;
+	color:#ffffff;
 	&.activated{		
 		background-color:#385185;	
+	}
+	&::hover{		
+		color:#ffffff!important;
 	}
 }
 
@@ -197,6 +203,49 @@ transform: translateY(-50%);
 	}
 }
 
+.primary-button{
+	background-color:$brand-color;
+	color:$light;
+	font-weight:normal;
+	border-radius:50px;
+	&:hover{
+		background-color:darken($brand-color, 10%);
+		color:darken($light, 10%);
+	}
+	&::before{
+		content:"";
+		position:absolute;
+		display:block;
+		left: 10%;
+		right: 10%;
+		bottom: 0px;
+		height: 10px;
+		box-shadow: 0px 0px 20px 0px rgba(31,169,71,0.70);	
+		z-index:-1;
+	}	
+}
+.secondary-button{
+	background-color:$light;
+	color:$brand-color;
+	border:solid 1px darken($light, 5%);
+	font-weight:normal;
+	border-radius:50px;
+	&:hover{
+		background-color:darken($light, 10%);
+		color:darken($brand-color, 10%);
+	}
+	&::before{
+		content:"";
+		position:absolute;
+		display:block;
+		left: 10%;
+		right: 10%;
+		bottom: 0px;
+		height: 10px;
+		box-shadow: 0px 0px 20px 0px rgba(31,169,71,0.70);	
+		z-index:-1;
+	}
+}
 
 
 .platform-android.grade-a,

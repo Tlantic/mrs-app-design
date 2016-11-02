@@ -387,28 +387,18 @@ hr{
 	}	
 }
 
-.item-actions-horizontal-big{
-	position:relative;
-	height: auto;
-	padding: 25px 0 30px 0;
-	border:0;
-	white-space:nowrap;
-	span{
-		display: none;
-	}
-	.button{
-		display:inline-block;
-		min-height: 70px;
-		width:50%;
-		span{
-			display:block;
-			padding:10px;
-		}	
-		&.icon:before{
-			font-size: $icon-font-size-big!important;
-		}
-	}
-}
+// .item-actions-horizontal-big{
+// 	position:relative;
+// 	height: auto;
+// 	padding: 0;
+// 	border:0;
+// 	white-space:nowrap;
+// 	.button{
+// 		display:inline-block;
+// 		min-height: 60px;
+// 		width:50%;
+// 	}
+// }
 
 .mrs-quick-list{
 	@include box-sizing(border-box);
@@ -544,14 +534,14 @@ hr{
 	.advertising-module{
 		min-height:180px;		
 		img{
-			// -webkit-clip-path: inset(10px 8px round 8px);
+			-webkit-clip-path: inset(10px 8px round 8px);
 		}
 		.swiper-slide{
-			// @extend %banner-style;	
+			@extend %banner-style;	
 		}
 		.image-default-wrapper{
 			position:relative;
-			// @extend %banner-style;
+			@extend %banner-style;
 		}
 	}
 
@@ -806,7 +796,7 @@ hr{
 #page-details{
 	.details-item-photo{
 		background-color:$light;		
-		min-height: 185px;
+		min-height: 180px;
 		text-align:center;
 		img{		
 			width: auto;
@@ -814,70 +804,145 @@ hr{
 			margin:0 auto;
 		}
 	}
-	#details-top{
+	.details-info{
+		@include boxSizing;
+		@include display-flex;
+		@include flex-direction(row);
+		@include justify-content(space-between);
 		font-family: $font-family-sans-serif;
-		min-height:90px;
-		.row{
-			position:relative;
-			padding:10px;		
-		}
-		.item-name{
+		padding:16px;
+		.details-info-name{
 			font-size: $font-size-base + 2;
 			font-weight: $font-regular;
-			width:100%;
+			color:$titleColor;
 			span{
 				display:block;
-				color:lighten($textColor, 20%);	
-				font-size: $font-size-base + 1;
+				color:$textColor-light;	
+				font-size: $font-size-base;				
 			}
 		}
-		.item-price{
+		.details-info-price{
 			min-width:80px;
 			text-align:right;
-		}
-		.item-description{
-			padding:20px 10px;
-		}
+			font-size: $font-size-base + 2;
+			font-weight: bold;
+			color:$brand-color;
+		}		
 	}
-	.item-secondary-actions{
-		position: absolute;
-		bottom:0;
-		margin: 0;
-	}	
+
+	.details-itemdescription{
+		padding:20px 10px;
+	}
+
+	// .item-secondary-actions{
+	// 	position: absolute;
+	// 	bottom:0;
+	// 	margin: 0;
+	// }	
 
 	.promotion-info{
 		@include boxSizing;
 		@include display-flex;
 		@include flex-direction(row);
 		@include justify-content(space-between);
+		@include align-items(flex-start);
 		padding:15px;
+		.promotion-icon{
+			max-width: 26px;
+			height: 26px;
+			font-size: 26px;
+			margin-right:4px;
+		}
 		.promotion-description{
 			font-size: $font-size-base + 2;
-			max-width:45%;
-
+			font-weight:bold;
+			line-height: $font-size-base + 1;
+			.promotion-date{
+				@include boxSizing;
+				display:block;
+				padding:2px 0;
+				font-family: $font-family-sans-serif;
+				font-size:$font-size-base - 1;
+				font-weight:normal;
+				color:lighten($dark, 20%);
+				text-align:left;
+			}			
 		}
 		.promotion-price{
-			font-size: $font-size-large + 10;
-			padding-left:50px;			
-			line-height:35px;
-			&:before{
-				font-size: $icon-font-size-big;
-				line-height:35px;
+			font-size: $font-size-large;
+			line-height: $font-size-large;
+			min-width:80px;
+			span{
+				display:block;
+				padding:3px 0;
+			}			
+		}
+	}
+}
+
+
+.details-actions{
+	@include boxSizing;
+	@include display-flex;
+	@include flex-direction(row);
+	@include justify-content(center);
+	@include align-items(center);
+	background-color:$light;
+	padding:0;
+	margin-top:20px;
+	position:relative;
+	height:60px;
+	&::before{
+		content:"";
+		position:absolute;
+		display:block;
+		width:1px;
+		height:35px;
+		background-color:$border-color;
+		top:0;
+		left:0;
+		right:0;
+		bottom:0;
+		margin:auto;
+		z-index:1;
+	}
+	&::after{
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: -1;
+		bottom: 5px;
+		left: 30px;
+		right: 30px;
+		height: 20px;
+		box-shadow: 0px 0px 25px 0px rgba(31, 169, 71, 0.45);		
+	}
+	.details-actions-button{
+		@extend .button;
+		@extend .button-clear;
+		@include flex(1);
+		@include boxSizing;
+		@include display-flex;
+		@include flex-direction(row);
+		@include justify-content(center);
+		@include align-items(center);	
+		min-height: 60px;
+		max-height: 60px;
+		height: 60px;
+		
+		.details-actions-button-icon{
+			font-size:22px;
+			line-height:0;
+			&.mrs-icon-list{
+				font-size:26px;
+			}
+			&.active{
+				color:$brand-color;
 			}
 		}
 	}
-
-	.promotion-date{
-		@include boxSizing;
-		display:block;
-		padding:0 15px 10px 15px;
-		font-family: $font-family-sans-serif;
-		font-size:$font-size-base - 1;
-		color:lighten($dark, 20%);
-		text-align:center;
-	}
-
 }
+
 
 //LIST HEADER 
 #page-list{
@@ -1085,100 +1150,40 @@ hr{
 		}
 	}
 
-
 	.shoppingList{
-		@extend .editable-list;
-		padding:0 10px;
+		@extend .editable-list;	
 		.shoppingList-item{
-			// @extend .item;				
-			// @extend .item-checkbox;  				
-			// background-color:red;
-			@include display-flex;
-			@include flex-direction(row);
-			@include justify-content(space-between);
-			@include boxSizing;
-			position:relative;
-			padding:5px 0;
-			border-bottom:solid 1px $border-color;					
-			background-color:$light;
-			.shoppingList-item-thumb{
-				margin:0 0 0 2px;
-				position:relative;
-				width:50px;
-				max-width:50px;
-				min-width:50px;
-				-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-				transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-				img{					
-					@include transform(translate3D(-50%,-50%,0));	
-					position: absolute;		
-					display: block;								
-				    top: 50%;				    
-				    left: 50%;							    
-				    max-height:50px;	    
-					max-width:100%;	
-				}
-			}
+			padding:0;	
+			height:100px;
+			max-height:100px;
+			padding-left: 55px !important;
 			.shoppingList-item-info{
+	    		@include boxSizing;
 				@include display-flex;
-				@include flex-direction(column);
-				@include justify-content(center);
-				@include flex(1,1, auto);
-				-webkit-transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-				transition: all 0.15s cubic-bezier(0.215, 0.610, 0.355, 1.000);
-				padding:5px 0 5px 5px;
-				.shoppingList-item-info-name{
-					font-family: $font-family-sans-serif;
-					color:$dark;
-					font-size:$font-size-base + 1;
-					.shoppingList-item-info-name-item{
-						word-break: break-all;
-						max-height:60px;
-						overflow:hidden;
-					}
-					.shoppingList-item-info-name-brand{
-						color:$textColor-light;
-						font-size:$font-size-small + 1;
-					}
-
-				}				
-				.shoppingList-item-info-promotion{
-					display:none;
-					.shoppingList-item-info-promotion-description{
-						color:$textColor;
-						font-family: $font-family-sans-serif;
-						font-size:$font-size-small + 1;
-						line-height:$font-size-small + 1;
-					}
-					.shoppingList-item-info-promotion-price{
-						@include display-flex;
-						@include flex-direction(row);
-						@include justify-content(space-between);
-						@include align-items(center);
-						@include boxSizing;
-						// color:$brand-color;
-						color:$highlight-color--red;
-						font-family: $font-family-sans-serif;
-						font-size:$font-size-base + 1;
-						font-weight:$font-bold;
-						text-align:left;
-						.shoppingList-item-info-promotion-price-wrapper{
-							@include display-flex;
-						@include flex-direction(row);
-						@include justify-content(flex-start);
-						@include align-items(center);
-						@include boxSizing;
-						}
-					}
-					.shoppingList-item-info-promotion-icon{
-						font-weight:normal;
-						font-size:20px;		
-						.mrs-customer-icon{
-							margin:10px 3px 10px 0;
-						}				
-					}
-					
-				}				
+				@include flex-direction(row);
+				@include justify-content(space-between);
+				@include align-items(flex-start);
+			
+			}
+			
+			.shoppingList-item-info-details{
+				@include flex(1);
+				padding:10px 0;
+			}
+			.product-thumb{
+				width:50px;
+				height:50px;
+				max-height:50px;
+				max-width:50px;
+				min-width:50px;	
+				img{
+					@include vertical-align;
+					max-width: 50px;
+					max-height: 50px;
+					height: auto;
+					width: auto;
+					margin:0 auto;			
+				}
 			}
 			.shoppingList-item-quantity{
 				@include display-flex;
@@ -1205,55 +1210,14 @@ hr{
 						height:50px;
 					}
 				}
-
 				.shoppingList-item-quantity-number{
 					font-family: $font-family-sans-serif;
 					font-size:$font-size-base;					
 					text-align:center;
 				}
 			}
-			.shoppingList-item-price{
-				@include display-flex;
-				@include flex-direction(row);
-				@include justify-content(space-between);
-				@include align-items(center);
-				margin-bottom:4px;
-				color:$brand-color;
-				// color:$highlight-color--red;
-				font-family: $font-family-sans-serif;
-				font-size:$font-size-base + 1;
-				font-weight:$font-bold;
-				text-align:left;
-				span{
-					padding:0 3px;
-				}
-				.shoppingList-item-price-quantity{
-					font-weight:bold;
-				}
-				
-			}
-			.shoppingList-item-price-subtotal{
-				@include boxSizing;
-				font-weight:bold;
-				color:$brand-color;
-				// color:$highlight-color--red;
-				font-size:$font-size-base + 4;
-				padding: 6px 12px;
-				border-radius:50px;
-				border:solid 1px $border-color;
-			}
-			&.item-promotion{
-				.shoppingList-item-price{
-					display:none!important;
-				}
-				.shoppingList-item-info-promotion{
-					display:block;
-				}
-			}
 		}
-
 	}
-
 
 	.item-checkbox{
 		.icon-search{
@@ -1293,13 +1257,18 @@ hr{
 			.shoppingList-item{
 				.checkbox{
 					display:block;
+					 margin-top:0;
 				}
-				.shoppingList-item-thumb{
-					@include transform(translate3D(50px,0,0));			
+				.product-thumb{
+					display:none;
 				}
-				.shoppingList-item-info{
-					@include transform(translate3D(50px,0,0));			
+				.product-info{
+					// @include transform(translate3D(50px,0,0));			
 				}
+				.promotion-info{
+					// @include transform(translate3D(50px,0,0));			
+				}
+
 				.shoppingList-item-quantity{
 					display:none!important;
 				}
@@ -1526,6 +1495,21 @@ hr{
 }
 
 
+#page-promotions{
+	.empty-state-loyalty{
+		@include boxSizing;
+		padding:10px 30px;
+
+	}
+	.empty-state-message{
+		font-size: $font-size-base;
+		color: $textColor-light;
+	}
+
+}
+
+
+
 #page-login{
 	ion-content{
 		@extend .content-wrapper-20;
@@ -1534,9 +1518,121 @@ hr{
 }
 
 
+#page-register{
+	hr{
+		margin:20px 0;
+	}
+	.bar-header{
+		@extend .lightText;
+		background-color:$brand-color;
+	}
+}
+
+.register-steps{
+	@include boxSizing;
+	@include display-flex;
+	@include flex-direction(row);
+	@include justify-content(center);	
+	@include align-items(center);
+	padding:30px 0;
+	position:relative;
+	background-color:$brand-color;
+	&::before{
+		content:"";
+		position:absolute;
+		width:60px;
+		height:1px;
+		background-color:$light;
+		left: 0;
+		right: 0;
+		top:0;
+		bottom:0;
+		margin: auto
+	}
+	.register-steps-step{
+		@include boxSizing;
+		font-family: $font-family-sans-serif;
+		border-radius:50px;
+		border:solid 1px $light;
+		text-align:center;
+		margin:0 50px;
+		color:$light;
+		font-size:$font-size-base + 2;
+		width:40px;
+		height:40px;
+		max-width:40px;
+		min-width:40px;
+		max-height:40px;
+		line-height:38px;
+		&.active{
+			background-color:$light;
+			color:$brand-color;
+			font-weight:bold;
+		}
+	}
+}
+
+
 .activated{
 	opacity: 1!important;
 }
+
+
+
+.mrs-page-tutorial{
+	@include boxSizing;
+	@include display-flex;
+	@include flex-direction(column);
+	@include justify-content(space-between);	
+	@include align-items(center);
+	font-family: $font-family-sans-serif;
+	position:absolute;
+	z-index:99;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background-color:$brand-color;
+	color:$light;
+	padding:20px 20px 80px 20px;
+
+	.tutorial-title{
+		@include boxSizing;
+		display:block;
+		font-weight:bold;
+		font-size: 24px;
+		padding: 30px 10px;
+		text-align:center;
+		margin-bottom:20px;
+		border-bottom:solid 1px $light;
+	}
+	.tutorial-description{
+		@include boxSizing;
+		font-size: 16px;
+		line-height: 21px;
+		padding:10px;
+	}
+
+	.tutorial-image{	
+		text-align:center;
+		box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.16);		
+		img{
+			display:block;
+			max-width:310px;	
+		}
+	}
+	.tutorial-buttons{
+		@include boxSizing;
+		display:block;
+		width:100%;
+		margin-top:40px;
+		.primary-button{
+			border: solid 1px $light;
+		}
+	}
+}
+
+
 
 //PLATFORM
 
