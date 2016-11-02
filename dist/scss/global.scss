@@ -500,6 +500,12 @@ hr{
 	}
 }
 
+.disabledItem{
+    opacity: 0.5;
+	.checkbox-icon:before{
+		background: transparent !important;
+	}
+}
 
 // PRICE STYLES
 .item-price{
