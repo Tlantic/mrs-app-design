@@ -683,18 +683,6 @@
 // }
 
 
-.empty-state{
-	font-size: $font-size-base +2;
-	font-weight:$font-light;
-	color:lighten($dark, 20%);
-	text-align:center;
-	padding-top:20px;
-	.icon{
-		font-size: $icon-font-size-big * 2;
-		display:block;
-		text-align: center;
-	}
-}
 
 .product-thumb{
 	overflow: hidden;

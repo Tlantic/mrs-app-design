@@ -252,7 +252,28 @@ hr{
 	text-align:center;
 	padding:40px;
 	color:lighten($dark, 10%);
-	font-size:$font-size-base - 2;
+	font-size:$font-size-base + 2;
+	font-weight:normal;
+
+	.icon{
+		color:$brand-color;
+		margin:0 auto;
+		height:80px;
+		width:100px;
+		font-size:100px;
+		display:block;
+		text-align: center;		
+	}
+	.empty-state-icon{
+		color:$brand-color;
+		font-size:$icon-font-size;
+	}
+	.empty-state-image{
+
+	}
+	p{
+		margin:20px 10px 30px 10px;		
+	}
 }
 
 .item-actions{	
@@ -1282,18 +1303,12 @@ hr{
 		}
 		
 	}
-	.empty-state{
-		>.icon{
-			margin:0 auto 20px auto;
-			height:110px;
-			width:110px;
-			position:relative;
-		}
-		.mrs-grid{
-			margin:20px;
-			border-top:solid 1px $border-color;
-		}
-	}
+	// .empty-state{		
+	// 	.mrs-grid{
+	// 		margin:20px;
+	// 		border-top:solid 1px $border-color;
+	// 	}
+	// }
 
 	.listTotal{
 		@include display-flex;
@@ -1502,14 +1517,8 @@ hr{
 
 
 #page-promotions{
-	.empty-state-loyalty{
-		@include boxSizing;
-		padding:10px 30px;
-
-	}
-	.empty-state-message{
-		font-size: $font-size-base;
-		color: $textColor-light;
+	.empty-state{
+		padding-top:0;
 	}
 
 }
